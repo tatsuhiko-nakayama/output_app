@@ -1,0 +1,77 @@
+.second-main {
+  background-color: #fff;
+  padding: 10px;
+}
+
+.top-content {
+  height: 30vh;
+  width: 80vw;
+  margin-left: 8vw;
+  padding: 10px;
+  background-color: lightseagreen;
+}
+
+.bottom-content {
+  height: 50vh;
+  width: 80vw;
+  margin-top: 10px;
+  margin-left: 8vw;
+  padding: 10px;
+  display: flex;
+  background-color: lightslategray;
+}
+
+.form-box {
+  height: 100%;
+  width: 50%;
+  background-color: lightsteelblue;
+}
+
+.skip-box {
+  height: 100%;
+  width: 50%;
+  background-color: lightyellow;
+}
+
+.field {
+  height: 50px;
+  width: 80%;
+  margin-top: 10px;
+  margin-left: 5vw;
+  background-color: linen;
+}
+
+.regist {
+  height: 50px;
+  width: 80%;
+  margin-left: 5vw;
+  margin-top: 20px;
+  background-color: mistyrose;
+}
+
+.input {
+  width: 80%;
+  height: 25px;
+  margin-top: 5px;
+  margin-left: 2vw;
+  padding: 5px 20px;
+  background-color: #fff;
+  font-size: 14px;
+  resize: none;
+  border-radius: 5px;
+  border: 2px solid #ccc;
+}
+
+.regist-btn {
+  width: 60%;
+  height: 45px;
+  margin-top: 3px;
+  margin-left: 6.5vw;
+  padding: 5px 20px;
+  background-color: cornflowerblue;
+  color: #fff;
+  font-size: 14px;
+  resize: none;
+  border-radius: 3px;
+  border: 1px solid #ccc;
+}
