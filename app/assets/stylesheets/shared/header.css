@@ -1,0 +1,45 @@
+.header {
+  height: 60px;
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  background-color: khaki;
+}
+
+.left-header {
+  width: 50vw;
+  display: flex;
+  padding: 10px;
+  justify-content: flex-start;
+  background-color: lightcoral;
+}
+
+.logo-box {
+  width: 15vw;
+  background-color: blue;
+}
+
+.search-box {
+  width: 15vw;
+  margin-left: 5vw;
+  background-color: blueviolet;
+}
+
+.right-header {
+  width: 50vw;
+  display: flex;
+  padding: 10px;
+  justify-content: flex-end;
+  background-color: lightgreen;
+}
+
+.new-item-box {
+  width: 15vw;
+  margin-right: 5vw;
+  background-color: cadetblue;
+}
+
+.mypage-box {
+  width: 15vw;
+  background-color: darkgoldenrod;
+}

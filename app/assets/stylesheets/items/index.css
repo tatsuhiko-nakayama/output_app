@@ -1,0 +1,27 @@
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+a:hover {
+  opacity: 0.5;
+}
+
+.main {
+  background-color: #fff;
+  display: flex
+}
+
+.left-content {
+  height: 75vh;
+  width: 70vw;
+  margin: 10px;
+  background-color: aquamarine;
+}
+
+.right-content {
+  height: 75vh;
+  width: 30vw;
+  margin: 10px;
+  background-color: beige;
+}
