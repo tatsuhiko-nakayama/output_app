@@ -43,3 +43,16 @@
   width: 15vw;
   background-color: darkgoldenrod;
 }
+
+.second-header {
+  height: 60px;
+  width: 100vw;
+  display: flex;
+  background-color: lightpink;
+}
+
+.second-logo-box {
+  width: 15vw;
+  margin: 10px;
+  background-color: lightsalmon;
+}
