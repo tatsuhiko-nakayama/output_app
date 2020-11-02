@@ -8,20 +8,20 @@ a:hover {
 }
 
 .main {
-  background-color: #fff;
-  display: flex
+  background-color: #f0f0f0;
+  display: flex;
 }
 
 .top-left-content {
   height: 75vh;
   width: 70vw;
-  margin: 10px;
-  background-color: aquamarine;
+  margin: 10px 10px 10px 20px;
+  background-color: #fff;
 }
 
 .top-right-content {
   height: 75vh;
   width: 30vw;
-  margin: 10px;
-  background-color: beige;
+  margin: 10px 20px 10px 0;
+  background-color: #fff;
 }

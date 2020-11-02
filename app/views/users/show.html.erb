@@ -14,10 +14,10 @@
       <%= image_tag 'human_icon', class:"main-avatar"%>
       <div class='user-info'>
         <div class='user-name'>
-          <%= 'hoge'%>
+          <%= @user.username%>
         </div>
         <div class='user-intro'>
-          <%= 'hogehoge'%>
+          <%= 'hoge' %>
         </div>
       </div>
       <div class='user-status'>
@@ -49,8 +49,9 @@
         </div>
       </div>
       <%# プロフィール編集ボタン or フォローボタン 本人と本人以外で表示切り替え %>
-      <%= link_to 'プロフィール編集', '#', class: 'profile-edit-btn' %>
+      <%= link_to 'プロフィール編集', new_user_profile_path(current_user), class: 'profile-edit-btn' %>
       <%# // プロフィール編集ボタン or フォローボタン 本人と本人以外で表示切り替え %>
+      <span class='user-website'><%= 'hoge' %></span>
     </div>
 
     <div class='user-analytics'>

@@ -37,7 +37,6 @@
   margin-top: 10px;
   display: flex;
   justify-content: center;
-  background-color: linen;
 }
 
 .regist {
@@ -46,7 +45,6 @@
   margin-top: 20px;
   display: flex;
   justify-content: center;
-  background-color: mistyrose;
 }
 
 .session {
@@ -55,7 +53,6 @@
   margin-top: 20px;
   display: flex;
   justify-content: center;
-  background-color: mistyrose;
 }
 
 .input {
@@ -67,7 +64,7 @@
   font-size: 14px;
   resize: none;
   border-radius: 5px;
-  border: 2px solid #ccc;
+  border: 1px solid #ccc;
 }
 
 .regist-btn {

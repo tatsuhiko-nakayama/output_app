@@ -11,5 +11,4 @@ class User < ApplicationRecord
   has_many :relationships, dependent: :destroy
 
   validates :username, presence: true, uniqueness: { case_sensitive: true}
-
 end

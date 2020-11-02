@@ -26,7 +26,7 @@
 }
 
 .user-card {
-  height: 330px;
+  height: 400px;
   width: 95%;
   margin-top: 5px;
   background-color: beige;
@@ -43,14 +43,14 @@
 }
 
 .user-info {
-  height: 30%;
+  height: 40%;
   width: 90%;
   margin-top: 10px;
 }
 
 .user-name {
-  height: 16%;
-  margin: 2px;
+  height: 15%;
+  margin: 5px;
   font-size: 14px;
   display: flex;
   justify-content: center;
@@ -58,7 +58,7 @@
 }
 
 .user-intro {
-  height: 77%;
+  height: 75%;
   margin: 2px;
   font-size: 14px;
   display: flex;
@@ -67,7 +67,7 @@
 }
 
 .user-status {
-  height: 33%;
+  height: 30%;
   width: 90%;
   margin-top: 5px;
 }
@@ -106,19 +106,25 @@
 }
 
 .profile-edit-btn {
+  width: 18vw;
   margin: 15px 0px 10px;
   padding: 5px 20px;
-  background-color: cornflowerblue;
-  color: #fff;
+  color: grey;
   font-size: 14px;
   font-weight: bold;
   resize: none;
   border-radius: 3px;
-  border: 1px solid #ccc;
+  border: 1px solid grey;
+  text-align: center;
+}
+
+.user-website {
+  font-size: 12px;
+  margin-bottom: 10px;
 }
 
 .user-analytics {
-  height: 150px;
+  height: 100px;
   width: 95%;
   margin-top: 8px;
   background-color: beige;
