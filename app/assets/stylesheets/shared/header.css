@@ -16,7 +16,13 @@
 
 .logo-box {
   width: 15vw;
+  padding: 2px;
   background-color: blue;
+}
+
+.output_app_logo {
+  width: 80%;
+  min-width: 100px;
 }
 
 .search-box {
