@@ -5,9 +5,9 @@
     <span class='profile-form-title'><%= @user.username %></span>
   
 
-    <%= form_with model: @profile, url: user_profiles_path(current_user), local: true do |f| %>
+    <%= form_with model: @profile, url: "/users/#{@user.id}/profiles/#{@user.profile.id}", local: true do |f| %>
       <%# エラーメッセージ %>
-      <%= render 'shared/error_messages', model: f.object %>
+
       <%# // エラーメッセージ %>
       
       <div class="profile-field-parent">
