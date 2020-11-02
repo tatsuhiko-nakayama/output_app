@@ -51,7 +51,7 @@
       <%# プロフィール編集ボタン or フォローボタン 本人と本人以外で表示切り替え %>
       <%= link_to 'プロフィール編集', edit_user_profile_path(@user.profile.id), class: 'profile-edit-btn' %>
       <%# // プロフィール編集ボタン or フォローボタン 本人と本人以外で表示切り替え %>
-      <span class='user-website'><%= @user.profile.website %></span>
+      <%= link_to @user.profile.website, "#{ @user.profile.website }",  class: 'user-website' %>
     </div>
 
     <div class='user-analytics'>
