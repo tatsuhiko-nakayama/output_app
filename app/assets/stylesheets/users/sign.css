@@ -1,12 +1,14 @@
 .second-main {
   background-color: #fff;
   padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .top-content {
   height: 30vh;
   width: 80vw;
-  margin-left: 8vw;
   padding: 10px;
   background-color: lightseagreen;
 }
@@ -15,7 +17,6 @@
   height: 50vh;
   width: 80vw;
   margin-top: 10px;
-  margin-left: 8vw;
   padding: 10px;
   display: flex;
   background-color: lightslategray;
@@ -24,36 +25,43 @@
 .form-box {
   height: 100%;
   width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   background-color: lightsteelblue;
-}
-
-.skip-box {
-  height: 100%;
-  width: 50%;
-  background-color: lightyellow;
 }
 
 .field {
   height: 50px;
-  width: 80%;
+  width: 35vw;
   margin-top: 10px;
-  margin-left: 5vw;
+  display: flex;
+  justify-content: center;
   background-color: linen;
 }
 
 .regist {
   height: 50px;
-  width: 80%;
-  margin-left: 5vw;
+  width: 35vw;
   margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  background-color: mistyrose;
+}
+
+.session {
+  height: 50px;
+  width: 35vw;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
   background-color: mistyrose;
 }
 
 .input {
-  width: 80%;
+  width: 25vw;
   height: 25px;
   margin-top: 5px;
-  margin-left: 2vw;
   padding: 5px 20px;
   background-color: #fff;
   font-size: 14px;
@@ -63,10 +71,9 @@
 }
 
 .regist-btn {
-  width: 60%;
+  width: 150px;
   height: 45px;
   margin-top: 3px;
-  margin-left: 6.5vw;
   padding: 5px 20px;
   background-color: cornflowerblue;
   color: #fff;
@@ -74,4 +81,23 @@
   resize: none;
   border-radius: 3px;
   border: 1px solid #ccc;
+}
+
+.session-btn {
+  width: 150px;
+  height: 45px;
+  margin-top: 3px;
+  padding: 5px 20px;
+  background-color: cornflowerblue;
+  color: #fff;
+  font-size: 14px;
+  resize: none;
+  border-radius: 3px;
+  border: 1px solid #ccc;
+}
+
+.skip-box {
+  height: 100%;
+  width: 50%;
+  background-color: lightyellow;
 }

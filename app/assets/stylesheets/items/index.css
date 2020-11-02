@@ -12,14 +12,14 @@ a:hover {
   display: flex
 }
 
-.left-content {
+.top-left-content {
   height: 75vh;
   width: 70vw;
   margin: 10px;
   background-color: aquamarine;
 }
 
-.right-content {
+.top-right-content {
   height: 75vh;
   width: 30vw;
   margin: 10px;

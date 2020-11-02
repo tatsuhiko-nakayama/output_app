@@ -5,7 +5,7 @@
   </div>
   <div class= "bottom-content">
     <div class="form-box">
-      <%= form_with model: @user, url: '/users', class: '#', local: true do |f| %>
+      <%= form_with model: @user, url: '/users', class: 'hoge', local: true do |f| %>
         <%# エラーメッセージ %>
           <%= render 'shared/error_messages', model: f.object %>
         <%# // エラーメッセージ %>
