@@ -7,7 +7,7 @@
     <div class="form-box">
       <%= form_with model: @user, url: '/users', local: true do |f| %>
         <%# エラーメッセージ %>
-          <%= render 'shared/error_messages', model: f.object %>
+        <%= render 'shared/error_messages', model: f.object %>
         <%# // エラーメッセージ %>
 
         <div class="field">

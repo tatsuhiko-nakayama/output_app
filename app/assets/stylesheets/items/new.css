@@ -1,0 +1,165 @@
+.new-content {
+  height: 88vh;
+  width: 100%;
+  margin: 10px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+
+}
+
+.caption-area {
+  height: 20%;
+  width: 100%;
+}
+
+.caption-input {
+  width: 100%;
+  height: 90%;
+  box-sizing: border-box;
+  padding: 5px 10px;
+  font-size: 14px;
+  resize: none;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.first-box {
+  height: 33%;
+}
+
+.second-box {
+  height: 33%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.second-box-left {
+  height: 100%;
+  width: 40%;
+  min-width: 450px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.category-list {
+  display: flex;
+  font-family: monospace;
+  font-size: 14px;
+  margin-left: 5px;
+}
+
+.category-list li {
+  margin-right: 20px;
+}
+
+.category-radio-btn {
+ height: 17px;
+ width: 17px;
+ top: 3px;
+ position: relative;
+}
+
+.second-box-right {
+  height: 100%;
+  width: 70%;
+  display: flex;
+  align-items: center;
+}
+
+.third-box {
+  height: 33%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.third-box-left {
+  height: 100%;
+  width: 40%;
+  min-width: 450px;
+  margin-right: 1px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.timer {
+  display: flex;
+  font-family: monospace;
+  padding: 5px 15px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: lightblue;
+}
+
+.third-box-right {
+  height: 100%;
+  width: 70%;
+  display: flex;
+  align-items: center;
+}
+
+.input-area {
+  height: 70%;
+  width: 100%;
+  margin-top: 5px;
+  display: flex;
+}
+
+.input-area-left {
+  height: 100%;
+  width: 50%;
+}
+
+.body-input {
+  height: 100%;
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.input-area-right {
+  height: 100%;
+  width: 50%;
+  background-color: mistyrose;
+}
+
+.command-area {
+  height: 10%;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  background-color: #f0f0f0;
+}
+
+.command-list {
+ display: flex;
+ align-items: center;
+}
+
+.item-open {
+  color: #fff;
+  background-color: burlywood;
+  border: 2px solid burlywood;
+  border-radius: 3px;
+  padding: 10px 15px;
+}
+
+.item-preview {
+  color: #fff;
+  background-color: burlywood;
+  border: 2px solid burlywood;
+  border-radius: 3px;
+  padding: 10px 15px;
+}
+
+.output-btn {
+  color: #fff;
+  background-color: peru;
+  border: 2px solid burlywood;
+  border-radius: 3px;
+  margin-left: 15px;
+  padding: 6px 17px;
+}

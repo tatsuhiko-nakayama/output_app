@@ -1,0 +1,74 @@
+<%= render "shared/header" %>
+
+<%= form_with model:@item, url: '/items', local: true do |f| %>
+  <div class='main'>
+    <div class='new-content'>    
+      <%# エラーメッセージ %>
+      <%= render 'shared/error_messages', model: f.object %>
+      <%# // エラーメッセージ %>
+      <div class='caption-area'>
+        <div class='first-box'>
+          <%= f.text_field :title, class:'caption-input', id:'item-title', placeholder:'タイトル', maxlength: '40' %>
+        </div>
+        <div class='second-box'>
+          <div class='second-box-left'>
+            <ul class='category-list'>
+              <li>
+                <%= f.radio_button :category_id, '1', class: 'category-radio-btn' %>
+                <label>本</label>
+              </li>
+              <li>
+                <%= f.radio_button :category_id, '2', class: 'category-radio-btn' %>
+                <label>Youtube</label>
+              </li>
+              <li>
+                <%= f.radio_button :category_id, '3', class: 'category-radio-btn' %>
+                <label>記事/SNS</label>
+              </li>
+              <li>
+                <%= f.radio_button :category_id, '4', class: 'category-radio-btn' %>
+                <label>イベント</label>
+              </li>
+              <li>
+                <%= f.radio_button :category_id, '5', class: 'category-radio-btn' %>
+                <label>出来事</label>
+              </li>
+            </ul>
+          </div>
+          <div class='second-box-right'>
+            <%= f.text_field :tagbody, class:'caption-input', id:'item-tagbody', placeholder:'#ハッシュタグ', maxlength: '60' %>
+          </div>
+        </div>
+        <div class='third-box'>
+          <div class='third-box-left'>
+            <span class='timer'>カウントアップタイマー機能を実装予定！！</span>
+          </div>
+          <div class='third-box-right'>
+            <%= f.text_field :url, class:'caption-input', id:'item-url', placeholder:'参考URL' %>
+          </div>
+        </div>
+      </div>
+
+      <div class='input-area'>
+        <div class='input-area-left'>
+          <%= f.text_area :body, class:'body-input', id:'item-body', maxlength: '100000' %>
+        </div>
+        <div class='input-area-right'>
+        </div>
+      </div>
+
+      <div class='command-area'>
+        <ul class='command-list'>
+          <li>
+            <span class='item-open'>公開モード</span>　
+          </li>
+          <li>
+            <span class='item-preview'>プレビュー</span>
+          </li>
+          <li>
+            <%= f.submit '記録する', class:'output-btn'%>
+          </li>
+      </div>
+    </div> 
+  </div>
+<% end %>
