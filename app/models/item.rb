@@ -1,4 +1,5 @@
 class Item < ApplicationRecord
+  extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to :user
   has_many :likes
   has_many :comments
@@ -9,7 +10,7 @@ class Item < ApplicationRecord
   with_options presence: true do
     validates :title, length: { maximum: 40 }
     validates :body, length: { maximum: 100000 }
+    validates :category_id
   end
   validates :tagbody, length: { maximum: 60 }
-  validates :category_id, numericality: { other_than: 1, message: 'を選んでください' }
 end
