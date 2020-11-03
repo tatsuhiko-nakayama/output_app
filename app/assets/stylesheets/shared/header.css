@@ -1,0 +1,113 @@
+.header {
+  height: 60px;
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  background-color: khaki;
+}
+
+.left-header {
+  width: 50vw;
+  display: flex;
+  padding: 10px;
+  justify-content: flex-start;
+  background-color: lightcoral;
+}
+
+.logo-box {
+  width: 15vw;
+  padding: 2px;
+  background-color: blue;
+}
+
+.output_app_logo {
+  width: 80%;
+  min-width: 100px;
+}
+
+.search-box {
+  width: 15vw;
+  margin-left: 5vw;
+  background-color: blueviolet;
+}
+
+.right-header {
+  width: 50vw;
+  padding: 10px;
+  display: flex;
+  justify-content: flex-end;
+  background-color: burlywood;
+}
+
+.signed-in-list {
+  display: flex;
+  align-items: center;
+}
+
+.sign-out-btn {
+  color: #fff;
+  border: 1px solid #fff;
+  border-radius: 3px;
+  padding: 8px 15px;
+  margin-right: 20px;
+  font-size: 14px;
+}
+
+.like-list-btn {
+  color: #fff;
+  border: 1px solid #fff;
+  border-radius: 3px;
+  padding: 8px 15px;
+  margin-right: 20px;
+  font-size: 14px;
+}
+
+.new-item-btn {
+  color: #fff;
+  border: 1px solid #fff;
+  border-radius: 3px;
+  padding: 8px 15px;
+  margin-right: 20px;
+  font-size: 14px;
+}
+
+.mini-avatar {
+  color: #fff;
+  border: 1px solid #fff;
+  border-radius: 30px;
+  padding: 10px 13px;
+  margin-right: 10px;
+  font-size: 14px;
+}
+
+.not-signed-in-list {
+  display: flex;
+  align-items: center;
+}
+
+.sign-up-btn {
+  color: #fff;
+  border: 1px solid #fff;
+  border-radius: 3px;
+  padding: 8px 15px;
+  margin-right: 20px;
+  font-size: 14px;
+}
+.sign-in-btn {
+  color: #fff;
+  margin-right: 10px;
+  font-size: 14px;
+}
+
+.second-header {
+  height: 60px;
+  width: 100vw;
+  display: flex;
+  background-color: lightpink;
+}
+
+.second-logo-box {
+  width: 15vw;
+  margin: 10px;
+  background-color: lightsalmon;
+}

@@ -1,0 +1,132 @@
+.user-left-content {
+  height: 80vh;
+  width: 100%;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: cadetblue;
+}
+
+.user-item-all {
+  height: 95%;
+  width: 95%;
+  margin-top: 5px;
+  background-color: beige;
+}
+
+.user-right-content {
+  height: 80vh;
+  width: 30vw;
+  max-width: 300px;
+  min-width: 200px;
+  margin: 10px 10px 10px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.user-card {
+  height: 47%;
+  width: 95%;
+  margin-top: 5px;
+  background-color:beige;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.second-user-card {
+  max-height: 45%;
+  width: 95%;
+  background-color: beige;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main-avatar {
+  height: 25%;
+  border: 1px solid #fff;
+  border-radius: 70px;
+  margin-top: 10px;
+}
+
+.user-name {
+  height: 15%;
+  width: 90%;
+  margin: 5px;
+  font-size: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.user-status {
+  height: 42%;
+  width: 90%;
+}
+
+.user-status-top {
+  height: 47%;
+  margin: 2px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.user-status-bottom {
+  height: 47%;
+  margin: 5px 30px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.user-status-nums {
+ font-size: 14px;
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+}
+
+.status-title {
+  color: grey;
+  font-size: 12px;
+}
+
+.status-number {
+  font-weight: bold;
+  margin-top: 3px;
+}
+
+
+.user-intro {
+  max-height: 50%;
+  width: 85%;
+  margin: 2px;
+  padding-left: 3px;
+  font-size: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile-edit-btn {
+  width: 16vw;
+  margin: 25px 0px 15px;
+  padding: 5px 20px;
+  color: grey;
+  font-size: 13px;
+  font-weight: bold;
+  resize: none;
+  border-radius: 3px;
+  border: 1px solid grey;
+  text-align: center;
+}
+
+.user-website {
+  font-size: 12px;
+  margin-bottom: 25px;
+  color: #000;
+}
+

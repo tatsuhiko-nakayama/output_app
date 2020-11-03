@@ -1,0 +1,22 @@
+<%= render "shared/header" %>
+<div class='main'>
+  <%# Left : item-all %>
+  <div class='top-left-content'>
+  </div>
+  <%# // Left : item-all %>
+
+  
+  <%# Right : user-box %>
+  <% if current_user %>
+    <div class='top-right-content'>
+      <%# 共通user-card部分%>
+      <%= render "shared/usercard" %>
+      <%# // 共通user-card部分%>
+
+      <div class='user-analytics'>
+      </div>
+    </div>
+  <% end %>
+  <%# // Right : user-box %>
+</div>
+<%= render "shared/footer" %>

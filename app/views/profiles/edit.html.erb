@@ -1,0 +1,48 @@
+<%= render "shared/header" %>
+
+<div class='profile-form-main'>
+  <div class='profile-form'>
+    <span class='profile-form-title'><%= @user.username %></span>
+  
+
+    <%= form_with model: @profile, url: "/users/#{@user.id}/profiles/#{@user.profile.id}", local: true do |f| %>
+      <%# エラーメッセージ %>
+
+      <%# // エラーメッセージ %>
+      
+      <div class="profile-field-parent">
+        <div class="profile-field-child">
+          <%= f.text_field :lastname, class: "profile-input-child", id: "lastname", placeholder: "姓", maxlength: "20" %>      
+          <%= f.text_field :firstname, class: "profile-input-child", id: "firstname", placeholder: "名", maxlength: "20" %>
+        </div>
+      </div>
+
+      <div class="profile-field-parent">
+        <div class="profile-field-child">
+          <%= f.text_field :website, class: "profile-input", id: "website", placeholder: "サイト/ブログ" %>
+        </div>
+      </div>
+
+      <div class="intro-field-parent">
+        <div class="intro-field-child">
+          <%= f.text_area :intro, class: "intro-input", id: "intro", placeholder: "自己紹介", maxlength: "200" %>
+        </div>
+      </div>
+
+      <div class="profile-image-parent">
+        <div class="profile-image-child">
+          <span>プロフィール画像</span>
+          <%= f.file_field :image, id:"profile-image" %>
+        </div>
+        <div id="image-list"></div>
+      </div>
+      
+      <div class="profile-submit">
+        <%= f.submit "プロフィールを編集する", class: "profile-submit-btn" %>
+      </div>
+      
+    <% end %>
+  </div>
+</div>
+
+<%= render "shared/footer" %>

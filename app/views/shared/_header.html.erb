@@ -1,0 +1,28 @@
+<header class='header'>
+  <div class='left-header'>
+    <div class='logo-box'>
+      <%= link_to image_tag("output_app_logo", class: "output_app_logo"), "/"%>
+    </div>
+    <div class='search-box'>
+    </div>
+  </div>
+
+  <%# ログイン有無の条件分岐 %>
+  <div class='right-header'>
+    <% if user_signed_in? %>
+      <ul class='signed-in-list'>
+        <li><%= link_to "いいね一覧", '#', class: "like-list-btn" %></li>
+        <li><%= link_to "新規投稿", '#', class: "new-item-btn" %></li>
+         <li><%= link_to 'Log-out', destroy_user_session_path, method: :delete, class: "sign-out-btn" %>
+        <li><%= link_to "#{current_user.username.slice(0)}", user_path(current_user.id), class: "mini-avatar" %></li> 
+      </ul>
+    <% else %>
+        <ul class='not-signed-in-list'>
+          <li><%= link_to 'ユーザー登録', new_user_registration_path, class: "sign-up-btn" %></li>
+          <li><%= link_to 'ログイン', new_user_session_path, class: "sign-in-btn" %></li>
+        </ul>
+      </div>
+    <% end %>
+  </div>
+  <%# // ログイン有無の条件分岐 %>
+</header>
