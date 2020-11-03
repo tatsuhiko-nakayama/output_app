@@ -1,6 +1,6 @@
 .user-left-content {
-  height: 75vh;
-  width: 70vw;
+  height: 80vh;
+  width: 100%;
   margin: 10px;
   display: flex;
   flex-direction: column;
@@ -11,24 +11,33 @@
 .user-item-all {
   height: 95%;
   width: 95%;
-  margin-top: 10px;
+  margin-top: 5px;
   background-color: beige;
 }
 
 .user-right-content {
-  height: 75vh;
+  height: 80vh;
   width: 30vw;
-  margin: 10px;
+  max-width: 300px;
+  min-width: 200px;
+  margin: 10px 10px 10px 0;
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: darkgoldenrod;
 }
 
 .user-card {
-  height: 400px;
+  height: 47%;
   width: 95%;
   margin-top: 5px;
+  background-color:beige;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.second-user-card {
+  max-height: 45%;
+  width: 95%;
   background-color: beige;
   display: flex;
   flex-direction: column;
@@ -36,20 +45,15 @@
 }
 
 .main-avatar {
-  height: 20%;
+  height: 25%;
   border: 1px solid #fff;
   border-radius: 70px;
   margin-top: 10px;
 }
 
-.user-info {
-  height: 40%;
-  width: 90%;
-  margin-top: 10px;
-}
-
 .user-name {
   height: 15%;
+  width: 90%;
   margin: 5px;
   font-size: 14px;
   display: flex;
@@ -57,19 +61,9 @@
   align-items: center;
 }
 
-.user-intro {
-  height: 75%;
-  margin: 2px;
-  font-size: 14px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .user-status {
-  height: 30%;
+  height: 42%;
   width: 90%;
-  margin-top: 5px;
 }
 
 .user-status-top {
@@ -105,12 +99,24 @@
   margin-top: 3px;
 }
 
+
+.user-intro {
+  max-height: 50%;
+  width: 85%;
+  margin: 2px;
+  padding-left: 3px;
+  font-size: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .profile-edit-btn {
-  width: 18vw;
-  margin: 15px 0px 10px;
+  width: 16vw;
+  margin: 25px 0px 15px;
   padding: 5px 20px;
   color: grey;
-  font-size: 14px;
+  font-size: 13px;
   font-weight: bold;
   resize: none;
   border-radius: 3px;
@@ -120,14 +126,7 @@
 
 .user-website {
   font-size: 12px;
-  margin-bottom: 10px;
+  margin-bottom: 25px;
   color: #000;
-}
-
-.user-analytics {
-  height: 100px;
-  width: 95%;
-  margin-top: 8px;
-  background-color: beige;
 }
 

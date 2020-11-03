@@ -10,51 +10,17 @@
 
   <%# Right : user-box %>
   <div class='user-right-content'>
-    <div class='user-card'>
-      <%= image_tag @user.profile.image , class:"main-avatar"%>
-      <div class='user-info'>
-        <div class='user-name'>
-          <%= @user.username%>
-        </div>
-        <div class='user-intro'>
-          <%= @user.profile.intro %>
-        </div>
-      </div>
-      <div class='user-status'>
-        <div class='user-status-top'>
-          <div class='user-status-nums'>
-            <span class='status-title'>投稿</span>
-            <span class='status-number'><%= '1' %></span>
-          </div>
-          <div class='user-status-nums'>
-            <span class='status-title'>コメント</span>
-            <span class='status-number'><%= '10' %></span>
-          </div>
-          <div class='user-status-nums'>
-            <span class='status-title'>いいね</span>
-            <span class='status-number'><%= '100' %></span>
-          </div>
-        </div>
-        <div class='user-status-bottom'>
-          <div class='user-status-nums'>
-            <span class='status-title'>フォロー</span>
-            <span class='status-number'><%= '1000' %></span>
-          </div>
-          <%# フォロワー数はログインユーザーのみ表示%>
-          <div class='user-status-nums'>
-            <span class='status-title'>フォロワー</span>
-            <span class='status-number'><%= '100' %></span>
-          </div>
-          <%# // フォロワー数はログインユーザーのみ表示%>
-        </div>
+    <%# 共通user-card部分%>
+    <%= render "shared/usercard" %>
+    <%# // 共通user-card部分%>
+    <div class="second-user-card">
+      <div class='user-intro'>
+        <%= @user.profile.intro %>
       </div>
       <%# プロフィール編集ボタン or フォローボタン 本人と本人以外で表示切り替え %>
       <%= link_to 'プロフィール編集', edit_user_profile_path(@user.profile.id), class: 'profile-edit-btn' %>
       <%# // プロフィール編集ボタン or フォローボタン 本人と本人以外で表示切り替え %>
       <%= link_to @user.profile.website, "#{ @user.profile.website }",  class: 'user-website' %>
-    </div>
-
-    <div class='user-analytics'>
     </div>
   </div>
   <%# // Right : user-box %>
