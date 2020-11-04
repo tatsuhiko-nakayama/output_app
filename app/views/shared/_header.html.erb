@@ -14,7 +14,7 @@
         <li><%= link_to "いいね一覧", '#', class: "like-list-btn" %></li>
         <li><%= link_to "新規投稿", new_item_path, class: "new-item-btn" %></li>
          <li><%= link_to 'Log-out', destroy_user_session_path, method: :delete, class: "sign-out-btn" %>
-        <li><%= link_to "#{current_user.username.slice(0)}", user_path(current_user.id), class: "mini-avatar" %></li> 
+        <li><%= link_to "#{current_user.username.slice(0)}", user_path(current_user.id), class: "account-mark" %></li> 
       </ul>
     <% else %>
         <ul class='not-signed-in-list'>

@@ -4,6 +4,9 @@ class ItemsController < ApplicationController
     if current_user
       @user = User.find(current_user.id)
     end
+
+    @items = Item.all.order('created_at DESC')
+    @my_items = Item.where(user_id: current_user.id).order('created_at DESC')
   end
 
   def new
