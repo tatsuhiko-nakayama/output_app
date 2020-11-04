@@ -32,6 +32,18 @@ RSpec.describe User, type: :model do
         expect(another_user.errors.full_messages).to include('ユーザー名はすでに存在します')
       end
 
+      it 'usernameが15文字以上であれば登録できない' do
+        @user.username = Faker::Name.initials(number: 15)
+        @user.valid?
+        expect(@user.errors.full_messages).to include('ユーザー名は14文字以内で入力してください')
+      end
+
+      it 'usernameに半角英数字以外が含まれる場合は登録できない' do
+        @user.username = 'testテスト'
+        @user.valid?
+        expect(@user.errors.full_messages).to include('ユーザー名は半角英数で入力してください')
+      end
+
       it 'emailが空では登録できない' do
         @user.email = nil
         @user.valid?
