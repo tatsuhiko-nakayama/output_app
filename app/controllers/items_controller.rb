@@ -3,10 +3,10 @@ class ItemsController < ApplicationController
   def index
     if current_user
       @user = User.find(current_user.id)
+      @my_items = Item.where(user_id: current_user.id).order('created_at DESC')
     end
 
     @items = Item.all.order('created_at DESC')
-    @my_items = Item.where(user_id: current_user.id).order('created_at DESC')
   end
 
   def new

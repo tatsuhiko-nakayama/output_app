@@ -4,22 +4,27 @@
   <div class='top-left-content'>
     <div class='top-left-content-child'>
       <div class='item-list-navi'>
-        ☀︎Pickup Output
+        ☀︎ Pickup Output
       </div>
       <%# @items リスト展開 %>
       <%= render "shared/item-list" %>
       <%# // @items リスト展開 %>
 
     </div>
+    <% if current_user %>
     <div class='top-left-content-child'>
       <div class='item-list-navi'>
-        ✏︎My Output
+        ✏︎ My Output
       </div>
       <%# @my_items リスト展開 %>
       <%= render "shared/my-item-list" %>
       <%# // @my_items リスト展開 %>
-
     </div>
+    <% else %>
+    <div class='top-left-content-child'>
+      ここは非ログインユーザー向けのコンテンツにするよ！
+    </div>
+    <% end %>
   </div>
 
   
@@ -29,9 +34,12 @@
       <%# 共通user-card部分%>
       <%= render "shared/usercard" %>
       <%# // 共通user-card部分%>
-
       <div class='user-analytics'>
       </div>
+    </div>
+  <% else %>
+    <div class='top-right-content'>
+    ここは非ログインユーザー向けのコンテンツにするよ！
     </div>
   <% end %>
   <%# // Right : user-box %>
