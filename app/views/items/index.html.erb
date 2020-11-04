@@ -1,46 +1,26 @@
 <%= render "shared/header" %>
 
 <div class='main'>
-  <%# Left : item-all %>
   <div class='top-left-content'>
     <div class='top-left-content-child'>
-      <% @items.each do |item| %>
-        <li class='item-list'>
-          <div class='list-avatar-content'>
-            <%= image_tag item.user.profile.image, class:'list-avatar'%>
-          </div>
-          <div class='list-main-content'>
-            <div class='list-title-content'>
-              <%= item.title %>
-            </div>
-            <div class='list-detail-content'>
-              <ul class='list-detail'>
-                <li class='list-username'>
-                  <%= item.user.username %>
-                </li>
-                <li class='list-created-at'>
-                  <%= item.created_at %>
-                </li>
-                <li class='list-like-count'>
-                  <%= 100 %>
-                </li>
-                <li class='list-comment-count'>
-                  <%= 100 %>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </li>
-      <% end %>
+      <div class='item-list-navi'>
+        ☀︎Pickup Output
+      </div>
+      <%# @items リスト展開 %>
+      <%= render "shared/item-list" %>
+      <%# // @items リスト展開 %>
+
     </div>
     <div class='top-left-content-child'>
-      <% @my_items.each do |item| %>
-        <li class='item-list'>
-        </li>    
-      <% end %>
+      <div class='item-list-navi'>
+        ✏︎My Output
+      </div>
+      <%# @my_items リスト展開 %>
+      <%= render "shared/my-item-list" %>
+      <%# // @my_items リスト展開 %>
+
     </div>
   </div>
-  <%# // Left : item-all %>
 
   
   <%# Right : user-box %>

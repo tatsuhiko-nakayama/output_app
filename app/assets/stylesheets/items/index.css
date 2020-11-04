@@ -24,8 +24,14 @@ a:hover {
   width: 100%;
 }
 
+.item-list-navi {
+  height: 25px;
+  margin: 5px;
+  padding-left: 20px;
+}
+
 .item-list {
-  min-height: 60px;
+  min-height: 90px;
   border-bottom: 1px solid #f0f0f0;
   border-right: 1px solid #f0f0f0;
   list-style: none;
@@ -33,58 +39,92 @@ a:hover {
   display: flex;
 }
 
-.list-avatar-content {
-  width: 60px;
-  height: 60px;
+.list-profile-content {
+  width: 80px;
+  min-height: 80px;
   display: flex;
-  justify-content: center;
-  background-color: antiquewhite;
+  flex-direction: column;
+  align-items: center;
+}
+
+.list-avatar {
+  width: 45px;
+  border: 1px solid #fff;
+  border-radius: 70px;
+  margin-top: 10px;
+}
+
+.list-username {
+  font-size: 12px;
 }
 
 .list-main-content {
-  width: calc(100% - 60px);
+  width: calc(100% - 80px);
   display: flex;
   flex-direction: column;
 }
 
 .list-title-content {
   height: 50%;
-  background-color: aquamarine;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+}
+
+.list-cate-tag-content {
+  height: 25%;
+  display: flex;
+  margin-bottom: 2px;
+}
+
+.list-category {
+  display: flex;
+  align-items: flex-end;
+}
+
+.list-category span{
+  font-size: 12px;
+  color: grey;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  padding: 2px 5px;
+}
+
+.list-tag {
+  font-size: 12px;
+  color: grey;
+  display: flex;
+  align-items: center;
+  margin: 0 5px;
 }
 
 .list-detail-content {
-  height: 50%;
-  background-color: cadetblue;
+  height: 25%;
+  display: flex;
+  margin-bottom: 5px;
 }
 
 .list-detail {
   display: flex;
+  align-items: center;
   font-size: 14px;
 }
 
-.list-username {
-
+.list-detail li {
+  margin-left: 10px;
 }
 
 .list-created-at {
-
+  font-size: 12px;
 }
 
 .list-like-count {
-
+  font-size: 12px
 }
 
 .list-comment-count {
-
+  font-size: 12px
 }
-
-.list-avatar {
-  height: 40px;
-  border: 1px solid #fff;
-  border-radius: 70px;
-  margin-top: 10px;
-}
-
 
 .top-right-content {
   height: 80vh;
