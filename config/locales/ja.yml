@@ -1,9 +1,12 @@
 ja:
- activerecord:
-   attributes:
-     user:
-       username: ユーザー名
-     profile:
-       lastname: 姓
-       firstname: 名
-       intro: 自己紹介
+  time:
+    formats:
+      default: "%m/%d %H:%M"
+  activerecord:
+    attributes:
+      user:
+        username: ユーザー名
+      profile:
+        lastname: 姓
+        firstname: 名
+        intro: 自己紹介
