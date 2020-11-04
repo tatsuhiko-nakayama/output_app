@@ -86,6 +86,10 @@ a:hover {
   white-space: nowrap;
 }
 
+.list-title-content a {
+  color: #000;
+}
+
 .list-cate-tag-content {
   height: 40%;
   display: flex;

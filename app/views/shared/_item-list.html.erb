@@ -6,7 +6,7 @@
     </div>
     <div class='list-main-content'>
       <div class='list-title-content'>
-        <p><%= item.title %></p>
+        <p><%= link_to "#{item.title}", item_path(item.id) %></p>
       </div>
       <div class='list-cate-tag-content'>
         <div class='list-category'>
