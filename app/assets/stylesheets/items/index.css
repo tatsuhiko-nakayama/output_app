@@ -13,24 +13,24 @@ a:hover {
 }
 
 .top-left-content {
-  width: 100%;
+  width: 70vw;
   margin: 10px 10px 10px 20px;
   display: flex;
   background-color: #fff;
 }
 
 .top-left-content-child {
-  width: 100%;
+  width: 50%;
 }
 
 .item-list-navi {
   height: 25px;
-  margin: 5px;
-  padding-left: 20px;
+  margin: 10px 0;
+  text-align: center;
 }
 
 .item-list {
-  height: 110px;
+  height: 90px;
   border-bottom: 1px solid #f0f0f0;
   border-right: 1px solid #f0f0f0;
   list-style: none;
@@ -40,7 +40,6 @@ a:hover {
 
 .list-profile-content {
   width: 80px;
-  height: 80px;
   box-sizing: border-box;
   padding: 0 5px;
   display: flex;
@@ -57,6 +56,8 @@ a:hover {
 
 .list-username {
   font-size: 12px;
+  line-height: 13px;
+  margin-top: 2px;
   word-break: break-all;
   text-align: center;
 }
@@ -68,20 +69,25 @@ a:hover {
 }
 
 .list-title-content {
-  height: 45%;
+  height: 40%;
   width: 100%;
-  font-size: 14px;
-  font-weight: bold;
-  line-height: 18px;
-  padding: 10px 5px 3px;
+  padding: 12px 5px 3px;
   box-sizing: border-box;
   display: flex;
   align-items: center;
-  word-break: break-all;
+}
+
+.list-title-content p {
+  font-size: 15px;
+  font-weight: bold;
+  line-height: 18px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .list-cate-tag-content {
-  height: 35%;
+  height: 40%;
   display: flex;
   align-items: center;
 }
@@ -101,7 +107,7 @@ a:hover {
   box-sizing: border-box;
   padding: 5px 10px;
   font-size: 12px;
-  line-height: 13px;
+  line-height: 15px;
   color: grey;
   display: flex;
   align-items: center;
@@ -115,9 +121,9 @@ a:hover {
 
 .list-detail {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: center;
-  font-size: 14px;
+  color: grey;
 }
 
 .list-like-comment {
@@ -127,11 +133,12 @@ a:hover {
 
 .list-like-count {
   font-size: 12px;
-  margin: 0 10px 0 5px;
+  margin-right: 10px;
 }
 
 .list-comment-count {
-  font-size: 12px
+  font-size: 12px;
+  margin-right: 12px;
 }
 
 

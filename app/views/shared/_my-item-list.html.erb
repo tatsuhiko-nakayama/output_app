@@ -1,32 +1,34 @@
 <% @my_items.each do |item| %>
-  <li class='item-list'>
+ <li class='item-list'>
     <div class='list-profile-content'>
       <%= image_tag item.user.profile.image, class:'list-avatar'%>
       <span class='list-username'><%= item.user.username %></span>
     </div>
     <div class='list-main-content'>
       <div class='list-title-content'>
-        <%= item.title %>
+        <p><%= item.title %></p>
       </div>
       <div class='list-cate-tag-content'>
         <div class='list-category'>
-          <span><%= item.category.name %></span>
+          <%= item.category.name %>
         </div>
         <div class='list-tag'>
           <%= item.tagbody %>
         </div>
       </div>
       <div class='list-detail-content'>
-        <ul class='list-detail'>
-          <li class='list-created-at'>
+        <div class='list-detail'>
+          <div class='list-like-comment'>
+            <div class='list-like-count'>
+             <%= '♡100' %>
+            </div>
+            <div class='list-comment-count'>
+              <%= '💬100' %>
+            </div>
+          </div>
+          <div class='list-created-at'>
             <%= l item.created_at %>
-          </li>
-          <li class='list-like-count'>
-            <%= '♡100' %>
-          </li>
-          <li class='list-comment-count'>
-            <%= '💬100' %>
-          </li>
+          </div>
         </ul>
       </div>
     </div>
