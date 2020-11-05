@@ -1,7 +1,71 @@
-<%= @item.title %>
-<%= @item.tagbody %>
-<%= @item.url %>
-<%= @item.body %>
-<%= @item.category.name%>
-<%= link_to '編集', edit_item_path(@item.id) %>
-<%= link_to '削除', "/items/#{@item.id}", method: :delete %>
+<%#= link_to '削除', "/items/#{@item.id}", method: :delete %>
+<%# プロフィール編集ボタン or フォローボタン 本人と本人以外で表示切り替え %>
+<%#= link_to 'プロフィール編集', edit_user_profile_path(@item.user.profile.id), class: 'profile-edit-btn' %>
+<%# // プロフィール編集ボタン or フォローボタン 本人と本人以外で表示切り替え %>
+<%#= link_to @item.user.profile.website, "#{ @item.user.profile.website }",  class: 'user-website' %>
+
+<%= render "shared/header" %>
+
+<div class='main'>
+  <div class='show-left-content'>
+
+    <div class='show-top'>      
+      <div class='show-top-info'>
+        <div class='show-top-profile'>
+          <%= image_tag @item.user.profile.image, class:'show-top-avatar'%>
+          <span class='show-top-username'><%= @item.user.username %></span>
+          <span class='show-top-updated_at'><%= l @item.updated_at %> 更新</span>
+        </div>
+        <div class='show-top-command'>
+          <%= link_to '編集する', edit_item_path(@item.id), class:'item-edit-btn' %>
+        </div>
+      </div>
+      <div class='show-top-caption'>
+        <div class='show-top-title'>
+          <%= @item.title %>
+        </div>
+        <div class='show-top-cate-tag'>
+          <div class='show-top-category'>
+            <%= @item.category.name%>
+          </div>
+          <div class='show-top-tag'>
+            <%= @item.tagbody %>
+          </div>
+        </div>
+        <div class='show-top-url'>
+          参考URL <%= @item.url %>
+        </div>
+      </div>
+      <div class='show-top-communication'>
+        <div class='show-top-communication-left'>
+          <%= link_to '#' do %>
+            <div class='show-top-like-btn'>
+              <span>LIKE ✔︎ 100</span>
+            </div>
+          <% end %>
+        </div>
+        <div class='show-top-communication-right'>
+          <%= link_to 'Twitter', '#', class:'show-top-sns-btn' %>
+          <%= link_to 'LINE', '#', class:'show-top-sns-btn' %>
+          <%= link_to 'Facebook', '#', class:'show-top-sns-btn' %>
+        </div>
+      </div>
+    </div>
+
+    <div class='show-body'>
+      <%= @item.body %>
+    </div>
+
+    <div class='show-bottom'>
+    </div>
+
+    <div class='show-comment-area'>
+    </div>
+
+  </div>
+
+  <div class='show-right-content'>
+  </div>
+</div>
+
+<%= render "shared/footer" %>

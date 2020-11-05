@@ -1,14 +1,11 @@
 <%= render "shared/header" %>
 
 <div class='main'>
-  <%# Left : user-item-all %>
   <div class='user-left-content'>
     <div class="user-item-all">
     </div>
   </div>
-  <%# // Left : user-item-all %>
 
-  <%# Right : user-box %>
   <div class='user-right-content'>
     <%# 共通user-card部分%>
     <%= render "shared/usercard" %>
@@ -23,6 +20,6 @@
       <%= link_to @user.profile.website, "#{ @user.profile.website }",  class: 'user-website' %>
     </div>
   </div>
-  <%# // Right : user-box %>
 </div>
+
 <%= render "shared/footer" %>
