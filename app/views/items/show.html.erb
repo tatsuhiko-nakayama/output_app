@@ -1,9 +1,3 @@
-<%#= link_to '削除', "/items/#{@item.id}", method: :delete %>
-<%# プロフィール編集ボタン or フォローボタン 本人と本人以外で表示切り替え %>
-<%#= link_to 'プロフィール編集', edit_user_profile_path(@item.user.profile.id), class: 'profile-edit-btn' %>
-<%# // プロフィール編集ボタン or フォローボタン 本人と本人以外で表示切り替え %>
-<%#= link_to @item.user.profile.website, "#{ @item.user.profile.website }",  class: 'user-website' %>
-
 <%= render "shared/header" %>
 
 <div class='main'>
@@ -47,7 +41,6 @@
         <div class='show-top-communication-right'>
           <%= link_to 'Twitter', '#', class:'show-top-sns-btn' %>
           <%= link_to 'LINE', '#', class:'show-top-sns-btn' %>
-          <%= link_to 'Facebook', '#', class:'show-top-sns-btn' %>
         </div>
       </div>
     </div>

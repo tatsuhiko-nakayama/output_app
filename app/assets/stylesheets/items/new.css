@@ -163,3 +163,30 @@
   margin-left: 15px;
   padding: 6px 17px;
 }
+
+.edit-command-area {
+  height: 10%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  background-color: #f0f0f0;
+}
+
+.edit-command-area-left {
+  display: flex;
+  align-items: center;
+}
+
+.edit-command-area-right {
+  display: flex;
+  align-items: center;
+}
+
+.item-delete-btn {
+  color: #fff;
+  background-color: purple;
+  border: 2px solid purple;
+  border-radius: 3px;
+  margin-left: 15px;
+  padding: 3px 15px;
+}

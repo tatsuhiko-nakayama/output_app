@@ -1,4 +1,5 @@
 class ItemsController < ApplicationController
+  before_action :set_item, only: [:edit, :update, :show]
 
   def index
     if current_user
@@ -26,13 +27,23 @@ class ItemsController < ApplicationController
   end
 
   def update
+    if @item.update(item_params)
+      redirect_to item_path(@item.id)
+    else
+      render :edit
+    end
   end
 
   def destroy
+    item = Item.find(params[:id])
+    if item.destroy
+      redirect_to root_path
+    else
+      render :show
+    end
   end
 
   def show
-    @item = Item.find(params[:id])
   end
 
   private
@@ -41,4 +52,8 @@ class ItemsController < ApplicationController
     params.require(:item).permit(:title, :tagbody, :body, :url, :status, :category_id).merge(user_id: current_user.id)
   end
 
+  def set_item
+    @item = Item.find(params[:id])
+  end
+    
 end

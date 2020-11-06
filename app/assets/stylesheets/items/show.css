@@ -145,7 +145,7 @@
 }
 
 .show-top-sns-btn {
-  width: calc(100%/3);
+  width: calc(100%/2);
   color: grey;
   border: 2px solid grey;
   text-align: center;  
