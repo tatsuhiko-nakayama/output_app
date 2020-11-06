@@ -36,15 +36,15 @@ RSpec.describe Item, type: :model do
         @item.valid?
         expect(@item.errors.full_messages).to include('ハッシュタグは60文字以内で入力してください')
       end
-      
+
       it 'bodyが空では登録できない' do
         @item.body = nil
         @item.valid?
         expect(@item.errors.full_messages).to include('本文を入力してください')
       end
-      
+
       it 'titleが100001文字以上では登録できない' do
-        @item.body = Faker::Name.initials(number: 100001)
+        @item.body = Faker::Name.initials(number: 100_001)
         @item.valid?
         expect(@item.errors.full_messages).to include('本文は100000文字以内で入力してください')
       end
@@ -54,9 +54,6 @@ RSpec.describe Item, type: :model do
         @item.valid?
         expect(@item.errors.full_messages).to include('カテゴリーを入力してください')
       end
-
     end
-
-
   end
 end

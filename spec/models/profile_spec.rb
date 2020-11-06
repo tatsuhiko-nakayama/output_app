@@ -35,6 +35,5 @@ RSpec.describe Profile, type: :model do
         expect(@profile.errors.full_messages).to include('自己紹介は100文字以内で入力してください')
       end
     end
-
   end
 end

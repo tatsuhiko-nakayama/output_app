@@ -9,7 +9,7 @@ class Item < ApplicationRecord
 
   with_options presence: true do
     validates :title, length: { maximum: 40 }
-    validates :body, length: { maximum: 100000 }
+    validates :body, length: { maximum: 100_000 }
     validates :category_id
   end
   validates :tagbody, length: { maximum: 60 }

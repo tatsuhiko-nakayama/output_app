@@ -11,7 +11,7 @@ class ItemsController < ApplicationController
 
     @items = Item.all.order('created_at DESC')
   end
-  
+
   def new
     @item = Item.new
   end
@@ -65,5 +65,4 @@ class ItemsController < ApplicationController
   def block_edit
     redirect_to root_path unless user_signed_in? && @item.user.id == current_user.id
   end
-
 end

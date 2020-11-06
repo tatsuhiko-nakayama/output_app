@@ -4,5 +4,4 @@ class Profile < ApplicationRecord
 
   validates :lastname, :firstname, length: { maximum: 20 }
   validates :intro, length: { maximum: 100 }
-
 end
