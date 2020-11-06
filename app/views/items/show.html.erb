@@ -12,8 +12,8 @@
     <div class='show-top'>      
       <div class='show-top-info'>
         <div class='show-top-profile'>
-          <%= image_tag @item.user.profile.image, class:'show-top-avatar'%>
-          <span class='show-top-username'><%= @item.user.username %></span>
+          <%= link_to image_tag(@item.user.profile.image, class: 'show-top-avatar'), user_path(@item.user.id) %>
+          <%= link_to @item.user.username, user_path(@item.user.id), class: 'show-top-username' %>   
           <span class='show-top-updated_at'><%= l @item.updated_at %> 更新</span>
         </div>
         <div class='show-top-command'>
@@ -33,7 +33,7 @@
           </div>
         </div>
         <div class='show-top-url'>
-          参考URL <%= @item.url %>
+          <%= link_to "✴︎Source✴︎　#{@item.url}", @item.url %>
         </div>
       </div>
       <div class='show-top-communication'>

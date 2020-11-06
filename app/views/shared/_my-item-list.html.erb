@@ -1,36 +1,27 @@
 <% @my_items.each do |item| %>
- <li class='item-list'>
-    <div class='list-profile-content'>
-      <%= image_tag item.user.profile.image, class:'list-avatar'%>
-      <span class='list-username'><%= item.user.username %></span>
-    </div>
-    <div class='list-main-content'>
-      <div class='list-title-content'>
-        <p><%= item.title %></p>
-      </div>
-      <div class='list-cate-tag-content'>
-        <div class='list-category'>
+  <li class='my-item-list'>
+    <div class='my-list-main-content'>
+      <div class='my-list-cate-detail-content'>     
+        <div class='my-list-category'>
           <%= item.category.name %>
         </div>
-        <div class='list-tag'>
-          <%= item.tagbody %>
-        </div>
       </div>
-      <div class='list-detail-content'>
-        <div class='list-detail'>
-          <div class='list-like-comment'>
-            <div class='list-like-count'>
-             <%= '♡100' %>
+       <div class='my-list-title-content'>
+        <p><%= link_to "#{item.title}", item_path(item.id) %></p>
+      </div>
+      <div class='my-list-detail-content'>
+        <div class='list-like-comment'>
+            <div class='my-list-like-count'>
+              <%= '✔︎ 100' %>
             </div>
-            <div class='list-comment-count'>
+            <div class='my-list-comment-count'>
               <%= '💬100' %>
             </div>
           </div>
-          <div class='list-created-at'>
-            <%= l item.created_at %>
-          </div>
-        </ul>
-      </div>
+        <div class='my-list-created-at'>
+          <%= l item.created_at %>
+        </div>  
+      </div>   
     </div>
   </li>
 <% end %>

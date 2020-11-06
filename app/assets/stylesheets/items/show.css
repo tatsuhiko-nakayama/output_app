@@ -33,6 +33,7 @@
 
 .show-top-username {
   margin-left: 10px;
+  color: #000;
 }
 
 .show-top-updated_at {
@@ -79,8 +80,10 @@
 }
 
 .show-top-category {
-  color: grey;
-  border: 1px solid #ccc;
+  color: #fff;
+  font-weight: bold;
+  border: 1px solid orange;
+  background-color: orange;
   border-radius: 3px;
   padding: 2px 7px;
   white-space: nowrap;
@@ -97,11 +100,16 @@
 
 .show-top-url {
  height: 30%;
+ color: #4A4A4A;
  display: flex;
  align-items: flex-end;
- font-size: 14px;
- margin-left: 5px;
+ font-size: 13px;
+ margin: 0 10px;
  border-bottom: 1px solid grey;
+}
+
+.show-top-url a {
+  color: #4A4A4A;
 }
 
 .show-top-communication {

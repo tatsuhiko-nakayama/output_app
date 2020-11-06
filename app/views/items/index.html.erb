@@ -1,40 +1,32 @@
 <%= render "shared/header" %>
 
 <div class='main'>
-  <div class='top-left-content'>
-    <div class='top-left-content-child'>
-      <div class='item-list-navi'>
-        <p>☀︎ Pickup Output</p>
-      </div>
-      <%# @items リスト展開 %>
-      <%= render "shared/item-list" %>
-      <%# // @items リスト展開 %>
-
+  <div class='top-left-content'>   
+    <div class='item-list-navi'>
+      <p>☀︎ Pickup Output</p>
     </div>
-    <% if current_user %>
-    <div class='top-left-content-child'>
-      <div class='item-list-navi'>
-        <p>✏︎ My Output</p>
-      </div>
-      <%# @my_items リスト展開 %>
-      <%= render "shared/my-item-list" %>
-      <%# // @my_items リスト展開 %>
-    </div>
-    <% else %>
-    <div class='top-left-content-child'>
-      ここは非ログインユーザー向けのコンテンツにするよ！
-    </div>
-    <% end %>
+    <%# @items リスト展開 %>
+    <%= render "shared/item-list" %>
+    <%# // @items リスト展開 %>   
   </div>
 
   
   <%# Right : user-box %>
   <% if current_user %>
     <div class='top-right-content'>
-      <%# 共通user-card部分%>
-      <%= render "shared/usercard" %>
-      <%# // 共通user-card部分%>
-      <div class='user-analytics'>
+      <div class='top-user-card'>
+        <%# 共通user-card部分%>
+        <%= render "shared/toppage_usercard" %>
+        <%# // 共通user-card部分%> 
+      </div>
+
+      <div class='top-my-output'>
+        <div class='item-list-navi'>
+          <p>✏︎ My Output</p>
+        </div>
+        <%# @my_items リスト展開 %>
+        <%= render "shared/my-item-list" %>
+        <%# // @my_items リスト展開 %>
       </div>
     </div>
   <% else %>

@@ -12,5 +12,5 @@ class Item < ApplicationRecord
     validates :body, length: { maximum: 100000 }
     validates :category_id
   end
-  validates :tagbody, length: { maximum: 30 }
+  validates :tagbody, length: { maximum: 60 }
 end
