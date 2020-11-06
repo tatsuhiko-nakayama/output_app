@@ -10,3 +10,8 @@ ja:
         lastname: 姓
         firstname: 名
         intro: 自己紹介
+      item:
+        title: タイトル
+        tagbody: ハッシュタグ
+        body: 本文
+        category_id: カテゴリー
