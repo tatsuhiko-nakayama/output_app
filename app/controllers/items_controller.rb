@@ -1,5 +1,7 @@
 class ItemsController < ApplicationController
   before_action :set_item, only: [:edit, :update, :show]
+  before_action :block_new, only: :new
+  before_action :block_edit, only: :edit
 
   def index
     if current_user
@@ -55,5 +57,13 @@ class ItemsController < ApplicationController
   def set_item
     @item = Item.find(params[:id])
   end
-    
+
+  def block_new
+    redirect_to new_user_registration_path unless user_signed_in?
+  end
+
+  def block_edit
+    redirect_to root_path unless user_signed_in? && @item.user.id == current_user.id
+  end
+
 end

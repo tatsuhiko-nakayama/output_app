@@ -11,7 +11,11 @@
           <span class='show-top-updated_at'><%= l @item.updated_at %> 更新</span>
         </div>
         <div class='show-top-command'>
-          <%= link_to '編集する', edit_item_path(@item.id), class:'item-edit-btn' %>
+          <% if user_signed_in? && @item.user.id == current_user.id  %>
+            <%= link_to '編集する', edit_item_path(@item.id), class:'item-edit-btn' %>
+          <% elsif user_signed_in? %>
+            <%= link_to 'フォローする', '#', class: 'show-follow-btn' %>
+          <% end %>
         </div>
       </div>
       <div class='show-top-caption'>
@@ -32,8 +36,14 @@
       </div>
       <div class='show-top-communication'>
         <div class='show-top-communication-left'>
-          <%= link_to '#' do %>
-            <div class='show-top-like-btn'>
+          <% if user_signed_in? %>
+            <%= link_to '#' do %>
+              <div class='show-top-like-btn'>
+                <span>LIKE ✔︎ 100</span>
+             </div>
+            <% end %>
+          <% else %>
+            <div class='show-top-like-onlydisplay'>
               <span>LIKE ✔︎ 100</span>
             </div>
           <% end %>

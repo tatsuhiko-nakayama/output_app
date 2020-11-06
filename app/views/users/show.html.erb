@@ -18,8 +18,10 @@
       <% if user_signed_in? && current_user.id.to_s == params[:id]  %>
         <%= link_to 'プロフィール編集', edit_user_profile_path(@user.profile.id), class: 'profile-edit-btn' %>
         <%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: 'sign-out-btn' %>
-      <% else %>
+      <% elsif user_signed_in? %>
         <%= link_to 'フォロー', '#', class: 'userpage-follow-btn' %>
+      <% else %>
+        <%= link_to "✔︎ ユーザー登録をして#{@user.username}さんをフォローしませんか？", new_user_registration_path, class: 'userpage-regist-suggest-btn'%>
       <% end %>
       <%# // プロフィール編集ボタン or フォローボタン 本人と本人以外で表示切り替え %>
       <div class='user-website-content'>
