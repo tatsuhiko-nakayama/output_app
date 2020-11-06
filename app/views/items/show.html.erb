@@ -1,0 +1,74 @@
+<%= render "shared/header" %>
+
+<div class='main'>
+  <div class='show-left-content'>
+
+    <div class='show-top'>      
+      <div class='show-top-info'>
+        <div class='show-top-profile'>
+          <%= link_to image_tag(@item.user.profile.image, class: 'show-top-avatar'), user_path(@item.user.id) %>
+          <%= link_to @item.user.username, user_path(@item.user.id), class: 'show-top-username' %>   
+          <span class='show-top-updated_at'><%= l @item.updated_at %> 更新</span>
+        </div>
+        <div class='show-top-command'>
+          <% if user_signed_in? && @item.user.id == current_user.id  %>
+            <%= link_to '編集する', edit_item_path(@item.id), class:'item-edit-btn' %>
+          <% elsif user_signed_in? %>
+            <%= link_to 'フォローする', '#', class: 'show-follow-btn' %>
+          <% end %>
+        </div>
+      </div>
+      <div class='show-top-caption'>
+        <div class='show-top-title'>
+          <%= @item.title %>
+        </div>
+        <div class='show-top-cate-tag'>
+          <div class='show-top-category'>
+            <%= @item.category.name%>
+          </div>
+          <div class='show-top-tag'>
+            <%= @item.tagbody %>
+          </div>
+        </div>
+        <div class='show-top-url'>
+          <%= link_to "✴︎Source✴︎　#{@item.url}", @item.url %>
+        </div>
+      </div>
+      <div class='show-top-communication'>
+        <div class='show-top-communication-left'>
+          <% if user_signed_in? %>
+            <%= link_to '#' do %>
+              <div class='show-top-like-btn'>
+                <span>LIKE ✔︎ 100</span>
+             </div>
+            <% end %>
+          <% else %>
+            <div class='show-top-like-onlydisplay'>
+              <span>LIKE ✔︎ 100</span>
+            </div>
+          <% end %>
+        </div>
+        <div class='show-top-communication-right'>
+          <%= link_to 'Twitter', '#', class:'show-top-sns-btn' %>
+          <%= link_to 'LINE', '#', class:'show-top-sns-btn' %>
+        </div>
+      </div>
+    </div>
+
+    <div class='show-body'>
+      <%= @item.body %>
+    </div>
+
+    <div class='show-bottom'>
+    </div>
+
+    <div class='show-comment-area'>
+    </div>
+
+  </div>
+
+  <div class='show-right-content'>
+  </div>
+</div>
+
+<%= render "shared/footer" %>

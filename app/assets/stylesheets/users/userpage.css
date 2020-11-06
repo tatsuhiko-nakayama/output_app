@@ -16,7 +16,6 @@
 }
 
 .user-right-content {
-  height: 80vh;
   width: 30vw;
   max-width: 300px;
   min-width: 200px;
@@ -27,7 +26,7 @@
 }
 
 .user-card {
-  height: 47%;
+  height: 250px;
   width: 95%;
   margin-top: 5px;
   background-color:beige;
@@ -35,8 +34,8 @@
   flex-direction: column;
   align-items: center;
 }
+
 .second-user-card {
-  max-height: 45%;
   width: 95%;
   background-color: beige;
   display: flex;
@@ -112,21 +111,80 @@
 }
 
 .profile-edit-btn {
-  width: 16vw;
-  margin: 25px 0px 15px;
-  padding: 5px 20px;
+  width: 90%;
+  margin-top: 25px;
+  padding: 3px 0;
+  box-sizing: border-box;
   color: grey;
   font-size: 13px;
   font-weight: bold;
   resize: none;
   border-radius: 3px;
-  border: 1px solid grey;
+  border: 2px solid grey;
   text-align: center;
+}
+
+.sign-out-btn {
+  width: 90%;
+  margin: 5px 0 7px;
+  padding:  3px 0;
+  box-sizing: border-box;
+  color: #fff;
+  background-color: grey;
+  font-size: 13px;
+  font-weight: bold;
+  resize: none;
+  border-radius: 3px;
+  border: 2px solid grey;
+  text-align: center;
+}
+
+.userpage-follow-btn {
+  width: 90%;
+  margin: 25px 0 7px;
+  padding: 3px 0;
+  box-sizing: border-box;
+  color: grey;
+  font-size: 13px;
+  font-weight: bold;
+  resize: none;
+  border-radius: 3px;
+  border: 2px solid grey;
+  text-align: center;
+}
+
+.userpage-regist-suggest-btn {
+  width: 90%;
+  margin: 5px 0 7px;
+  padding:  3px 8px;
+  box-sizing: border-box;
+  color: #fff;
+  background-color:lightcoral;
+  font-size: 13px;
+  font-weight: bold;
+  resize: none;
+  border-radius: 3px;
+  border: 2px solid lightcoral;
+  
+}
+
+.user-website-content {
+  width: 85%;
+  display: flex;
+}
+
+.user-website-mark {
+  margin-right: 5px;
+  margin-top: 8px;
 }
 
 .user-website {
   font-size: 12px;
+  margin-top: 10px;
   margin-bottom: 25px;
+  text-align: center;
   color: #000;
+  word-break: break-all;
 }
+
 

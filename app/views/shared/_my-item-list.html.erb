@@ -1,0 +1,27 @@
+<% @my_items.each do |item| %>
+  <li class='my-item-list'>
+    <div class='my-list-main-content'>
+      <div class='my-list-cate-detail-content'>     
+        <div class='my-list-category'>
+          <%= item.category.name %>
+        </div>
+      </div>
+       <div class='my-list-title-content'>
+        <p><%= link_to "#{item.title}", item_path(item.id) %></p>
+      </div>
+      <div class='my-list-detail-content'>
+        <div class='list-like-comment'>
+            <div class='my-list-like-count'>
+              <%= '✔︎ 100' %>
+            </div>
+            <div class='my-list-comment-count'>
+              <%= '💬100' %>
+            </div>
+          </div>
+        <div class='my-list-created-at'>
+          <%= l item.created_at %>
+        </div>  
+      </div>   
+    </div>
+  </li>
+<% end %>

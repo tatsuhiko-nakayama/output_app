@@ -3,7 +3,7 @@
   width: 100vw;
   display: flex;
   justify-content: space-between;
-  background-color: khaki;
+  background-color: burlywood;
 }
 
 .left-header {
@@ -11,24 +11,16 @@
   display: flex;
   padding: 10px;
   justify-content: flex-start;
-  background-color: lightcoral;
-}
-
-.logo-box {
-  width: 15vw;
-  padding: 2px;
-  background-color: blue;
 }
 
 .output_app_logo {
-  width: 80%;
-  min-width: 100px;
+  width: 160px;
+  margin-left: 10px;
 }
 
 .search-box {
   width: 15vw;
   margin-left: 5vw;
-  background-color: blueviolet;
 }
 
 .right-header {
@@ -36,21 +28,11 @@
   padding: 10px;
   display: flex;
   justify-content: flex-end;
-  background-color: burlywood;
 }
 
 .signed-in-list {
   display: flex;
   align-items: center;
-}
-
-.sign-out-btn {
-  color: #fff;
-  border: 1px solid #fff;
-  border-radius: 3px;
-  padding: 8px 15px;
-  margin-right: 20px;
-  font-size: 14px;
 }
 
 .like-list-btn {
@@ -71,7 +53,7 @@
   font-size: 14px;
 }
 
-.mini-avatar {
+.account-mark {
   color: #fff;
   border: 1px solid #fff;
   border-radius: 30px;
@@ -103,11 +85,10 @@
   height: 60px;
   width: 100vw;
   display: flex;
-  background-color: lightpink;
+  background-color: burlywood;
 }
 
 .second-logo-box {
   width: 15vw;
   margin: 10px;
-  background-color: lightsalmon;
 }

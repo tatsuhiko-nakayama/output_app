@@ -3,6 +3,5 @@ class Profile < ApplicationRecord
   has_one_attached :image
 
   validates :lastname, :firstname, length: { maximum: 20 }
-  validates :intro, length: { maximum: 200 }
-
+  validates :intro, length: { maximum: 100 }
 end
