@@ -30,9 +30,9 @@ RSpec.describe Profile, type: :model do
       end
 
       it 'introが201文字以上では登録できない' do
-        @profile.intro = Faker::Name.initials(number: 201)
+        @profile.intro = Faker::Name.initials(number: 101)
         @profile.valid?
-        expect(@profile.errors.full_messages).to include('自己紹介は200文字以内で入力してください')
+        expect(@profile.errors.full_messages).to include('自己紹介は100文字以内で入力してください')
       end
     end
 
