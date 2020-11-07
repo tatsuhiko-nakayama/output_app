@@ -14,4 +14,9 @@ class Item < ApplicationRecord
     validates :category_id
   end
   validates :tagbody, length: { maximum: 60 }
+
+  def already_liked?(user)
+    likes.exists?(user_id: user.id)
+  end
+  
 end
