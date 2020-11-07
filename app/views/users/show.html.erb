@@ -24,10 +24,13 @@
         <%= link_to "✔︎ ユーザー登録をして#{@user.username}さんをフォローしませんか？", new_user_registration_path, class: 'userpage-regist-suggest-btn'%>
       <% end %>
       <%# // プロフィール編集ボタン or フォローボタン 本人と本人以外で表示切り替え %>
-      <div class='user-website-content'>
-        <span class='user-website-mark'>✈</span>
-        <%= link_to @user.profile.website, "#{ @user.profile.website }",  class: 'user-website' %>
-      </div>
+
+      <% if @user.profile.website %>
+        <div class='user-website-content'>
+          <span class='user-website-mark'>✈</span>
+          <%= link_to @user.profile.website, "#{ @user.profile.website }",  class: 'user-website' %>
+        </div>
+      <% end%>
     </div>
   </div>
 </div>

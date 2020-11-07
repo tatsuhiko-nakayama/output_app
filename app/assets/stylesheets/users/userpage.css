@@ -41,6 +41,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-bottom: 5px;
 }
 
 .main-avatar {
@@ -102,7 +103,7 @@
 .user-intro {
   max-height: 50%;
   width: 85%;
-  margin: 2px;
+  margin: 0 2px 15px;
   padding-left: 3px;
   font-size: 14px;
   display: flex;
@@ -126,7 +127,7 @@
 
 .sign-out-btn {
   width: 90%;
-  margin: 5px 0 7px;
+  margin: 5px 0 12px;
   padding:  3px 0;
   box-sizing: border-box;
   color: #fff;
@@ -141,7 +142,7 @@
 
 .userpage-follow-btn {
   width: 90%;
-  margin: 25px 0 7px;
+  margin: 30px 0 10px;
   padding: 3px 0;
   box-sizing: border-box;
   color: grey;
@@ -155,7 +156,7 @@
 
 .userpage-regist-suggest-btn {
   width: 90%;
-  margin: 5px 0 7px;
+  margin: 5px 0 12px;
   padding:  3px 8px;
   box-sizing: border-box;
   color: #fff;
