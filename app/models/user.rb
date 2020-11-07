@@ -17,4 +17,9 @@ class User < ApplicationRecord
   validates_format_of :username, with: USERNAME_REGEX, message: 'は半角英数で入力してください'
   PASSWORD_REGEX = /\A(?=.*?[a-z])(?=.*?\d)[a-z\d]+\z/i.freeze
   validates_format_of :password, with: PASSWORD_REGEX, message: 'は半角英数のみで両方含めてください'
+
+  def already_liked?(item)
+    likes.exists?(item_id: item.id)
+  end
+  
 end

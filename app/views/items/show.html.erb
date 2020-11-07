@@ -37,11 +37,7 @@
       <div class='show-top-communication'>
         <div class='show-top-communication-left'>
           <% if user_signed_in? %>
-            <%= link_to '#' do %>
-              <div class='show-top-like-btn'>
-                <span>LIKE ✔︎ 100</span>
-             </div>
-            <% end %>
+            <%= render "shared/like"%>
           <% else %>
             <div class='show-top-like-onlydisplay'>
               <span>LIKE ✔︎ 100</span>
