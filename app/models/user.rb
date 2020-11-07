@@ -5,9 +5,10 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   has_one :profile, dependent: :destroy
-  has_many :items
+  has_many :items, dependent: :destroy
   has_many :comments
-  has_many :likes
+  has_many :likes, dependent: :destroy
+  has_many :liked_items, through: :likes, source: :item
   has_many :relationships, dependent: :destroy
 
   validates :username, presence: true, uniqueness: { case_sensitive: true }, length: { maximum: 14 }
