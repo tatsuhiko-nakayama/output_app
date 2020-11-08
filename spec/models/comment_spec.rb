@@ -16,7 +16,7 @@ RSpec.describe Comment, type: :model do
       it 'messageが空では投稿できない' do
         @comment.message = nil
         @comment.valid?
-        expect(@comment.errors.full_messages).to include("コメントを入力してください")
+        expect(@comment.errors.full_messages).to include('コメントを入力してください')
       end
 
       it 'messageが10,001文字以上では登録できない' do
