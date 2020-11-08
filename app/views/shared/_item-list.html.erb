@@ -22,7 +22,7 @@
         <div class='list-detail'>
           <div class='list-like-comment'>
             <div class='list-like-count'>
-             <%= '✔︎ 100' %>
+             <span>✔︎ <%= Like.where(item_id: item.id).count %></span>
             </div>
             <div class='list-comment-count'>
               <%= '💬100' %>

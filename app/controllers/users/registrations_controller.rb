@@ -14,6 +14,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
     super
 
     resource.build_profile
+    resource.profile.intro = 'プロフィールを編集しよう！'
     resource.profile.image.attach(io: File.open('public/images/human_icon.png'), filename: 'human_icon.png')
     resource.save
   end

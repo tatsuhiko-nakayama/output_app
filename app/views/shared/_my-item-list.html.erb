@@ -12,7 +12,7 @@
       <div class='my-list-detail-content'>
         <div class='list-like-comment'>
             <div class='my-list-like-count'>
-              <%= '✔︎ 100' %>
+              <span>✔︎ <%= Like.where(item_id: item.id).count %></span>
             </div>
             <div class='my-list-comment-count'>
               <%= '💬100' %>

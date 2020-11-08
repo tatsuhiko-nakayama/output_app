@@ -135,7 +135,21 @@
   margin-left: 10px;
 }
 
+.show-top-communication-left a:hover {
+  opacity: 1;
+}
+
 .show-top-like-btn {
+  width: 100%;
+  border: 2px solid lightcoral;
+  box-sizing: border-box;
+  text-align: center;
+  padding: 5px;
+  color: lightcoral;
+  font-weight: bold;
+}
+
+.show-top-liked-btn {
   width: 100%;
   border: 2px solid lightcoral;
   box-sizing: border-box;
