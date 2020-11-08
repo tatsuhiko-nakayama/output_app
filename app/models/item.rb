@@ -3,7 +3,8 @@ class Item < ApplicationRecord
   belongs_to :user
   has_many :likes, dependent: :destroy
   has_many :liked_users, through: :likes, source: :user
-  has_many :comments
+  has_many :comments, dependent: :destroy
+  has_many :commented_users, through: :comments, source: :user
   has_many :item_tags
   has_many :tags, through: :item_tags
   belongs_to_active_hash :category
