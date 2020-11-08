@@ -2,11 +2,8 @@ class CommentsController < ApplicationController
 
   def create
     @comment = Comment.new(comment_params)
-    if @comment.save
-      redirect_to item_path(@comment.item_id)
-    else
-      redirect_to item_path(@comment.item_id)
-    end
+    @comment.save
+    redirect_to item_path(@comment.item_id)
   end
 
   def destroy

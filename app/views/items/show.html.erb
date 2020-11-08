@@ -54,50 +54,53 @@
     <div class='show-bottom'>
     </div>
 
-    <div class='show-comment-area'>
-
+    <div class='comment-area'>
+      <div class='comment-info'>
+        💬コメント
+      </div>
       <% if user_signed_in? %>
-        <%= form_with model: @comment, url: item_comments_path(@item.id), local: true do |f| %>
-          <%= f.text_area :message, class:"comment-text", id:"comment-text", placeholder:"コメントする", maxlength:"10000" %>
-          <%= f.submit 'コメントする', class:'comment-btn'%>
-        <% end %>
+        <div class='comment-input'>
+          <%= form_with model: @comment, url: item_comments_path(@item.id), local: true do |f| %>
+            <div class='comment-btn-box'>
+              <div class='comment-btn-box-left'>
+                <%= image_tag current_user.profile.image, class:'show-top-avatar'%>
+                <span class='show-top-username'><%= current_user.username %></span>
+              </div>
+              <%= f.submit 'コメントする', class:'comment-btn'%>
+            </div>
+            <div class='comment-text-box'>
+              <%= f.text_area :message, class:"comment-text", id:"comment-text", placeholder:"テキストを入力", maxlength:"10000" %>
+            </div>
+          <% end %>
+        </div>
       <% else %>
         <span><%= link_to 'ユーザー登録', new_user_registration_path %>をしてコメントを書こう！</span>
       <% end %>
 
       <% @comments.each do |comment| %>
         <div class="comment-content">
+          <div class="comment-btn-box">
+            <div class="comment-btn-box-left">
+              <%= link_to image_tag(comment.user.profile.image, class: 'show-top-avatar'), user_path(comment.user.id) %>
+              <%= link_to comment.user.username, user_path(comment.user.id), class: 'show-top-username' %>
+            </div>
+            <div class="comment-btn-box-right">
+              <% if comment.user == current_user %>
+                <%= link_to '削除', "/items/#{@item.id}/comments/#{comment.id}", method: :delete,  class: "comment-delete-btn" %>
+              <% end %>
+              <%= l comment.created_at %>
+            </div>
+          </div>
           <div class="comment-message">
-            <span><%= comment.message %></span>
+            <%= comment.message %>
           </div>
-          <div class="comment-detail">
-            <div class="comment-user-box">
-              <div class="comment-user-type">
-                <% if @item.user == comment.user %>
-                  <span class="seller">出品者</span>
-                <% else %>
-                  <span class="buyer">投稿者</span>
-                <% end %>
-              </div>
-              <div class="comment-user-name">
-                <span><%= comment.user.username %></span>
-              </div>
-            </div>
-            <div class="comment-date-title">
-              <span>投稿日時</span>
-            </div>
-            <div class="comment-date">
-              <span><%= l comment.created_at %></span>
+          <div class="comment-bottom-border-box">
+            <div class='comment-bottom-border'>
             </div>
           </div>
-          <% if comment.user == current_user %>
-            <div class="comment-delete">
-              <%= link_to 'コメントを削除', "/items/#{@item.id}/comments/#{comment.id}", method: :delete,  class: "delete-btn" %>
-            </div>
-          <% end %>
         </div>
       <% end %>
-      
+
     </div>
 
   </div>
