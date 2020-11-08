@@ -46,7 +46,7 @@ class ItemsController < ApplicationController
   end
 
   def show
-    @like = Like.new
+    @likes = Like.where(item_id: @item.id).count
   end
 
   private

@@ -35,14 +35,8 @@
         </div>
       </div>
       <div class='show-top-communication'>
-        <div class='show-top-communication-left'>
-          <% if user_signed_in? %>
-            <%= render "shared/like"%>
-          <% else %>
-            <div class='show-top-like-onlydisplay'>
-              <span>LIKE ✔︎ 100</span>
-            </div>
-          <% end %>
+        <div class='show-top-communication-left' id="like-btn-<%= @item.id %>">
+          <%= render partial: 'shared/like', locals: { item: @item } %>
         </div>
         <div class='show-top-communication-right'>
           <%= link_to 'Twitter', '#', class:'show-top-sns-btn' %>
