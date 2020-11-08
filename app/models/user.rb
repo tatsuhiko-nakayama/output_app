@@ -6,7 +6,8 @@ class User < ApplicationRecord
 
   has_one :profile, dependent: :destroy
   has_many :items, dependent: :destroy
-  has_many :comments
+  has_many :comments, dependent: :destroy
+  has_many :commented_items, through: :comments, source: :item
   has_many :likes, dependent: :destroy
   has_many :liked_items, through: :likes, source: :item
   has_many :relationships, dependent: :destroy
@@ -21,5 +22,4 @@ class User < ApplicationRecord
   def already_liked?(item)
     likes.exists?(item_id: item.id)
   end
-  
 end

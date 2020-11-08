@@ -46,6 +46,8 @@ class ItemsController < ApplicationController
   end
 
   def show
+    @comment = Comment.new
+    @comments = @item.comments.order('created_at DESC')
     @like_count = Like.where(item_id: @item.id).count
   end
 

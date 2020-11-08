@@ -15,3 +15,5 @@ ja:
         tagbody: ハッシュタグ
         body: 本文
         category_id: カテゴリー
+      comment:
+        message: コメント
