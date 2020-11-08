@@ -59,6 +59,7 @@
  width: 17px;
  top: 3px;
  position: relative;
+ cursor: pointer;
 }
 
 .second-box-right {
@@ -162,6 +163,11 @@
   border-radius: 3px;
   margin-left: 15px;
   padding: 6px 17px;
+}
+
+.output-btn:hover {
+  opacity: 0.5;
+  cursor: pointer;
 }
 
 .edit-command-area {

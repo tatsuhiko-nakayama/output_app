@@ -25,7 +25,7 @@
              <span>✔︎ <%= Like.where(item_id: item.id).count %></span>
             </div>
             <div class='list-comment-count'>
-              <%= '💬100' %>
+              <span>💬 <%= Comment.where(item_id: item.id).count %></span>
             </div>
           </div>
           <div class='list-created-at'>

@@ -261,6 +261,11 @@
   box-sizing: border-box;
 }
 
+.comment-btn:hover {
+  opacity: 0.5;
+  cursor: pointer;
+}
+
 .comment-text-box {
   display: flex;
   justify-content: center;
