@@ -2,18 +2,18 @@
   <% if current_user.already_liked?(@item) %>
     <%= link_to item_like_path(@item.id), method: :delete, remote: true do %>
       <div class='show-top-liked-btn'>
-        <span>LIKED ✔︎ <%= @likes %></span>
+        <span>LIKED ✔︎ <%= @like_count %></span>
       </div>
     <% end %>
   <% else %>
      <%= link_to item_likes_path(@item.id), method: :post, remote: true do %>
       <div class='show-top-like-btn'>
-        <span>LIKE ✔︎ <%= @likes %></span>
+        <span>LIKE ✔︎ <%= @like_count %></span>
       </div>
     <% end %>
   <% end %>
 <% else %>
   <div class='show-top-like-onlydisplay'>
-    <span>LIKE ✔︎ <%= @likes %></span>
+    <span>LIKE ✔︎ <%= @like_count %></span>
   </div>
 <% end %>

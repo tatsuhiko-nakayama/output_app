@@ -4,14 +4,14 @@ class LikesController < ApplicationController
   def create
     @like = Like.new(user_id: current_user.id, item_id: params[:item_id])
     @like.save
-    @likes = Like.where(item_id: @item.id).count
+    @like_count = Like.where(item_id: @item.id).count
     redirect_to item_path(@item.id)
   end
 
   def destroy
     like = Like.find_by(user_id: current_user.id, item_id: params[:item_id])
     like.destroy
-    @likes = Like.where(item_id: @item.id).count
+    @like_count = Like.where(item_id: @item.id).count
   end
 
   private

@@ -36,7 +36,9 @@
       </div>
       <div class='show-top-communication'>
         <div class='show-top-communication-left' id="like-btn-<%= @item.id %>">
+          <%# LIKEボタン%>
           <%= render partial: 'shared/like', locals: { item: @item } %>
+          <%# // LIKEボタン%>
         </div>
         <div class='show-top-communication-right'>
           <%= link_to 'Twitter', '#', class:'show-top-sns-btn' %>

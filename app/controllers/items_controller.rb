@@ -4,7 +4,7 @@ class ItemsController < ApplicationController
   before_action :block_edit, only: :edit
 
   def index
-    if current_user
+    if user_signed_in?
       @user = User.find(current_user.id)
       @my_items = Item.where(user_id: current_user.id).order('created_at DESC')
     end
@@ -46,7 +46,7 @@ class ItemsController < ApplicationController
   end
 
   def show
-    @likes = Like.where(item_id: @item.id).count
+    @like_count = Like.where(item_id: @item.id).count
   end
 
   private

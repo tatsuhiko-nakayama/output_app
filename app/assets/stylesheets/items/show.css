@@ -135,6 +135,10 @@
   margin-left: 10px;
 }
 
+.show-top-communication-left a:hover {
+  opacity: 1;
+}
+
 .show-top-like-btn {
   width: 100%;
   border: 2px solid lightcoral;
