@@ -76,7 +76,7 @@
 
 .user-status-bottom {
   height: 47%;
-  margin: 5px 30px;
+  margin: 5px 20px;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -206,4 +206,12 @@
   word-break: break-all;
 }
 
-
+@media screen and (min-width: 967px) {
+  .user-status-bottom {
+    height: 47%;
+    margin: 5px 30px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+}

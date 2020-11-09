@@ -253,7 +253,7 @@ a:hover {
   margin-top: 5px;
 }
 
-@media screen and (min-width: 960px) {
+@media screen and (min-width: 968px) {
   .main {
     background-color: #f0f0f0;
     display: flex;
@@ -262,7 +262,7 @@ a:hover {
 }
 
 
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 968px) {
   .main {
     background-color: #f0f0f0;
     display: flex;
@@ -276,7 +276,7 @@ a:hover {
   }
 }
 
-@media screen and (max-width: 760px) {
+@media screen and (max-width: 768px) {
   .main {
     background-color: #f0f0f0;
     display: flex;
