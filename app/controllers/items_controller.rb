@@ -53,7 +53,11 @@ class ItemsController < ApplicationController
 
   def tag
     @tag = Tag.find_by(name: params[:name])
-    @tags = Tag.all.to_a.group_by{ |tag| tag.items.count}
+    @items = @tag.items
+    if user_signed_in?
+      @user = User.find(current_user.id)
+      @my_items = Item.where(user_id: current_user.id).order('created_at DESC')
+    end
   end
 
   private
