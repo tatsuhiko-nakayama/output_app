@@ -21,12 +21,17 @@
     <div class='user-status-bottom'>
       <div class='user-status-nums'>
         <span class='status-title'>フォロー</span>
-        <span class='status-number'><%= '1000' %></span>
+        <span class='status-number'><%= @user.relationships.count %></span>
       </div>
       <%# フォロワー数はログインユーザーのみ表示%>
       <div class='user-status-nums'>
-        <span class='status-title'>フォロワー</span>
-        <span class='status-number'><%= '100' %></span>
+        <% if @user == current_user%>
+          <span class='status-title'>フォロワー</span>
+          <span class='status-number'><%= Relationship.where(follow_id: @user.id).count %></span>
+        <% else %>
+          <span class='status-title'>フォロワー</span>
+          <span class='status-number'>-</span>
+        <% end %>
       </div>
       <%# // フォロワー数はログインユーザーのみ表示%>
     </div>
