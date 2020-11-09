@@ -19,7 +19,9 @@
         <%= link_to 'プロフィール編集', edit_user_profile_path(@user.profile.id), class: 'profile-edit-btn' %>
         <%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: 'sign-out-btn' %>
       <% elsif user_signed_in? %>
-        <%= link_to 'フォロー', '#', class: 'userpage-follow-btn' %>
+        <%# フォローボタン%>
+        <%= render 'shared/userpage_follow', user: @user %>
+        <%# // フォローボタン%>
       <% else %>
         <%= link_to "✔︎ ユーザー登録をして#{@user.username}さんをフォローしませんか？", new_user_registration_path, class: 'userpage-regist-suggest-btn'%>
       <% end %>

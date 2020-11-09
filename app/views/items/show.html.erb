@@ -14,7 +14,9 @@
           <% if user_signed_in? && @item.user.id == current_user.id  %>
             <%= link_to '編集する', edit_item_path(@item.id), class:'item-edit-btn' %>
           <% elsif user_signed_in? %>
-            <%= link_to 'フォローする', '#', class: 'show-follow-btn' %>
+            <%# フォローボタン%>
+            <%= render 'shared/show_follow', user: @item.user%>
+            <%# // フォローボタン%>
           <% end %>
         </div>
       </div>

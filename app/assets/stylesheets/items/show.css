@@ -61,6 +61,18 @@
   border: 1px solid grey;
   border-radius: 3px;
   color: grey;
+  background-color: #fff;
+  font-size: 14px;
+  padding: 3px 15px;
+  margin-right: 5px;
+  box-sizing: border-box;
+}
+
+.show-unfollow-btn {
+  border: 1px solid grey;
+  border-radius: 3px;
+  color: #fff;
+  background-color: grey;
   font-size: 14px;
   padding: 3px 15px;
   margin-right: 5px;

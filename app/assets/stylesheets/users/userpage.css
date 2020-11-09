@@ -141,11 +141,29 @@
 }
 
 .userpage-follow-btn {
-  width: 90%;
+  min-width: 180px;
+  width: 19vw;
   margin: 30px 0 10px;
   padding: 3px 0;
   box-sizing: border-box;
   color: grey;
+  background-color: beige;
+  font-size: 13px;
+  font-weight: bold;
+  resize: none;
+  border-radius: 3px;
+  border: 2px solid grey;
+  text-align: center;
+}
+
+.userpage-unfollow-btn {
+  min-width: 180px;
+  width: 19vw;
+  margin: 30px 0 10px;
+  padding: 3px 0;
+  box-sizing: border-box;
+  color: #fff;
+  background-color: grey;
   font-size: 13px;
   font-weight: bold;
   resize: none;
