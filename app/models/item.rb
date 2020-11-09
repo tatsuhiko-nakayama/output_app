@@ -15,4 +15,24 @@ class Item < ApplicationRecord
     validates :category_id
   end
   validates :tagbody, length: { maximum: 60 }
+
+  after_create do
+    item = Item.find_by(id: id)
+    tags = tagbody.scan(/[#＃][Ａ-Ｚａ-ｚA-Za-z一-鿆0-9０-９ぁ-ヶｦ-ﾟー]+/).map(&:strip)
+    tags.uniq.map do |tag|
+      t = Tag.find_or_create_by(name: tag.downcase.delete('#'))
+      item.tags << t
+    end
+  end
+
+  before_update do
+    item = Item.find_by(id: id)
+    item.tags.clear
+    tags = tagbody.scan(/[#＃][\w\p{Han}ぁ-ヶｦ-ﾟー]+/)
+    tags.uniq.map do |tag|
+      t = Tag.find_or_create_by(name: tag.downcase.delete('#'))
+      item.tags << t
+    end
+  end
+
 end
