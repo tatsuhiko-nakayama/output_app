@@ -51,6 +51,15 @@ class ItemsController < ApplicationController
     @like_count = Like.where(item_id: @item.id).count
   end
 
+  def tag
+    @tag = Tag.find_by(name: params[:name])
+    @items = @tag.items
+    if user_signed_in?
+      @user = User.find(current_user.id)
+      @my_items = Item.where(user_id: current_user.id).order('created_at DESC')
+    end
+  end
+
   private
 
   def item_params
