@@ -57,52 +57,9 @@
     </div>
 
     <div class='comment-area'>
-      <div class='comment-info'>
-        💬コメント
-      </div>
-      <% if user_signed_in? %>
-        <div class='comment-input'>
-          <%= form_with model: @comment, url: item_comments_path(@item.id), local: true do |f| %>
-            <div class='comment-btn-box'>
-              <div class='comment-btn-box-left'>
-                <%= image_tag current_user.profile.image, class:'show-top-avatar'%>
-                <span class='show-top-username'><%= current_user.username %></span>
-              </div>
-              <%= f.submit 'コメントする', class:'comment-btn'%>
-            </div>
-            <div class='comment-text-box'>
-              <%= f.text_area :message, class:"comment-text", id:"comment-text", placeholder:"テキストを入力", maxlength:"10000" %>
-            </div>
-          <% end %>
-        </div>
-      <% else %>
-        <span><%= link_to 'ユーザー登録', new_user_registration_path %>をしてコメントを書こう！</span>
-      <% end %>
-
-      <% @comments.each do |comment| %>
-        <div class="comment-content">
-          <div class="comment-btn-box">
-            <div class="comment-btn-box-left">
-              <%= link_to image_tag(comment.user.profile.image, class: 'show-top-avatar'), user_path(comment.user.id) %>
-              <%= link_to comment.user.username, user_path(comment.user.id), class: 'show-top-username' %>
-            </div>
-            <div class="comment-btn-box-right">
-              <% if comment.user == current_user %>
-                <%= link_to '削除', "/items/#{@item.id}/comments/#{comment.id}", method: :delete,  class: "comment-delete-btn" %>
-              <% end %>
-              <%= l comment.created_at %>
-            </div>
-          </div>
-          <div class="comment-message">
-            <%= comment.message %>
-          </div>
-          <div class="comment-bottom-border-box">
-            <div class='comment-bottom-border'>
-            </div>
-          </div>
-        </div>
-      <% end %>
-
+      <%# コメントゾーン%>
+      <%= render 'shared/comment'%>
+      <%# // コメントゾーン%>
     </div>
 
   </div>
