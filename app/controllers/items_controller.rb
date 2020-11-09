@@ -60,6 +60,15 @@ class ItemsController < ApplicationController
     end
   end
 
+  def category
+    @item = Item.find_by(category_id: params[:id])
+    @items = Item.where(category_id: params[:id]).order('created_at DESC')
+    if user_signed_in?
+      @user = User.find(current_user.id)
+      @my_items = Item.where(user_id: current_user.id).order('created_at DESC')
+    end
+  end
+
   private
 
   def item_params

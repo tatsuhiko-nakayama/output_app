@@ -2,6 +2,22 @@
   <div class='left-header'>
     <%= link_to image_tag("output_app_logo", class: "output_app_logo"), "/"%>  
     <div class='search-box'>
+      <div class='search-title'>
+        <p>▼SEARCH</p>
+      </div>
+      <ul class='search-list hidden', id='search-list'>
+        <li class='search-list-parent category-search'>カテゴリー検索</li>
+        <ul class='search-category-list hidden', id='search-category-list'>
+          <li class='search-list-child'><%= link_to '> 本', "/items/category/1"%></li>
+          <li class='search-list-child'><%= link_to '> Youtube', "/items/category/2"%></li>
+          <li class='search-list-child'><%= link_to '> 記事/SNS', "/items/category/3"%></li>
+          <li class='search-list-child'><%= link_to '> イベント', "/items/category/4"%></li>
+          <li class='search-list-child'><%= link_to '> 出来事', "/items/category/5"%></li>
+        </ul>
+        <ul>
+        <li class='search-list-parent'>タイトル検索</li>
+        <li class='search-list-parent'>ユーザー名検索</li>
+      </ul>
     </div>
   </div>
 
