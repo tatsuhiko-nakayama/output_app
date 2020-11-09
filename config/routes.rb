@@ -16,4 +16,5 @@ Rails.application.routes.draw do
 
   resources :relationships, only: [:create, :destroy]
 
+  get '/items/hashtag/:name', to: "items#tag"
 end

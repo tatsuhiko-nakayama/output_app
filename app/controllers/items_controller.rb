@@ -51,6 +51,11 @@ class ItemsController < ApplicationController
     @like_count = Like.where(item_id: @item.id).count
   end
 
+  def tag
+    @tag = Tag.find_by(name: params[:name])
+    @tags = Tag.all.to_a.group_by{ |tag| tag.items.count}
+  end
+
   private
 
   def item_params

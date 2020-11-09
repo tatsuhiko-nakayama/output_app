@@ -29,7 +29,7 @@
             <%= @item.category.name%>
           </div>
           <div class='show-top-tag'>
-            <%= @item.tagbody %>
+            <%= render_with_tags(@item.tagbody) %>
           </div>
         </div>
         <div class='show-top-url'>
