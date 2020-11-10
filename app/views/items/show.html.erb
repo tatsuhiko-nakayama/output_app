@@ -15,7 +15,7 @@
             <%= link_to '編集する', edit_item_path(@item.id), class:'item-edit-btn' %>
           <% elsif user_signed_in? %>
             <%# フォローボタン%>
-            <%= render 'shared/show_follow', user: @item.user%>
+            <%= render 'follow', user: @item.user%>
             <%# // フォローボタン%>
           <% end %>
         </div>
@@ -39,7 +39,7 @@
       <div class='show-top-communication'>
         <div class='show-top-communication-left' id="like-btn-<%= @item.id %>">
           <%# LIKEボタン%>
-          <%= render partial: 'shared/like', locals: { item: @item } %>
+          <%= render partial: 'like', locals: { item: @item } %>
           <%# // LIKEボタン%>
         </div>
         <div class='show-top-communication-right'>
@@ -58,13 +58,14 @@
 
     <div class='comment-area'>
       <%# コメントゾーン%>
-      <%= render 'shared/comment'%>
+      <%= render 'comment'%>
       <%# // コメントゾーン%>
     </div>
 
   </div>
 
   <div class='show-right-content'>
+    詳細ページ用のコンテンツを入れるよ！
   </div>
 </div>
 

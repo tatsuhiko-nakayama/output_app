@@ -15,12 +15,14 @@ class Item < ApplicationRecord
     validates :category_id
   end
   validates :tagbody, length: { maximum: 60 }
+  validates :tagbody, format: { without: /[０-９]/, message: 'の数字は半角で入力してください' }
+  validates :tagbody, format: { without: /＃/, message: ' # は半角で入力してください' }
 
   after_create do
     item = Item.find_by(id: id)
-    tags = tagbody.scan(/[#＃][\w\p{Han}ぁ-ヶｦ-ﾟー]+/)
+    tags = tagbody.scan(/[#][\w\p{Han}ぁ-ヶｦ-ﾟー]+/)
     tags.uniq.map do |tag|
-      t = Tag.find_or_create_by(name: tag.downcase.delete('#'))
+      t = Tag.find_or_create_by(name: tag.delete('#'))
       item.tags << t
     end
   end
@@ -28,11 +30,20 @@ class Item < ApplicationRecord
   before_update do
     item = Item.find_by(id: id)
     item.tags.clear
-    tags = tagbody.scan(/[#＃][\w\p{Han}ぁ-ヶｦ-ﾟー]+/)
+    tags = tagbody.scan(/[#][\w\p{Han}ぁ-ヶｦ-ﾟー]+/)
     tags.uniq.map do |tag|
-      t = Tag.find_or_create_by(name: tag.downcase.delete('#'))
+      t = Tag.find_or_create_by(name: tag.delete('#'))
       item.tags << t
     end
   end
+
+  def self.search(search)
+    if search != ""
+      Item.where('title LIKE(?)', "%#{search}%")
+    else
+      Item.all
+    end
+  end
+
 
 end

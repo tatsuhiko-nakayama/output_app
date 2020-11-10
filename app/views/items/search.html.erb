@@ -5,7 +5,7 @@
   <%# Left-side %>
   <div class='top-left-content'>   
     <div class='item-list-navi'>
-      <p># <%= @tag.name%></p>
+      <p>☀︎ タイトル「 <%= params[:keyword] %> 」の検索結果</p>
     </div>
     <%# @items リスト展開 %>
     <%= render "shared/item-list" %>
@@ -14,9 +14,9 @@
   <%# // Left-side %>
   
   <%# Right-side %>
-    <%= render 'shared/right_side' %>
+  <%= render 'shared/right_side' %>
   <%# // Right-side %>
-
+  
 </div>
 
 <%= render "shared/footer" %>

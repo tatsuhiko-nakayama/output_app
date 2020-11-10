@@ -5,16 +5,16 @@
   <%# Left-side %>
   <div class='top-left-content'>   
     <div class='item-list-navi'>
-      <p># <%= @tag.name%></p>
+      <p>☀︎ ユーザー「 <%= params[:keyword] %> 」の検索結果</p>
     </div>
-    <%# @items リスト展開 %>
-    <%= render "shared/item-list" %>
-    <%# // @items リスト展開 %>   
+    <%# @users リスト展開 %>
+    <%= render 'userlist'%>
+    <%# // @users リスト展開 %>   
   </div>
   <%# // Left-side %>
   
   <%# Right-side %>
-    <%= render 'shared/right_side' %>
+  <%= render 'shared/right_side' %>
   <%# // Right-side %>
 
 </div>
