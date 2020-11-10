@@ -1,0 +1,15 @@
+.tag-list {
+  height: 40px;
+  border-bottom: 1px solid #f0f0f0;
+  list-style: none;
+  margin: 1px 20px;
+  display: flex;
+}
+
+.tag-list-content {
+  margin: 10px 20px 5px;
+}
+
+.tag-list-content a {
+  color: #4a4a4a;
+}

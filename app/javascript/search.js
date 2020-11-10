@@ -53,3 +53,17 @@ const userSearch = () => {
 }
 
 window.addEventListener("turbolinks:load", userSearch);
+
+const hashtagSearch = () => {
+  const pullDownButton = document.querySelector(".hashtag-search");
+  const pullDownParents = document.getElementById("hashtag-search-form");
+  pullDownButton.addEventListener('click', () => {
+    if (pullDownParents.getAttribute("style") == "display:block;") {
+      pullDownParents.removeAttribute("style", "display:block;");
+    } else {
+      pullDownParents.setAttribute("style", "display:block;");
+    }; 
+  });
+}
+
+window.addEventListener("turbolinks:load", hashtagSearch);

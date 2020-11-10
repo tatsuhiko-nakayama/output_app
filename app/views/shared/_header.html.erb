@@ -16,6 +16,11 @@
           <li class='search-list-child'><%= link_to '> 出来事', "/items/category/5"%></li>
         </ul>
         <ul>
+        <li class='search-list-parent hashtag-search'>ハッシュタグ検索</li>
+        <%= form_with(url: hashtags_path, local: true, method: :get, class:'hashtag-search-form hidden', id:'hashtag-search-form') do |form| %>
+          <%= form.text_field :keyword, class: "search-input" %>
+          <%= form.submit "🔎", class: "search-btn" %>
+        <% end %>
         <li class='search-list-parent title-search'>タイトル検索</li>
         <%= form_with(url: search_items_path, local: true, method: :get, class:'title-search-form hidden', id:'title-search-form') do |form| %>
           <%= form.text_field :keyword, class: "search-input" %>
