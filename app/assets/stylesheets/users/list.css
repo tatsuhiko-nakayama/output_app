@@ -1,0 +1,45 @@
+.list-profile-title {
+  display: flex;
+  font-size: 12px;
+  font-weight: bold;
+  color: #fff;
+  border: 1px solid yellowgreen;
+  border-radius: 3px;
+  padding: 1px 5px;
+  white-space: nowrap;
+  background-color: yellowgreen;
+}
+
+.user-list-detail-content {
+  height: 20%;
+  margin-bottom: 2px;
+}
+
+.user-list-detail {
+  display: flex;
+  justify-content: space-between;
+  color:#4a4a4a;
+}
+
+.list-item-count {
+  font-size: 12px;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.user-list-comment-count {
+  font-size: 12px;
+  font-weight: bold;
+  margin-right: 8px;
+}
+
+.list-follow-count {
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.user-list-created-at {
+  font-size: 12px;
+  margin-right: 10px;
+  color: grey;
+}

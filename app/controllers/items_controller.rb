@@ -53,7 +53,7 @@ class ItemsController < ApplicationController
 
   def tag
     @tag = Tag.find_by(name: params[:name])
-    @items = @tag.items
+    @items = @tag.items.order('created_at DESC')
     if user_signed_in?
       @user = current_user
       @my_items = Item.where(user_id: current_user.id).order('created_at DESC')
@@ -70,7 +70,7 @@ class ItemsController < ApplicationController
   end
 
   def search
-    @items = Item.search(params[:keyword])
+    @items = Item.search(params[:keyword]).order('created_at DESC')
     if user_signed_in?
       @user = current_user
       @my_items = Item.where(user_id: current_user.id).order('created_at DESC')

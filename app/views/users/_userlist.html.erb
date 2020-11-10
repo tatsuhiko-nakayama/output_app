@@ -1,1 +1,44 @@
-<p>a</p>
+<% @users.each do |user| %>
+  <li class='item-list'>
+    <%= link_to user_path(user.id) do %>
+      <div class='list-profile-content'>
+        <%= image_tag user.profile.image, class:'list-avatar'%>
+      </div>
+    <% end %>
+    <div class='list-main-content'>
+      <div class='list-title-content'>
+        <%= link_to "#{user.username}", user_path(user.id) %>
+      </div>
+      <div class='list-cate-tag-content'>
+        <div class='list-profile-title'>
+          Profile
+        </div>
+        <div class='list-tag'>
+          <p><%= user.profile.intro %></p>
+        </div>
+      </div>
+      <div class='user-list-detail-content'>
+        <div class='user-list-detail'>
+          <div class='list-like-comment'>
+            <div class='list-like-count'>
+              ✏︎ <%= user.items.count%>
+            </div>
+            <div class='list-like-count'>
+              ✔︎ <%= user.likes.count%>
+            </div>
+            <div class='user-list-comment-count'>
+              💬<%= user.comments.count %>
+            </div>
+            <%= image_tag 'human_icon.png', size: '15x15' %>
+            <div class='list-follow-count'>
+              <%= user.relationships.count %>
+            </div>
+          </div>
+          <div class='user-list-created-at'>
+            <%= user.created_at.strftime('20%y年%m月から利用') %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </li>
+<% end %>
