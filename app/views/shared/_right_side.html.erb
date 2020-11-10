@@ -1,0 +1,22 @@
+<% if user_signed_in? %>
+  <div class='top-right-content'>
+    <div class='top-user-card'>
+      <%# 共通user-card部分%>
+      <%= render "shared/toppage_usercard" %>
+      <%# // 共通user-card部分%> 
+    </div>
+
+    <div class='top-my-output'>
+      <div class='item-list-navi'>
+        <p>✏︎ My Output</p>
+      </div>
+      <%# @my_items リスト展開 %>
+      <%= render "shared/my-item-list" %>
+      <%# // @my_items リスト展開 %>
+    </div>
+  </div>
+<% else %>
+  <div class='top-right-content'>
+  ここは非ログインユーザー向けのコンテンツにするよ！
+  </div>
+<% end %>

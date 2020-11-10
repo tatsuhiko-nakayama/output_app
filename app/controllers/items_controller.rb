@@ -5,7 +5,7 @@ class ItemsController < ApplicationController
 
   def index
     if user_signed_in?
-      @user = User.find(current_user.id)
+      @user = current_user
       @my_items = Item.where(user_id: current_user.id).order('created_at DESC')
     end
 
@@ -55,7 +55,7 @@ class ItemsController < ApplicationController
     @tag = Tag.find_by(name: params[:name])
     @items = @tag.items
     if user_signed_in?
-      @user = User.find(current_user.id)
+      @user = current_user
       @my_items = Item.where(user_id: current_user.id).order('created_at DESC')
     end
   end
@@ -64,7 +64,7 @@ class ItemsController < ApplicationController
     @item = Item.find_by(category_id: params[:id])
     @items = Item.where(category_id: params[:id]).order('created_at DESC')
     if user_signed_in?
-      @user = User.find(current_user.id)
+      @user = current_user
       @my_items = Item.where(user_id: current_user.id).order('created_at DESC')
     end
   end
@@ -72,7 +72,7 @@ class ItemsController < ApplicationController
   def search
     @items = Item.search(params[:keyword])
     if user_signed_in?
-      @user = User.find(current_user.id)
+      @user = current_user
       @my_items = Item.where(user_id: current_user.id).order('created_at DESC')
     end
   end
