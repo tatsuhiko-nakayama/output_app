@@ -50,7 +50,7 @@
     </div>
 
     <div class='show-body'>
-      <%= @item.body %>
+      <%= safe_join(@item.body.split("\n"),tag(:br)) %>
     </div>
 
     <div class='show-bottom'>
