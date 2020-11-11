@@ -1,7 +1,7 @@
 class ItemsController < ApplicationController
   before_action :set_item, only: [:edit, :update, :show]
   before_action :set_user_items, only: [:index, :tag, :category, :search]
-  before_action :corrent_user_new, only: :new
+  before_action :correct_user_new, only: :new
   before_action :correct_user_edit, only: :edit
 
   def index
