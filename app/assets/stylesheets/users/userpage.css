@@ -1,18 +1,21 @@
 .user-left-content {
-  height: 80vh;
-  width: 100%;
-  margin: 10px;
+  width: calc(100% - 230px);
+  margin: 10px 10px 10px 20px;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  background-color: cadetblue;
+  background-color: #fff;
 }
 
-.user-item-all {
-  height: 95%;
-  width: 95%;
-  margin-top: 5px;
-  background-color: beige;
+.user-analytics {
+  height: 100px;
+  background-color: lightsteelblue;
+  font-weight: bold;
+  color: #4a4a4a;
+  border: 1px solid grey;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
 }
 
 .user-right-content {
@@ -23,13 +26,13 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: #fff;
 }
 
 .user-card {
   height: 250px;
   width: 95%;
   margin-top: 5px;
-  background-color:beige;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -37,7 +40,6 @@
 
 .second-user-card {
   width: 95%;
-  background-color: beige;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -117,6 +119,7 @@
   padding: 3px 0;
   box-sizing: border-box;
   color: grey;
+  background-color: beige;
   font-size: 13px;
   font-weight: bold;
   resize: none;
