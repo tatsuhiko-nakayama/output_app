@@ -61,7 +61,7 @@
       <div class='command-area'>
         <ul class='command-list'>
           <li>
-            <span class='item-open'>公開モード</span>　
+            <%= f.select :status, Item.statuses.keys.to_a, {}, { class:'item-open' } %>
           </li>
           <li>
             <span class='item-preview'>プレビュー</span>

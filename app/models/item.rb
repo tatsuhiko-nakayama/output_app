@@ -9,6 +9,8 @@ class Item < ApplicationRecord
   has_many :tags, through: :item_tags
   belongs_to_active_hash :category
 
+  enum status: { closed: 0, open: 1 }
+
   with_options presence: true do
     validates :title, length: { maximum: 40 }
     validates :body, length: { maximum: 100_000 }

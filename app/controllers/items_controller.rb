@@ -5,7 +5,7 @@ class ItemsController < ApplicationController
   before_action :correct_user_edit, only: :edit
 
   def index
-    @items = Item.all.order('created_at DESC')
+    @items = Item.open.order('created_at DESC')
   end
 
   def new
@@ -49,16 +49,16 @@ class ItemsController < ApplicationController
 
   def tag
     @tag = Tag.find_by(name: params[:name])
-    @items = @tag.items.order('created_at DESC')
+    @items = @tag.items.open.order('created_at DESC')
   end
 
   def category
     @item = Item.find_by(category_id: params[:id])
-    @items = Item.where(category_id: params[:id]).order('created_at DESC')
+    @items = Item.open.where(category_id: params[:id]).order('created_at DESC')
   end
 
   def search
-    @items = Item.search(params[:keyword]).order('created_at DESC')
+    @items = Item.open.search(params[:keyword]).order('created_at DESC')
   end
 
   private
