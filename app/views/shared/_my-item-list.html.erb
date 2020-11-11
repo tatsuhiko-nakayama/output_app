@@ -5,6 +5,15 @@
         <div class='my-list-category'>
           <%= item.category.name %>
         </div>
+        <% if item.status_before_type_cast == 1 %>
+          <div class='my-list-open'>
+            open
+          </div>
+        <% else %>
+          <div class='my-list-closed'>
+            closed
+          </div>
+        <% end %>
       </div>
        <div class='my-list-title-content'>
         <p><%= link_to "#{item.title}", item_path(item.id) %></p>

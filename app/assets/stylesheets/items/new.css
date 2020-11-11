@@ -150,8 +150,9 @@
   background-color: burlywood;
   border: 2px solid burlywood;
   border-radius: 3px;
-  padding: 9px 15px;
+  padding: 9px 5px 9px 15px;
   margin-right: 15px;
+ 
 }
 
 .item-preview {

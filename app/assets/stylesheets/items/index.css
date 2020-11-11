@@ -115,6 +115,29 @@ a:hover {
   color: #000;
 }
 
+.users-list-title-content {
+  height: 40%;
+  width: 100%;
+  padding: 12px 0px 3px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+}
+
+.users-list-title-content a {
+  color: #000;
+  font-weight: bold;
+}
+
+.users-list-title-content p {
+  font-size: 16px;
+  font-weight: bold;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+
 .list-cate-tag-content {
   height: 40%;
   display: flex;
@@ -135,11 +158,11 @@ a:hover {
 
 .my-list-cate-detail-content {
   display: flex;
+  justify-content: space-between;
   align-items: flex-start;
 }
 
 .my-list-category {
-  display: flex;
   color: #fff;
   font-size: 12px;
   font-weight: bold;
@@ -149,6 +172,56 @@ a:hover {
   white-space: nowrap;
   background-color: orange;
 }
+
+.my-list-open {
+  display: flex;
+  color: #fff;
+  font-size: 12px;
+  font-weight: bold;
+  border: 1px solid yellowgreen;
+  border-radius: 3px;
+  padding: 2px 5px;
+  white-space: nowrap;
+  background-color: yellowgreen;
+}
+
+.users-list-open {
+  display: flex;
+  color: #fff;
+  font-size: 12px;
+  font-weight: bold;
+  border: 1px solid yellowgreen;
+  border-radius: 3px;
+  padding: 2px 5px;
+  background-color: yellowgreen;
+  margin-right: 30px;
+}
+
+.my-list-closed {
+  display: flex;
+  color: #fff;
+  font-size: 12px;
+  font-weight: bold;
+  border: 1px solid  darkgreen;
+  border-radius: 3px;
+  padding: 2px 5px;
+  white-space: nowrap;
+  background-color: darkgreen;
+}
+
+.users-list-closed {
+  display: flex;
+  color: #fff;
+  font-size: 12px;
+  font-weight: bold;
+  border: 1px solid  darkgreen;
+  border-radius: 3px;
+  padding: 2px 5px;
+  white-space: nowrap;
+  background-color: darkgreen;
+  margin-right: 20px;
+}
+
 
 .list-tag {
   height: 100%;
