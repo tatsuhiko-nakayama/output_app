@@ -8,6 +8,9 @@
 
 .tag-list-content {
   margin: 10px 20px 5px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .tag-list-content a {

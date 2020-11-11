@@ -2,8 +2,17 @@
 
 <div class='main'>
   <div class='user-left-content'>
-    <div class="user-item-all">
+    <% if @user == current_user%>
+      <div class="user-analytics">
+        アナリティクスコンテンツ開発中 >>>
+      </div>
+    <% end %>
+    <div class='item-list-navi'>
+      <p>☀︎ Output</p>
     </div>
+    <%# @items リスト展開 %>
+    <%= render "shared/item-list" %>
+    <%# // @items リスト展開 %>  
   </div>
 
   <div class='user-right-content'>
@@ -16,7 +25,7 @@
       </div>
       <%# プロフィール編集ボタン or フォローボタン 本人と本人以外で表示切り替え %>
       <% if user_signed_in? && current_user.id.to_s == params[:id]  %>
-        <%= link_to 'プロフィール編集', edit_user_profile_path(@user.profile.id), class: 'profile-edit-btn' %>
+        <%= link_to 'プロフィール編集', edit_user_profile_path(current_user.id), class: 'profile-edit-btn' %>
         <%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: 'sign-out-btn' %>
       <% elsif user_signed_in? %>
         <%# フォローボタン%>
@@ -29,7 +38,7 @@
 
       <% if @user.profile.website %>
         <div class='user-website-content'>
-          <span class='user-website-mark'>✈</span>
+          <span class='user-website-mark'>〄</span>
           <%= link_to @user.profile.website, "#{ @user.profile.website }",  class: 'user-website' %>
         </div>
       <% end%>

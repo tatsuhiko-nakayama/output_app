@@ -2,10 +2,10 @@
 
 <div class='profile-form-main'>
   <div class='profile-form'>
-    <span class='profile-form-title'><%= @user.username %></span>
+    <span class='profile-form-title'><%= current_user.username %></span>
   
 
-    <%= form_with model: @profile, url: "/users/#{@user.id}/profiles/#{@user.profile.id}", local: true do |f| %>
+    <%= form_with model: @profile, url: user_profile_path(current_user.id), local: true do |f| %>
       <%# エラーメッセージ %>
 
       <%# // エラーメッセージ %>

@@ -1,14 +1,10 @@
 class ItemsController < ApplicationController
   before_action :set_item, only: [:edit, :update, :show]
-  before_action :block_new, only: :new
-  before_action :block_edit, only: :edit
+  before_action :set_user_items, only: [:index, :tag, :category, :search]
+  before_action :correct_user_new, only: :new
+  before_action :correct_user_edit, only: :edit
 
   def index
-    if user_signed_in?
-      @user = current_user
-      @my_items = Item.where(user_id: current_user.id).order('created_at DESC')
-    end
-
     @items = Item.all.order('created_at DESC')
   end
 
@@ -54,27 +50,15 @@ class ItemsController < ApplicationController
   def tag
     @tag = Tag.find_by(name: params[:name])
     @items = @tag.items.order('created_at DESC')
-    if user_signed_in?
-      @user = current_user
-      @my_items = Item.where(user_id: current_user.id).order('created_at DESC')
-    end
   end
 
   def category
     @item = Item.find_by(category_id: params[:id])
     @items = Item.where(category_id: params[:id]).order('created_at DESC')
-    if user_signed_in?
-      @user = current_user
-      @my_items = Item.where(user_id: current_user.id).order('created_at DESC')
-    end
   end
 
   def search
     @items = Item.search(params[:keyword]).order('created_at DESC')
-    if user_signed_in?
-      @user = current_user
-      @my_items = Item.where(user_id: current_user.id).order('created_at DESC')
-    end
   end
 
   private
@@ -87,11 +71,19 @@ class ItemsController < ApplicationController
     @item = Item.find(params[:id])
   end
 
-  def block_new
+  def set_user_items
+    if user_signed_in?
+      @user = current_user
+      @my_items = Item.where(user_id: current_user.id).order('created_at DESC')
+    end
+  end
+
+
+  def correct_user_new
     redirect_to new_user_registration_path unless user_signed_in?
   end
 
-  def block_edit
+  def correct_user_edit
     redirect_to root_path unless user_signed_in? && @item.user.id == current_user.id
   end
 end

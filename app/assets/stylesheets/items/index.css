@@ -10,6 +10,7 @@ a:hover {
 .main {
   background-color: #f0f0f0;
   display: flex;
+  min-height: 83vh;
 }
 
 .top-left-content {
@@ -69,6 +70,8 @@ a:hover {
   width: calc(100% - 80px);
   display: flex;
   flex-direction: column;
+  padding: 0 10px;
+  box-sizing: border-box;
 }
 
 .my-list-main-content {
@@ -86,7 +89,7 @@ a:hover {
 }
 
 .list-title-content p {
-  font-size: 15px;
+  font-size: 16px;
   font-weight: bold;
   overflow: hidden;
   text-overflow: ellipsis;
