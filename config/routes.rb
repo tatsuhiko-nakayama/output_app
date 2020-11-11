@@ -6,18 +6,14 @@ Rails.application.routes.draw do
   }
 
   resources :users, only: [:show] do
-    resources :profiles, only: [:edit, :update]
-    collection do
-      get 'search'
-    end
+    get :search, on: :collection
+    resource :profile, only: [:edit, :update]
   end
 
   resources :items do
+    get :search, on: :collection
     resources :likes, only: [:create, :destroy]
     resources :comments, only: [:create, :destroy]
-    collection do
-      get 'search'
-    end
   end
 
   resources :relationships, only: [:create, :destroy]

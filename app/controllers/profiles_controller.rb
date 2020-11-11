@@ -1,9 +1,8 @@
 class ProfilesController < ApplicationController
   before_action :set_profile, only: [:edit, :update]
-  before_action :block_edit, only: :edit
+  before_action :correct_user
 
   def edit
-    @user = User.find(params[:id])
   end
 
   def update
@@ -21,10 +20,10 @@ class ProfilesController < ApplicationController
   end
 
   def set_profile
-    @profile = Profile.find(params[:id])
+    @profile = Profile.find(current_user.id)
   end
 
-  def block_edit
+  def correct_user
     redirect_to root_path unless user_signed_in? && @profile.user.id == current_user.id
   end
 end
