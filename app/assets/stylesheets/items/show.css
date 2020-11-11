@@ -230,12 +230,11 @@
 }
 
 .show-bottom-second {
-  height: 50px;
+  height: 0px;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: mediumaquamarine;
-  border: 1px solid #ccc;
+  background-color: #ccc;
   margin: 0 10px;
 }
 

@@ -5,7 +5,11 @@
   <%# Left-side %>
   <div class='top-left-content'>   
     <div class='item-list-navi'>
-      <p>☀︎ <%= @item.category.name%></p>
+      <% if @item.present?%>
+        <p>☀︎ <%= @item.category.name%></p>
+      <% else %>
+        まだ投稿がありません
+      <% end %>
     </div>
     <%# @items リスト展開 %>
     <%= render "shared/item-list" %>
