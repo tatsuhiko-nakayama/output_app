@@ -215,9 +215,28 @@
 }
 
 .show-bottom {
-  height: 100px;
+  display: flex;
+  flex-direction: column;
+  color: #4a4a4a;
+  font-weight: bold;
+  box-sizing: border-box;
+  border-top: 3px solid grey;
+  margin: 20px;
+}
+
+.show-bottom-first {
+  height: 20px;
   width: 100%;
+}
+
+.show-bottom-second {
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: mediumaquamarine;
+  border: 1px solid #ccc;
+  margin: 0 10px;
 }
 
 .comment-area {
