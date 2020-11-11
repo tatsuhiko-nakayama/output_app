@@ -1,0 +1,23 @@
+<%= render "shared/header" %>
+
+<div class='main'>
+
+  <%# Left-side %>
+  <div class='top-left-content'>   
+    <div class='item-list-navi'>
+      <p>☀︎ Liked Output</p>
+    </div>
+    <%# @items リスト展開 %>
+    <%= render "shared/item-list" %>
+    <%# // @items リスト展開 %>   
+  </div>
+  <%# // Left-side%>
+
+  
+  <%# Right-side %>
+  <%= render 'shared/right_side' %>
+  <%# // Right-side %>
+
+</div>
+
+<%= render "shared/footer" %>
