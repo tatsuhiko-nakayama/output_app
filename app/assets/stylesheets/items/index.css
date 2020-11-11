@@ -97,6 +97,7 @@ a:hover {
 }
 
 .list-title-content a {
+  font-size: 17px;
   color: #000;
   font-weight: bold;
 }
@@ -130,7 +131,7 @@ a:hover {
 }
 
 .users-list-title-content p {
-  font-size: 16px;
+  font-size: 17px;
   font-weight: bold;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -164,11 +165,11 @@ a:hover {
 
 .my-list-category {
   color: #fff;
-  font-size: 12px;
+  font-size: 11px;
   font-weight: bold;
   border: 1px solid orange;
   border-radius: 3px;
-  padding: 2px 5px;
+  padding: 2px 5px 1px;
   white-space: nowrap;
   background-color: orange;
 }
@@ -180,7 +181,7 @@ a:hover {
   font-weight: bold;
   border: 1px solid yellowgreen;
   border-radius: 3px;
-  padding: 2px 5px;
+  padding: 1px 5px 2px;
   white-space: nowrap;
   background-color: yellowgreen;
 }
