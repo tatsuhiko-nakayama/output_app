@@ -1,7 +1,7 @@
 .new-content {
   height: 88vh;
   width: 100%;
-  margin: 10px;
+  margin: 10px 15px;
   background-color: #fff;
   display: flex;
   flex-direction: column;
@@ -111,7 +111,7 @@
 
 .input-area-left {
   height: 100%;
-  width: 50%;
+  width: 100%;
 }
 
 .body-input {
@@ -123,9 +123,10 @@
 
 .input-area-right {
   height: 100%;
-  width: 50%;
+  width: 40%;
   background-color: mistyrose;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   font-weight: bold;
@@ -202,4 +203,10 @@
   border-radius: 3px;
   margin-left: 15px;
   padding: 3px 15px;
+}
+
+@media screen and (max-width: 768px) {
+  .input-area-right {
+    display: none;
+  }
 }
