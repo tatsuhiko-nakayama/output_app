@@ -49,8 +49,9 @@
       </div>
     </div>
 
-    <div class='show-body'>
-      <%= safe_join(@item.body.split("\n"),tag(:br)) %>
+    <div class='show-body'> 
+      <%= markdown(@item.body).html_safe %>
+      <%#= safe_join(@item.body.split("\n"),tag(:br)) %>
     </div>
 
     <div class='show-bottom'>
