@@ -1,7 +1,7 @@
 .new-content {
   height: 88vh;
   width: 100%;
-  margin: 10px;
+  margin: 10px 15px;
   background-color: #fff;
   display: flex;
   flex-direction: column;
@@ -111,7 +111,7 @@
 
 .input-area-left {
   height: 100%;
-  width: 50%;
+  width: 100%;
 }
 
 .body-input {
@@ -123,13 +123,14 @@
 
 .input-area-right {
   height: 100%;
-  width: 50%;
+  width: 20%;
   background-color: mistyrose;
   display: flex;
   justify-content: center;
   align-items: center;
   font-weight: bold;
   color: #4a4a4a;
+  margin-top: 39px;
 }
 
 .command-area {
