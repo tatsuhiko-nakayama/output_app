@@ -2,7 +2,7 @@ class LikesController < ApplicationController
   before_action :set_item, only: [:create, :destroy]
 
   def index
-    @items = current_user.liked_items.joins(:likes).order('likes.created_at DESC')
+    @items = current_user.liked_items.order('likes.created_at DESC')
     if user_signed_in?
       @user = current_user
       @my_items = Item.where(user_id: current_user.id).order('created_at DESC')

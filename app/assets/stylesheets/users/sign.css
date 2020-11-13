@@ -1,37 +1,65 @@
-.second-main {
+.sign-main {
   background-color: #fff;
+  margin-top: 10px;
   padding: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.top-content {
-  height: 30vh;
+.sign-top-content {
   width: 80vw;
-  padding: 10px;
+  padding: 0 3px 10px;
+  color: #fff;
   background-color: lightseagreen;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.bottom-content {
-  height: 50vh;
+.pr {
+  width: 100%;
+  height: 7vw;
+  display: flex;
+  justify-content: space-between;
+  font-size: 7vw;
+  font-weight: bold;
+}
+
+.sign-top-content a {
+  color: #fff;
+  text-decoration: underline;
+  margin: 3vw 0 5px;
+}
+
+.sign-top-content p {
+  font-size: 14px;
+}
+
+.sign-bottom-content {
+  height: 330px;
   width: 80vw;
-  margin-top: 10px;
+  margin-top: 3vw;
   padding: 10px;
   display: flex;
-  background-color: lightslategray;
 }
 
-.form-box {
+.sign-title {
+  font-weight: bold;
+  color: #4a4a4a;
+  margin-left: 3vw;
+}
+
+.sign-form-box {
   height: 100%;
   width: 50%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: lightsteelblue;
+  
 }
 
-.field {
+.sign-field {
   height: 50px;
   width: 35vw;
   margin-top: 10px;
@@ -55,7 +83,7 @@
   justify-content: center;
 }
 
-.input {
+.sign-input {
   width: 26vw;
   height: 25px;
   margin-top: 5px;
@@ -93,8 +121,14 @@
   border: 1px solid #ccc;
 }
 
-.skip-box {
+.sign-sns-box {
   height: 100%;
   width: 50%;
-  background-color: lightyellow;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 3px dashed #CCC;
+  color: grey;
+  font-weight: bold;
 }

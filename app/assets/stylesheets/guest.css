@@ -1,0 +1,16 @@
+.guest-login-box {
+  height: 30vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: url("/images/guest_login_box_background.png");
+  background-position: center;
+  background-size: cover;
+}
+
+.guest-login-btn {
+  border: 2px solid #fff;
+  padding: 8px 20px;
+  color: #fff;
+}

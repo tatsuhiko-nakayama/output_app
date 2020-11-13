@@ -19,6 +19,7 @@ class Item < ApplicationRecord
   validates :tagbody, length: { maximum: 60 }
   validates :tagbody, format: { without: /[０-９]/, message: 'の数字は半角で入力してください' }
   validates :tagbody, format: { without: /＃/, message: ' # は半角で入力してください' }
+  validates :tagbody, format: { without: /♯/, message: ' # は半角で入力してください' }
 
   after_create do
     item = Item.find_by(id: id)

@@ -1,24 +1,30 @@
 <%= render "shared/second-header"%>
 
-<div class="second-main">
-  <div class= "top-content">
-  </div>
-  <div class= "bottom-content">
-    <div class="form-box">
-      <%= form_with model: @user, url: '/users/sign_in', class: 'hoge', local: true do |f| %>
+<div class="sign-main">
+  <%# ログイン系トップコンテンツ%>
+  <%= render "shared/sign_top"%>
+  <%# // ログイン系トップコンテンツ%>
+
+  <div class= "sign-bottom-content">
+    <div class="sign-form-box">
+      <%= form_with model: @user, url: '/users/sign_in', local: true do |f| %>
         <%# エラーメッセージ %>
         <div class='sign-in-flash-message'>
           <%= flash[:notice] %>
           <%= flash[:alert] %>
         </div>
         <%# // エラーメッセージ %>
+
+        <div class="sign-title">
+          ログイン
+        </div>
         
-        <div class="field">
-          <%= f.email_field :email, class: "input", id: "email", placeholder: "メールアドレス", autofocus: true %>
+        <div class="sign-field">
+          <%= f.email_field :email, class: "sign-input", id: "email", placeholder: "メールアドレス", autofocus: true %>
         </div>
 
-        <div class="field">
-          <%= f.password_field :password, class: "input", id: "password", placeholder: "パスワード" %>
+        <div class="sign-field">
+          <%= f.password_field :password, class: "sign-input", id: "password", placeholder: "パスワード" %>
         </div>
 
         <div class="session">
@@ -28,7 +34,9 @@
       <% end %>
     </div>
 
-    <div class = "skip-box">
-    </div>
+    <%# SNS認証 %>
+    <%= render "shared/sign_sns_omniauth"%>
+    <%# // SNS認証 %>
+    
   </div>
 </div>
