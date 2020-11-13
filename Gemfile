@@ -65,3 +65,7 @@ gem 'active_hash'
 gem 'rails-i18n'
 gem 'redcarpet', '~> 2.3.0'
 gem 'coderay'
+
+group :production do
+  gem 'rails_12factor'
+end
