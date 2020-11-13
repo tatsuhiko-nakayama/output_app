@@ -25,6 +25,8 @@
 
 .show-top-avatar {
   height: 35px;
+  width: 35px;
+  object-fit: cover;
   border: 1px solid #fff;
   border-radius: 70px;
 }
