@@ -7,16 +7,17 @@
 <% end %>
 
 
+<%# ゲストログイン用コンテンツ%>
+<% unless user_signed_in?%>
+  <%= render 'guest'%>
+<% end %>
+<%# // ゲストログイン用コンテンツ%>
+
+
 <div class='main'>
 
   <%# Left-side %>
   <div class='top-left-content'>
-
-    <%# ゲストログイン用コンテンツ%>
-    <% unless user_signed_in?%>
-      <%= render 'guest'%>
-    <% end %>
-    <%# // ゲストログイン用コンテンツ%>
 
     <div class='item-list-navi'>
       <p>☀︎ Pickup Output</p>
