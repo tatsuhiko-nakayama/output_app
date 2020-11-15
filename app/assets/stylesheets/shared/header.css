@@ -105,6 +105,17 @@
   font-size: 14px;
 }
 
+.like-list-btn-small {
+  color: burlywood;
+  background-color: #fff;
+  padding: 3px 10px;
+  margin-right: 20px;
+  font-size: 14px;
+  border: 1px solid #fff;
+  border-radius: 3px;
+  display: none;
+}
+
 .new-item-btn {
   color: #fff;
   border: 1px solid #fff;
@@ -112,6 +123,17 @@
   padding: 8px 15px;
   margin-right: 20px;
   font-size: 14px;
+}
+
+.new-item-btn-small {
+  color: burlywood;
+  background-color: #fff;
+  border: 1px solid #fff;
+  border-radius: 3px;
+  padding: 0 7.5px;
+  margin-right: 20px;
+  font-size: 18px;
+  font-weight: bold;
 }
 
 .account-mark {
@@ -151,12 +173,24 @@
 }
 
 @media screen and (max-width: 768px) {
-  .output_app_logo {
-    width: 30vw;
-    max-width: 160px;
-    margin-left: 10px;
-  }
+  
   .search-title span {
     display: none;
+  }
+
+  .like-list-btn {
+    display: none;
+  }
+
+  .like-list-btn-small {
+    display: block;
+  }
+
+  .new-item-btn {
+    display: none;
+  }
+
+  .new-item-btn-small {
+    display: block;
   }
 }
