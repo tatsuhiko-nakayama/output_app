@@ -4,7 +4,7 @@
     <div class='search-box'>
       <div class='search-title'>
         <%= image_tag 'search.png', size: '14x14' %>
-        検索
+        <span>検索</span>
       </div>
       <ul class='search-list hidden', id='search-list'>
         <li class='search-list-parent category-search'>カテゴリー検索</li>
@@ -40,15 +40,15 @@
     <% if user_signed_in? %>
       <ul class='signed-in-list'>
         <li><%= link_to "✔︎ LIKE", "/likes/user/#{current_user.id}", class: "like-list-btn" %></li>
+        <li><%= link_to "✔︎","/likes/user/#{current_user.id}", class: 'like-list-btn-small' %>
         <li><%= link_to "✏︎ NEW", new_item_path, class: "new-item-btn" %></li>
+        <li><%= link_to "✏︎", new_item_path, class: "new-item-btn-small" %></li>
         <li><%= link_to "#{current_user.username.slice(0)}", user_path(current_user.id), class: "account-mark" %></li> 
       </ul>
     <% else %>
-        <ul class='not-signed-in-list'>
-          <li><%= link_to 'ユーザー登録', new_user_registration_path, class: "sign-up-btn" %></li>
-          <li><%= link_to 'ログイン', new_user_session_path, class: "sign-in-btn" %></li>
-        </ul>
-      </div>
+      <ul class='not-signed-in-list'>
+        <li><%= link_to 'ログイン', new_user_session_path, class: "sign-in-btn" %></li>
+      </ul>
     <% end %>
   </div>
   <%# // ログイン有無の条件分岐 %>

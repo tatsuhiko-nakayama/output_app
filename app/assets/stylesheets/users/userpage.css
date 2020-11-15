@@ -1,3 +1,9 @@
+.user-main {
+  background-color: #f0f0f0;
+  display: flex;
+  min-height: 83vh;
+}
+
 .user-left-content {
   width: calc(100% - 230px);
   margin: 10px 10px 10px 20px;
@@ -219,5 +225,21 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
+  }
+}
+
+@media screen and (max-width:768px) {
+  .user-main {
+    background-color: #fff;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    min-height: 83vh;
+  }
+  .user-left-content {
+    width: 90%;
+  }
+  .user-right-content {
+    width: 90%;
   }
 }

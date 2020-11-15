@@ -1,16 +1,31 @@
 .guest-login-box {
   height: 30vw;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
   background-image: url("/images/guest_login_box_background.png");
   background-position: center;
   background-size: cover;
+  padding: 0 20vw;
 }
 
 .guest-login-btn {
   border: 2px solid #fff;
   padding: 8px 20px;
   color: #fff;
+}
+
+.sign-up-btn {
+  border: 2px solid #fff;
+  padding: 8px 20px;
+  color: #fff;
+}
+
+@media screen and (max-width: 768px) {
+  .guest-login-btn {
+    font-size: 2vw;
+  }
+  .sign-up-btn {
+    font-size: 2vw;
+  }
 }

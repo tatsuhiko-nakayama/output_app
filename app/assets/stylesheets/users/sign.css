@@ -1,3 +1,9 @@
+.output_app_logo-second {
+  width: 160px;
+  margin-top: 30px;
+  margin-left: 10vw;
+}
+
 .sign-main {
   background-color: #fff;
   padding: 0 10px;
@@ -9,13 +15,15 @@
 .sign-top-content {
   width: 100vw;
   padding: 10px 10px 20px;
-  color: #fff;
-  background-color: mediumaquamarine;
+  color: #4a4a4a;
   display: flex;
   flex-direction: column;
   align-items: center;
+  font-size: 43px;
+  margin-top: 30px;
 }
 
+/* 
 .pr {
   width: 95%;
   height: 8vw;
@@ -24,29 +32,22 @@
   font-size: 7vw;
   font-weight: bold;
 }
+*/
 
-.sign-top-content a {
-  color: #fff;
-  text-decoration: underline;
-  margin: 5vw 0 5px;
-}
-
-.sign-top-content p {
-  font-size: 14px;
+.sign-bottom-title {
+  font-weight: bold;
+  color: #4a4a4a;
+  margin: 20px 0;
+  padding-bottom: 5px;
+  border-bottom: 1px solid grey;
 }
 
 .sign-bottom-content {
   height: 330px;
   width: 80vw;
-  margin-top: 3vw;
   padding: 10px;
   display: flex;
-}
-
-.sign-title {
-  font-weight: bold;
-  color: #4a4a4a;
-  margin-left: 3vw;
+  margin-top: 10px;
 }
 
 .sign-form-box {
@@ -55,31 +56,15 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  
 }
+
 
 .sign-field {
-  height: 50px;
-  width: 35vw;
-  margin-top: 10px;
   display: flex;
+  flex-direction: column;
   justify-content: center;
-}
-
-.regist {
-  height: 50px;
-  width: 35vw;
-  margin-top: 20px;
-  display: flex;
-  justify-content: center;
-}
-
-.session {
-  height: 50px;
-  width: 35vw;
-  margin-top: 20px;
-  display: flex;
-  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
 }
 
 .sign-input {
@@ -88,46 +73,168 @@
   margin-top: 5px;
   padding: 5px 20px;
   background-color: #fff;
-  font-size: 14px;
+  font-size: 13px;
   resize: none;
+  border-radius: 1px;
+  border: 1px solid grey;
+}
+
+.username-rule {
+  width: 150px;
+  margin-bottom: 2px;
+  position: relative;
+  z-index: 1;
+  color: #fff;
+  padding: 6px 15px;
+  font-size: 12px;
+  background-color: #2a2a2a;
+  border: 1px solid #2a2a2a;
   border-radius: 5px;
-  border: 1px solid #ccc;
+  text-align: center;
+}
+
+.username-rule::before {
+  content: "";
+  position: absolute;
+  border: 8px solid transparent;
+  border-top: solid 6px #2a2a2a;
+  top: 100%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+.password-rule {
+  width: 150px;
+  margin-bottom: 2px;
+  position: relative;
+  z-index: 1;
+  color: #fff;
+  padding: 6px 15px;
+  font-size: 12px;
+  background-color: #2a2a2a;
+  border: 1px solid #2a2a2a;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.password-rule::before {
+  content: "";
+  position: absolute;
+  border: 8px solid transparent;
+  border-top: solid 6px #2a2a2a;
+  top: 100%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+.regist {
+  height: 50px;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.session {
+  height: 50px;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
 }
 
 .regist-btn {
   width: 150px;
-  height: 45px;
+  height: 38px;
   margin-top: 3px;
   padding: 5px 20px;
-  background-color: cornflowerblue;
+  background-color: burlywood;
   color: #fff;
   font-size: 14px;
-  resize: none;
+  font-weight: bold;
   border-radius: 3px;
-  border: 1px solid #ccc;
+  border: 1px solid burlywood;
 }
 
 .session-btn {
-  width: 150px;
-  height: 45px;
+  width: 130px;
+  height: 38px;
   margin-top: 3px;
+  margin-bottom: 10px;
   padding: 5px 20px;
-  background-color: cornflowerblue;
+  background-color: burlywood;
   color: #fff;
   font-size: 14px;
-  resize: none;
+  font-weight: bold;
   border-radius: 3px;
-  border: 1px solid #ccc;
+  border: 1px solid burlywood;
 }
 
 .sign-sns-box {
-  height: 100%;
   width: 50%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  border: 3px dashed #CCC;
-  color: grey;
+}
+
+.auth-btn-google{
+  width: 27vw;
+  padding: 10px;
+  text-align: center;
+  color: #fff;
+  background-color: darkred;
+  border: 1px solid darkred;
+  border-radius: 2px;
+  font-size: 16px;
   font-weight: bold;
+  display: block;
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+
+.auth-btn-twitter{
+  width: 27vw;
+  padding: 10px;
+  text-align: center;
+  color: #fff;
+  background-color:#6BAAE8;
+  border: 1px solid #6BAAE8;
+  border-radius: 2px;
+  font-size: 16px;
+  font-weight: bold;
+  display: block;
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+
+
+@media screen and (max-width: 768px) {
+  .sign-bottom-content {
+    flex-direction: column;
+  }
+
+  .sign-sns-box {
+  width: 100%;
+  margin-bottom: 20px;
+  }
+
+  .sign-form-box {
+  width: 100%;
+  }
+
+  .sign-input {
+    width: 45vw;
+  }
+  
+  .auth-btn-google {
+    width: 50vw;
+  }
+
+  .auth-btn-twitter {
+    width: 50vw;
+  }
+
+  .sign-top-content {
+    font-size: 5.7vw;
+  }
 }

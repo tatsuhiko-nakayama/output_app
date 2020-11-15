@@ -35,7 +35,7 @@
       </div>
     </div>
     <div class="comment-message">
-      <%= comment.message %>
+      <%= safe_join(comment.message.split("\n"), tag(:br)) %>
     </div>
     <div class="comment-bottom-border-box">
       <div class='comment-bottom-border'>

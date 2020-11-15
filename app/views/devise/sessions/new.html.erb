@@ -1,11 +1,20 @@
-<%= render "shared/second-header"%>
+<%= link_to image_tag("output_app_logo_second.png", class: "output_app_logo-second"), "/"%>  
 
 <div class="sign-main">
   <%# ログイン系トップコンテンツ%>
   <%= render "shared/sign_top"%>
   <%# // ログイン系トップコンテンツ%>
 
+  <div class="sign-bottom-title">
+    ログイン
+  </div>
+
   <div class= "sign-bottom-content">
+
+    <%# SNS認証 %>
+    <%= render "shared/sign_sns_omniauth"%>
+    <%# // SNS認証 %>
+
     <div class="sign-form-box">
       <%= form_with model: @user, url: '/users/sign_in', local: true do |f| %>
         <%# エラーメッセージ %>
@@ -14,10 +23,6 @@
           <%= flash[:alert] %>
         </div>
         <%# // エラーメッセージ %>
-
-        <div class="sign-title">
-          ログイン
-        </div>
         
         <div class="sign-field">
           <%= f.email_field :email, class: "sign-input", id: "email", placeholder: "メールアドレス", autofocus: true %>
@@ -33,10 +38,6 @@
 
       <% end %>
     </div>
-
-    <%# SNS認証 %>
-    <%= render "shared/sign_sns_omniauth"%>
-    <%# // SNS認証 %>
     
   </div>
 </div>

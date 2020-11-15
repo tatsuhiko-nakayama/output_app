@@ -34,7 +34,7 @@
 }
 
 .search-list {
-  width: 155px;
+  width: 165px;
   position: relative;
   z-index: 1;
   margin-top: 5px;
@@ -105,6 +105,17 @@
   font-size: 14px;
 }
 
+.like-list-btn-small {
+  color: burlywood;
+  background-color: #fff;
+  padding: 3px 10px;
+  margin-right: 20px;
+  font-size: 14px;
+  border: 1px solid #fff;
+  border-radius: 3px;
+  display: none;
+}
+
 .new-item-btn {
   color: #fff;
   border: 1px solid #fff;
@@ -112,6 +123,17 @@
   padding: 8px 15px;
   margin-right: 20px;
   font-size: 14px;
+}
+
+.new-item-btn-small {
+  color: burlywood;
+  background-color: #fff;
+  border: 1px solid #fff;
+  border-radius: 3px;
+  padding: 0 7.5px;
+  margin-right: 20px;
+  font-size: 18px;
+  font-weight: bold;
 }
 
 .account-mark {
@@ -128,14 +150,6 @@
   align-items: center;
 }
 
-.sign-up-btn {
-  color: #fff;
-  border: 1px solid #fff;
-  border-radius: 3px;
-  padding: 8px 15px;
-  margin-right: 20px;
-  font-size: 14px;
-}
 .sign-in-btn {
   color: #fff;
   margin-right: 10px;
@@ -156,4 +170,27 @@
 
 .hidden{
   display: none;
+}
+
+@media screen and (max-width: 768px) {
+  
+  .search-title span {
+    display: none;
+  }
+
+  .like-list-btn {
+    display: none;
+  }
+
+  .like-list-btn-small {
+    display: block;
+  }
+
+  .new-item-btn {
+    display: none;
+  }
+
+  .new-item-btn-small {
+    display: block;
+  }
 }
