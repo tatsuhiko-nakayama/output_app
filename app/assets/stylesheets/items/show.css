@@ -225,7 +225,7 @@
   font-size: 22px;
   font-weight: bold;
   border-bottom: 1px solid #ccc;
-  margin-bottom: 50px;
+  margin: 25px 0;
   color: #000;
 }
 
@@ -234,7 +234,7 @@
   font-size: 20px;
   font-weight: bold;
   border-bottom: 1px solid #ccc;
-  margin-bottom: 25px;
+  margin: 25px 0;
   color: #2a2a2a;
 }
 
@@ -242,7 +242,7 @@
   width: 80%;
   font-size: 18px;
   font-weight: bold;
-  margin-bottom: 25px;
+  margin: 15px 0;
   color: #2a2a2a;
 }
 
