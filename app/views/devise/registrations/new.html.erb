@@ -25,6 +25,9 @@
        
 
         <div class="sign-field">
+          <div class='username-rule hidden', id='username-rule' >
+            <p>半角英数字のみ14文字まで</p>
+          </div>
           <%= f.text_field :username, class: "sign-input", id: "username", placeholder: "ユーザー名", maxlength: "14" %>
         </div>
         
@@ -33,6 +36,10 @@
         </div>
 
         <div class="sign-field">
+          <div class='password-rule hidden', id='password-rule' >
+            <p>半角英数字のみ(両方含む)</p>
+            <p>6文字以上</p>
+          </div>
           <%= f.password_field :password, class: "sign-input", id: "password", placeholder: "パスワード" %>
         </div>
 

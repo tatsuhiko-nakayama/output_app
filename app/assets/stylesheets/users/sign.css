@@ -60,10 +60,11 @@
 
 
 .sign-field {
-  height: 50px;
   display: flex;
+  flex-direction: column;
   justify-content: center;
-
+  align-items: center;
+  margin-bottom: 10px;
 }
 
 .sign-input {
@@ -72,10 +73,60 @@
   margin-top: 5px;
   padding: 5px 20px;
   background-color: #fff;
-  font-size: 14px;
+  font-size: 13px;
   resize: none;
+  border-radius: 1px;
+  border: 1px solid grey;
+}
+
+.username-rule {
+  width: 150px;
+  margin-bottom: 2px;
+  position: relative;
+  z-index: 1;
+  color: #fff;
+  padding: 6px 15px;
+  font-size: 12px;
+  background-color: #2a2a2a;
+  border: 1px solid #2a2a2a;
   border-radius: 5px;
-  border: 1px solid #ccc;
+  text-align: center;
+}
+
+.username-rule::before {
+  content: "";
+  position: absolute;
+  border: 8px solid transparent;
+  border-top: solid 6px #2a2a2a;
+  top: 100%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+.password-rule {
+  width: 150px;
+  margin-bottom: 2px;
+  position: relative;
+  z-index: 1;
+  color: #fff;
+  padding: 6px 15px;
+  font-size: 12px;
+  background-color: #2a2a2a;
+  border: 1px solid #2a2a2a;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.password-rule::before {
+  content: "";
+  position: absolute;
+  border: 8px solid transparent;
+  border-top: solid 6px #2a2a2a;
+  top: 100%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
 }
 
 .regist {
