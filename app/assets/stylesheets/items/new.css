@@ -206,7 +206,44 @@
 }
 
 @media screen and (max-width: 768px) {
+
+  .caption-area {
+    height: 30%;
+  }
+
+  .category-list {
+    font-size: 12px;
+  }
+
+  .input-area {
+    height: 60%;
+  }
+
   .input-area-right {
     display: none;
+  }
+
+  .first-box {
+    height: 20%;
+  }
+
+  .second-box {
+    height: 40%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .second-box-right {
+    width: 100%;
+  }
+
+  .third-box {
+    height: 40%;
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .third-box-right {
+    width: 100%;
   }
 }
