@@ -5,7 +5,6 @@
   background-color: #fff;
   display: flex;
   flex-direction: column;
-
 }
 
 .caption-area {
@@ -162,6 +161,8 @@
   border: 2px solid burlywood;
   border-radius: 3px;
   padding: 10px 15px;
+  /* いったん非表示 */
+  display: none;
 }
 
 .output-btn {
@@ -212,7 +213,8 @@
   }
 
   .category-list {
-    font-size: 12px;
+    font-size: 11px;
+    margin-left: 3px;
   }
 
   .input-area {

@@ -1,6 +1,6 @@
 .show-left-content {
   width: 100%;
-  margin: 30px 10px 30px 30px;
+  margin: 30px 10px;
   display: flex;
   flex-direction: column;
   background-color: #fff;
@@ -410,5 +410,11 @@
 @media screen and (max-width: 1220px) {
   .show-right-content {
     display: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .comment-input {
+    padding: 0 10px 10px;
   }
 }

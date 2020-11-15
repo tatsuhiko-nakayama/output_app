@@ -2,7 +2,6 @@
   background-color: #f0f0f0;
   display: flex;
   flex-direction: column;
-
 }
 
 .profile-form {
@@ -122,4 +121,52 @@
   resize: none;
   border-radius: 3px;
   border: 1px solid #ccc;
+}
+
+@media screen and (max-width: 768px) {
+  .profile-form {
+    width: 90vw;
+    margin: 7vh 5vw;
+  }
+
+  .profile-image-parent {
+    width: 80vw;
+  }
+  
+  .profile-image-child {
+    width: 80vw;
+  }
+  
+  .profile-field-parent {
+    width: 80vw;
+  }
+  
+  .profile-field-child {
+    width: 100%;
+  }
+  
+  .profile-input-child {
+    width: 50%;
+  }
+  
+  .profile-input {
+    width: 100%;
+  }
+  
+  .intro-field-parent {
+    width: 80vw;
+  }
+  
+  .intro-field-child {
+    width: 80vw;
+  }
+  
+  .intro-input {
+    width: 100%;
+  }
+  
+  .profile-submit {
+    width: 80vw;
+  }
+  
 }
