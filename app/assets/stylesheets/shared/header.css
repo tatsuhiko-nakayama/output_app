@@ -128,14 +128,6 @@
   align-items: center;
 }
 
-.sign-up-btn {
-  color: #fff;
-  border: 1px solid #fff;
-  border-radius: 3px;
-  padding: 8px 15px;
-  margin-right: 20px;
-  font-size: 14px;
-}
 .sign-in-btn {
   color: #fff;
   margin-right: 10px;
@@ -156,4 +148,15 @@
 
 .hidden{
   display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .output_app_logo {
+    width: 30vw;
+    max-width: 160px;
+    margin-left: 10px;
+  }
+  .search-title span {
+    display: none;
+  }
 }
