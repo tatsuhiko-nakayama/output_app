@@ -28,6 +28,10 @@
   font-weight: bold;
 }
 
+.search-title-icon {
+  height: 16px;
+}
+
 .search-title:hover {
   opacity: 0.5;
   cursor: pointer;
@@ -174,6 +178,10 @@
 }
 
 @media screen and (max-width: 768px) {
+
+  .search-title-icon {
+    height: 18px;
+  }
   
   .search-title span {
     display: none;

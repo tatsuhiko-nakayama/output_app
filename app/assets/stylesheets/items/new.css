@@ -44,7 +44,7 @@
 
 .category-list {
   display: flex;
-  font-family: monospace;
+  font-weight: bold;
   font-size: 14px;
   margin-left: 5px;
 }

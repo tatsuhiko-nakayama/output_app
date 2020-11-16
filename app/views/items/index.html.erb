@@ -1,11 +1,5 @@
 <%= render "shared/header" %>
 
-<% if user_signed_in? %>
-  <% if @user.username == 'guest' %>
-    ゲストログイン中！機能が制限されています。
-  <% end %>
-<% end %>
-
 
 <%# ゲストログイン用コンテンツ%>
 <% unless user_signed_in?%>
@@ -15,6 +9,12 @@
 
 
 <div class='main'>
+
+  <%# if user_signed_in? %>
+    <%# if @user.username == 'guest' %>
+      <%# ゲストログイン中！機能が制限されています。 %>
+    <%# end %>
+  <%# end %>
 
   <%# Left-side %>
   <div class='top-left-content'>

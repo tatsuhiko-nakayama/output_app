@@ -1,3 +1,7 @@
+html, body {
+  font-family: "arial", sans-serif;
+}
+
 a {
   text-decoration: none;
   cursor: pointer;
@@ -10,7 +14,7 @@ a:hover {
 .main {
   background-color: #f0f0f0;
   display: flex;
-  min-height: 83vh;
+  min-height: calc(100vh - 120px);
 }
 
 .top-left-content {
