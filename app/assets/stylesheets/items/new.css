@@ -2,6 +2,7 @@
   height: 88vh;
   width: 100%;
   margin: 10px 15px;
+  box-sizing: border-box;
   background-color: #fff;
   display: flex;
   flex-direction: column;
@@ -86,9 +87,9 @@
 
 .timer {
   display: flex;
-  font-family: monospace;
   padding: 5px 15px;
-  font-size: 14px;
+  font-size: 13px;
+  font-weight: bold;
   border: 1px solid #ccc;
   border-radius: 5px;
   background-color: lightblue;
@@ -199,6 +200,7 @@
 
 .item-delete-btn {
   color: #fff;
+  font-size: 15px;
   background-color: purple;
   border: 2px solid purple;
   border-radius: 3px;
@@ -208,14 +210,33 @@
 
 @media screen and (max-width: 768px) {
 
+  .new-content {
+    padding: 5px 5px 0 5px;
+    overflow-x: hidden;
+  }
+
   .caption-area {
     height: 30%;
   }
 
+  .second-box-left {
+    width: 90vw;
+    min-width: 300px;
+  }
+
   .category-list {
     font-size: 11px;
-    margin-left: 3px;
+    margin-left: 1px;
   }
+
+  .category-list li {
+    margin-right: 10px;
+  }
+
+  .category-radio-btn {
+    height: 14px;
+    width: 14px;
+   }
 
   .input-area {
     height: 60%;
@@ -247,5 +268,9 @@
 
   .third-box-right {
     width: 100%;
+  }
+
+  .third-box-left {
+    width: 90vw;
   }
 }

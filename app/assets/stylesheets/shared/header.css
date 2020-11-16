@@ -134,7 +134,7 @@
   background-color: #fff;
   border: 1px solid #fff;
   border-radius: 3px;
-  padding: 0 7.5px;
+  padding: 0.5px 7.2px;
   margin-right: 20px;
   font-size: 18px;
   font-weight: bold;
@@ -201,5 +201,15 @@
 
   .new-item-btn-small {
     display: block;
+  }
+
+  .search-btn {
+    width: 20px;
+    font-size: 13px;
+    margin-right: 10px;
+    cursor: pointer;
+    background-color: #fff;
+    border: none;
+    border-radius: 30px;
   }
 }

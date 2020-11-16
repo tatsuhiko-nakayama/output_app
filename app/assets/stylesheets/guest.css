@@ -22,6 +22,10 @@
 }
 
 @media screen and (max-width: 768px) {
+  .guest-login-box {
+    padding: 0 5vw;
+  }
+
   .guest-login-btn {
     font-size: 14px;
     border: 1px solid #fff;

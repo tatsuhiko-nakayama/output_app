@@ -274,7 +274,7 @@ a:hover {
 }
 
 .list-like-count {
-  font-size: 12px;
+  font-size: 13px;
   font-weight: bold;
   margin-right: 10px;
 }
@@ -284,8 +284,18 @@ a:hover {
   margin-right: 10px;
 }
 
+.list-comment-icon {
+  font-size: 11px;
+  margin-right: 2px;
+}
+
+.my-list-comment-icon {
+  font-size: 10px;
+  margin-right: 2px;
+}
+
 .list-comment-count {
-  font-size: 12px;
+  font-size: 13px;
   font-weight: bold;
   margin-right: 12px;
 }

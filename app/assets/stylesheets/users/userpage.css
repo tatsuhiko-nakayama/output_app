@@ -1,7 +1,6 @@
 .user-main {
   background-color: #f0f0f0;
   display: flex;
-  min-height: 83vh;
 }
 
 .user-left-content {
@@ -94,7 +93,7 @@
 }
 
 .user-status-nums {
- font-size: 14px;
+ font-size: 16px;
  display: flex;
  flex-direction: column;
  align-items: center;
@@ -102,7 +101,7 @@
 
 .status-title {
   color: grey;
-  font-size: 12px;
+  font-size: 13px;
 }
 
 .status-number {
@@ -206,11 +205,11 @@
 
 .user-website-mark {
   margin-right: 5px;
-  margin-top: 8px;
+  margin-top: 5px;
 }
 
 .user-website {
-  font-size: 12px;
+  font-size: 13px;
   margin-top: 10px;
   margin-bottom: 25px;
   text-align: center;
@@ -234,7 +233,6 @@
     display: flex;
     flex-direction: column-reverse;
     align-items: center;
-    min-height: 83vh;
   }
   .user-left-content {
     width: 90%;
