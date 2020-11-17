@@ -19,8 +19,7 @@
   box-sizing: border-box;
   padding: 5px 10px;
   font-size: 14px;
-  resize: none;
-  border-radius: 5px;
+  border-radius: 3px;
   border: 1px solid #ccc;
 }
 
@@ -119,6 +118,7 @@
   width: 100%;
   padding: 20px;
   box-sizing: border-box;
+  border: 1px solid #ccc;
 }
 
 .input-area-right {
@@ -138,7 +138,6 @@
   width: 100%;
   display: flex;
   justify-content: flex-end;
-  background-color: #f0f0f0;
 }
 
 .command-list {
@@ -171,7 +170,8 @@
   background-color: peru;
   border: 2px solid burlywood;
   border-radius: 3px;
-  margin-left: 15px;
+  margin-left: 10px;
+  margin-right: 5px;
   padding: 6px 17px;
 }
 
@@ -233,11 +233,6 @@
     margin-right: 10px;
   }
 
-  .category-radio-btn {
-    height: 14px;
-    width: 14px;
-   }
-
   .input-area {
     height: 60%;
   }
@@ -272,5 +267,10 @@
 
   .third-box-left {
     width: 90vw;
+    min-width: 10px;
+  }
+
+  .timer {
+    font-size: 12px;
   }
 }

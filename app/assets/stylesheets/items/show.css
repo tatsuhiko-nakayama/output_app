@@ -218,7 +218,7 @@
   font-size: 15px;
 }
 .show-body p {
-  margin-bottom: 10px;
+  margin-bottom: 25px;
 }
 
 .show-body h1 {
@@ -258,6 +258,15 @@
 .show-body em {
   color: #000;
   font-weight: bold;
+}
+
+.show-body strong {
+  text-decoration: underline;
+}
+
+.show-body blockquote {
+  border-left: 3px solid #ccc;
+  padding-left: 5px;
 }
 
 .code {
@@ -367,6 +376,7 @@
   height: 100px;
   padding: 10px;
   box-sizing: border-box;
+  border: 1px solid #ccc;
 }
 
 .comment-content {
@@ -417,4 +427,9 @@
   .comment-input {
     padding: 0 10px 10px;
   }
+
+  .comment-message {
+    padding: 0 10px;
+  }
+
 }
