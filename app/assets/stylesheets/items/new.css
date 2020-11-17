@@ -57,7 +57,7 @@
  height: 17px;
  width: 17px;
  top: 3px;
- font-family: sans-serif;
+ font-family: monospace;
  position: relative;
  cursor: pointer;
 }

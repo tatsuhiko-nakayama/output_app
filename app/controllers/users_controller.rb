@@ -6,7 +6,7 @@ class UsersController < ApplicationController
   end
 
   def search
-    @users = User.search(params[:keyword])
+    @users = User.search(params[:keyword]).order('created_at DESC')
     if user_signed_in?
       @user = current_user
       @my_items = Item.where(user_id: current_user.id).order('created_at DESC')
