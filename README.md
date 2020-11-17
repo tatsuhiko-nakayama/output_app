@@ -1,10 +1,11 @@
 ## アプリケーション名
 Output App
 
-<img width="704" alt="スクリーンショット 2020-11-17 12 58 15" src="https://user-images.githubusercontent.com/70306357/99345033-b2085380-28d4-11eb-8c3d-f14170bfb752.png">
+<img width="600" alt="スクリーンショット 2020-11-17 12 58 15" src="https://user-images.githubusercontent.com/70306357/99345033-b2085380-28d4-11eb-8c3d-f14170bfb752.png">
+
 
 非ログイン状態でも記事の閲覧は可能です。
-ゲストログインをしていただくことで記事の投稿やいいね等各リアクションが可能になります。
+ゲストログインをしていただくことで記事の投稿やいいね等各アクションが可能になります。
 
 ## リンク
 - URL : https://outputapp.herokuapp.com/
@@ -16,7 +17,7 @@ Output App
 - デフォルトが非公開でログアプリとして使いやすい
 - インプット情報を検索してネタ探し＆共有ができる
 
-<img width="804" alt="スクリーンショット 2020-11-17 13 07 37" src="https://user-images.githubusercontent.com/70306357/99345591-fc3e0480-28d5-11eb-8620-ca6b6a7a2f1e.png">
+<img width="600" alt="スクリーンショット 2020-11-17 13 07 37" src="https://user-images.githubusercontent.com/70306357/99345591-fc3e0480-28d5-11eb-8620-ca6b6a7a2f1e.png">
 
 ## 開発背景
 - 自己成長に集中できるログ＆コミュニケーションツールが欲しかったから
@@ -43,10 +44,12 @@ Output App
   - フォロワー数表示（本人のみ）
 
 ログインユーザー自身のユーザーページ
-<img width="804" alt="スクリーンショット 2020-11-17 13 13 13" src="https://user-images.githubusercontent.com/70306357/99345939-d2391200-28d6-11eb-8474-6314156cdc2f.png">
+
+<img width="600" alt="スクリーンショット 2020-11-17 13 13 13" src="https://user-images.githubusercontent.com/70306357/99345939-d2391200-28d6-11eb-8474-6314156cdc2f.png">
 
 本人以外のユーザーページ
-<img width="810" alt="スクリーンショット 2020-11-17 13 15 30" src="https://user-images.githubusercontent.com/70306357/99346023-fd236600-28d6-11eb-818b-36e2d775a637.png">
+
+<img width="600" alt="スクリーンショット 2020-11-17 13 15 30" src="https://user-images.githubusercontent.com/70306357/99346023-fd236600-28d6-11eb-818b-36e2d775a637.png">
 
 ◆投稿機能
 - マークダウン記法
@@ -54,9 +57,9 @@ Output App
 - 投稿プレビュー機能 ※開発中
 - カウントアップタイマー機能 ※開発中
 
-<img width="684" alt="スクリーンショット 2020-11-17 13 05 07" src="https://user-images.githubusercontent.com/70306357/99345413-96517d00-28d5-11eb-924c-c466bfd9d048.png">
+<img width="600" alt="スクリーンショット 2020-11-17 13 05 07" src="https://user-images.githubusercontent.com/70306357/99345413-96517d00-28d5-11eb-924c-c466bfd9d048.png">
 
-<img width="812" alt="スクリーンショット 2020-11-17 13 20 49" src="https://user-images.githubusercontent.com/70306357/99346338-bd10b300-28d7-11eb-9848-4cece72981be.png">
+<img width="600" alt="スクリーンショット 2020-11-17 13 20 49" src="https://user-images.githubusercontent.com/70306357/99346338-bd10b300-28d7-11eb-9848-4cece72981be.png">
 
 
 ◆検索機能
