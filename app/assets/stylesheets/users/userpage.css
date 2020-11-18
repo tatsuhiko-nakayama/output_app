@@ -107,8 +107,8 @@
 .status-number {
   font-weight: bold;
   margin-top: 3px;
+  color: #000;
 }
-
 
 .user-intro {
   max-height: 50%;
