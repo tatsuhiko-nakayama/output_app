@@ -177,6 +177,10 @@
 
 @media screen and (max-width: 768px) {
 
+  .left-header {
+    padding: 10px 0;
+  }
+
   .search-title-icon {
     height: 18px;
   }

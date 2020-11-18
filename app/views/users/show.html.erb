@@ -41,7 +41,7 @@
       <% end %>
       <%# // プロフィール編集ボタン or フォローボタン 本人と本人以外で表示切り替え %>
 
-      <% if @user.profile.website %>
+      <% if @user.profile.website && @user.profile.website != '' %>
         <div class='user-website-content'>
           <span class='user-website-mark'>〄</span>
           <%= link_to @user.profile.website, "#{ @user.profile.website }",  class: 'user-website' %>

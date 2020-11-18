@@ -1,5 +1,5 @@
 .new-content {
-  height: 88vh;
+  height: calc(100vh - 80px);
   width: 100%;
   margin: 10px 15px;
   box-sizing: border-box;
@@ -274,4 +274,6 @@
   .timer {
     font-size: 12px;
   }
+
+
 }

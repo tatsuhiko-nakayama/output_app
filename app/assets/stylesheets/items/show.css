@@ -109,21 +109,20 @@
   border-radius: 3px;
   padding: 2px 7px;
   white-space: nowrap;
+  display: flex;
+  align-items: center;
 }
 
 .show-top-tag {
   color: grey;
-  display: flex;
-  align-items: center;
   margin-left: 15px;
-  word-break: break-all;
   font-size: 15px;
   line-height: 18px;
 }
 
 .show-top-tag a{
   color: grey;
-  margin-left: 10px;
+  margin-right: 10px;
 }
 
 .show-top-url {
@@ -131,19 +130,22 @@
  color: #4A4A4A;
  display: flex;
  align-items: flex-end;
- font-size: 13px;
+ font-size: 14px;
  margin: 0 10px;
  border-bottom: 1px solid grey;
 }
 
 .show-top-url a {
   color: #4A4A4A;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .show-top-communication {
-  height: 70px;
+  height: 50px;
   display: flex;
-  align-items: center;
+  align-items: flex-end;
 }
 
 .show-top-communication-left {
@@ -222,10 +224,10 @@
 }
 
 .show-body h1 {
-  font-size: 22px;
+  font-size: 24px;
   font-weight: bold;
   border-bottom: 1px solid #ccc;
-  margin: 25px 0;
+  margin: 35px 0 25px;
   color: #000;
 }
 
@@ -234,7 +236,7 @@
   font-size: 20px;
   font-weight: bold;
   border-bottom: 1px solid #ccc;
-  margin: 25px 0;
+  margin: 30px 0 25px;
   color: #2a2a2a;
 }
 
@@ -242,17 +244,18 @@
   width: 80%;
   font-size: 18px;
   font-weight: bold;
-  margin: 15px 0;
+  margin: 25px 0 20px;
   color: #2a2a2a;
 }
 
 .show-body ul {
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   margin-left: 20px;
 }
 
 .show-body li {
   list-style: inside;
+  margin-bottom: 3px;
 }
 
 .show-body em {
@@ -267,6 +270,12 @@
 .show-body blockquote {
   border-left: 3px solid #ccc;
   padding-left: 5px;
+}
+
+.show-body code {
+  margin: 0 2px;
+  padding: 2px 5px;
+  background-color: #ccc;
 }
 
 .code {

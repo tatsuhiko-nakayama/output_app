@@ -85,10 +85,18 @@ a:hover {
   flex-direction: column;
 }
 
+.users-list-main-content {
+  width: calc(100% - 80px);
+  display: flex;
+  flex-direction: column;
+  padding: 0 10px;
+  box-sizing: border-box;
+}
+
 .list-title-content {
   height: 40%;
   width: 100%;
-  padding: 12px 5px 3px;
+  padding: 12px 3px 3px 0;
   box-sizing: border-box;
   display: flex;
   align-items: center;
@@ -424,4 +432,24 @@ a:hover {
     display: none;
   }
 
+  .list-title-content a {
+    font-size: 16px;
+  }
+
+  .list-category {
+    display: flex;
+    font-size: 11px;
+  }
+
+  .users-list-main-content {
+    padding: 0 1px 0 0;
+  }
+
+  .users-list-open {
+    margin-right: 2.5vw;
+  }
+
+  .users-list-closed {
+    margin-right: 2.5vw;
+  }
 }
