@@ -1,5 +1,5 @@
 .show-left-content {
-  width: 100%;
+  width: 95%;
   margin: 30px 10px;
   display: flex;
   flex-direction: column;
@@ -40,6 +40,14 @@
   margin-left: 15px;
   font-size: 13px;
   color: grey;
+}
+
+.show-top-updated_at_hide {
+  font-size: 13px;
+  color: grey;
+  display: none;
+  margin-bottom: 15px;
+  margin-left: 3px;
 }
 
 .show-top-command {
@@ -513,4 +521,16 @@
     padding: 0 0.2vw;
   }
 
+
+  .show-top-info {
+    height: 60px;
+  }
+
+  .show-top-updated_at {
+    display: none;
+  }
+
+  .show-top-updated_at_hide {
+    display: block;
+  }
 }
