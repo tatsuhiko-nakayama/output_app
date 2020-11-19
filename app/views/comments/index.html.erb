@@ -6,7 +6,7 @@
   <div class='top-left-content'>   
     <div class='whose-item-list-navi'>
       <%= image_tag @commented_user.profile.image, class: 'whose-user-avatar'%>
-      <p><%= @commented_user.username%> 's Commented Output</p>
+      <p><%= @commented_user.username%> 's Comment</p>
     </div>
     <%# @items リスト展開 %>
     <%= render "shared/item-list" %>

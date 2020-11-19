@@ -43,9 +43,9 @@ a:hover {
   margin-left: 5px;
 }
 
-.liked-item-list-navi {
-  height: 60px;
+.liked-item-list-navi { 
   margin: 20px 0 10px;
+  padding: 0 5px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -58,7 +58,7 @@ a:hover {
 }
 .liked-item-list-navi p {
   font-size: 14px;
-  margin-top: 5px;
+  margin-top: 10px;
 }
 
 .item-list {
