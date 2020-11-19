@@ -21,7 +21,7 @@
     <div class='user-status-bottom'>
       <div class='user-status-nums'>
         <span class='status-title'>フォロー</span>
-        <span class='status-number'><%= @user.relationships.count %></span>
+        <%= link_to @user.followings.count, "/follows/user/#{@user.id}", class: 'status-number' %>
       </div>
       <div class='user-status-nums'>
         <span class='status-title'>フォロワー</span>

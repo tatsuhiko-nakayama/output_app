@@ -28,5 +28,6 @@ Rails.application.routes.draw do
   get '/hashtags', to: "tags#search"
   get '/likes/user/:id', to: "likes#index"
   get '/comments/user/:id', to: "comments#index"
+  get '/follows/user/:id', to: "users#follow"
   
 end

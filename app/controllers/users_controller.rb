@@ -12,4 +12,14 @@ class UsersController < ApplicationController
       @my_items = Item.where(user_id: current_user.id).order('created_at DESC')
     end
   end
+
+  def follow
+    @follow_user = User.find(params[:id])
+    @users = @follow_user.followings.order('relationships.created_at DESC')
+    if user_signed_in?
+      @user = current_user
+      @my_items = Item.where(user_id: current_user.id).order('created_at DESC')
+    end
+  end
+
 end
