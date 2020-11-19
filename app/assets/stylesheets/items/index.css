@@ -31,7 +31,7 @@ a:hover {
   text-align: center;
 }
 
-.liked-item-list-navi {
+.whose-item-list-navi {
   height: 25px;
   margin: 20px 0 10px;
   display: flex;
@@ -39,7 +39,7 @@ a:hover {
   align-items: center;
 }
 
-.liked-item-list-navi p {
+.whose-item-list-navi p {
   margin-left: 5px;
 }
 
@@ -75,7 +75,7 @@ a:hover {
   margin-top: 10px;
 }
 
-.liked-user-avatar {
+.whose-user-avatar {
   width: 35px;
   height: 35px;
   object-fit: cover;

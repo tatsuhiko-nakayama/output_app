@@ -5,8 +5,8 @@
   <%# Left-side %>
   <div class='top-left-content'>   
     <div class='whose-item-list-navi'>
-      <%= image_tag @liked_user.profile.image, class: 'whose-user-avatar'%>
-      <p><%= @liked_user.username%> 's Liked Output</p>
+      <%= image_tag @commented_user.profile.image, class: 'whose-user-avatar'%>
+      <p><%= @commented_user.username%> 's Commented Output</p>
     </div>
     <%# @items リスト展開 %>
     <%= render "shared/item-list" %>
