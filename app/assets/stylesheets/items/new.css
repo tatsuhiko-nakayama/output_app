@@ -2,10 +2,6 @@ input[type="submit"] {
   -webkit-appearance: none;
 }
 
-input[type="radio"] {
-  -webkit-appearance: none;
-}
-
 select {
   -webkit-appearance: none;
 }
