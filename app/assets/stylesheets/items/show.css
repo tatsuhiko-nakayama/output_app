@@ -238,6 +238,7 @@
   margin-top: 20px;
   color: #3A3A3A;
   font-size: 15px;
+  word-break: break-all;
 }
 .show-body p {
   margin-bottom: 25px;
