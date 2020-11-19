@@ -43,6 +43,24 @@ a:hover {
   margin-left: 5px;
 }
 
+.liked-item-list-navi {
+  height: 60px;
+  margin: 20px 0 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.liked-item-list-navi span {
+  font-size: 18px;
+  font-weight: bold;
+}
+.liked-item-list-navi p {
+  font-size: 14px;
+  margin-top: 5px;
+}
+
 .item-list {
   height: 90px;
   border-bottom: 1px solid #f0f0f0;

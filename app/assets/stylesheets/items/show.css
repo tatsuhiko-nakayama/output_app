@@ -211,6 +211,18 @@
   box-sizing: border-box;
 }
 
+.show-top-communication-after {
+  height: 30px;
+  margin: 0 10px;
+  display: flex;
+  align-items: flex-end;
+}
+
+.show-top-communication-after a {
+  font-size: 14px;
+  color: grey;
+}
+
 .show-body {
   width: 100%;
   padding: 0px 30px;

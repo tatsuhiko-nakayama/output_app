@@ -61,6 +61,15 @@ class ItemsController < ApplicationController
     @items = Item.open.search(params[:keyword]).order('created_at DESC')
   end
 
+  def like
+    @liked_item = Item.find(params[:id])
+    @users = @liked_item.liked_users.order('likes.created_at DESC')
+    if user_signed_in?
+      @user = current_user
+      @my_items = Item.where(user_id: current_user.id).order('created_at DESC')
+    end
+  end
+
   private
 
   def item_params
