@@ -2,7 +2,7 @@ class CommentsController < ApplicationController
 
   def index
     @commented_user = User.find(params[:id])
-    @items = @commented_user.commented_items.order('comments.created_at DESC').distinct
+    @items = @commented_user.commented_items.open.order('comments.created_at DESC').distinct
     if user_signed_in?
       @user = current_user
       @my_items = Item.where(user_id: current_user.id).order('created_at DESC')
