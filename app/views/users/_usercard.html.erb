@@ -27,7 +27,7 @@
       <div class='user-status-nums'>
         <% if @user == current_user%>
           <span class='status-title'>フォロワー</span>
-          <span class='status-number'><%= @user.followers.count %></span>
+          <%= link_to @user.followers.count, "/followers/user/#{@user.id}", class: 'status-number' %>
         <% else %>
           <span class='status-title'>フォロワー</span>
           <span class='status-number'>-</span>

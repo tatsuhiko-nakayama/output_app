@@ -1,0 +1,23 @@
+<%= render "shared/header" %>
+
+<div class='main'>
+
+  <%# Left-side %>
+  <div class='top-left-content'>   
+    <div class='whose-item-list-navi'>
+      <%= image_tag @follower_user.profile.image, class: 'whose-user-avatar'%>
+      <p><%= @follower_user.username%> 's follower</p>
+    </div>
+    <%# @users リスト展開 %>
+    <%= render 'userlist'%>
+    <%# // @users リスト展開 %>   
+  </div>
+  <%# // Left-side %>
+  
+  <%# Right-side %>
+  <%= render 'shared/right_side' %>
+  <%# // Right-side %>
+
+</div>
+
+<%= render "shared/footer" %>

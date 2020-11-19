@@ -25,7 +25,7 @@
       </div>
       <div class='user-status-nums'>
         <span class='status-title'>フォロワー</span>
-        <span class='status-number'><%= Relationship.where(follow_id: @user.id).count %></span>
+        <%= link_to @user.followers.count, "/followers/user/#{@user.id}", class: 'status-number' %>
       </div>
     </div>
   </div>
