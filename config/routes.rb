@@ -25,7 +25,11 @@ Rails.application.routes.draw do
   
   get '/items/hashtag/:name', to: "items#tag"
   get '/items/category/:id', to: "items#category"
+  get '/items/like/:id', to: "items#like"
   get '/hashtags', to: "tags#search"
   get '/likes/user/:id', to: "likes#index"
+  get '/comments/user/:id', to: "comments#index"
+  get '/follows/user/:id', to: "users#follow"
+  get '/followers/user/:id', to: "users#follower"
   
 end

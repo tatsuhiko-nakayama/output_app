@@ -1,0 +1,23 @@
+<%= render "shared/header" %>
+
+<div class='main'>
+
+  <%# Left-side %>
+  <div class='top-left-content'>   
+    <div class='liked-item-list-navi'>
+      <span><%= "「#{@liked_item.title}」" %></span>
+      <p>LIKEしたユーザー</p>
+    </div>
+    <%# @users リスト展開 %>
+    <%= render 'users/userlist'%>
+    <%# // @users リスト展開 %>   
+  </div>
+  <%# // Left-side %>
+  
+  <%# Right-side %>
+  <%= render 'shared/right_side' %>
+  <%# // Right-side %>
+
+</div>
+
+<%= render "shared/footer" %>

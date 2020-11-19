@@ -35,7 +35,7 @@
       </div>
     </div>
     <div class="comment-message">
-      <%= safe_join(comment.message.split("\n"), tag(:br)) %>
+      <%= markdown(comment.message).html_safe %>
     </div>
     <div class="comment-bottom-border-box">
       <div class='comment-bottom-border'>

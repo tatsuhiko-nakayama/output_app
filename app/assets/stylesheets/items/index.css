@@ -31,6 +31,36 @@ a:hover {
   text-align: center;
 }
 
+.whose-item-list-navi {
+  height: 25px;
+  margin: 20px 0 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.whose-item-list-navi p {
+  margin-left: 5px;
+}
+
+.liked-item-list-navi {
+  height: 60px;
+  margin: 20px 0 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.liked-item-list-navi span {
+  font-size: 18px;
+  font-weight: bold;
+}
+.liked-item-list-navi p {
+  font-size: 14px;
+  margin-top: 5px;
+}
+
 .item-list {
   height: 90px;
   border-bottom: 1px solid #f0f0f0;
@@ -61,6 +91,14 @@ a:hover {
   border: 1px solid #fff;
   border-radius: 70px;
   margin-top: 10px;
+}
+
+.whose-user-avatar {
+  width: 35px;
+  height: 35px;
+  object-fit: cover;
+  border: 1px solid #fff;
+  border-radius: 70px;
 }
 
 .list-username {
@@ -439,6 +477,7 @@ a:hover {
   .list-category {
     display: flex;
     font-size: 11px;
+    padding: 1px 4px;
   }
 
   .users-list-main-content {
