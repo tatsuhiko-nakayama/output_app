@@ -63,7 +63,7 @@ class ItemsController < ApplicationController
 
   def like
     @liked_item = Item.find(params[:id])
-    @users = @liked_item.liked_users.order('likes.created_at DESC')
+    @users = @liked_item.liked_users.order('likes.created_at DESC').page(params[:page])
     if user_signed_in?
       @user = current_user
       @my_items = Item.where(user_id: current_user.id).order('created_at DESC')

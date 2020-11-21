@@ -9,7 +9,10 @@
       <p>LIKEしたユーザー</p>
     </div>
     <%# @users リスト展開 %>
-    <%= render 'users/userlist'%>
+    <div id='user-pagenate'>
+      <%= render 'users/userlist'%>
+    </div>
+    <%= link_to_next_page @users, 'もっと見る', remote: true, class: 'more-link', id: 'more-link' %>
     <%# // @users リスト展開 %>   
   </div>
   <%# // Left-side %>
