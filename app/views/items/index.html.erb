@@ -24,7 +24,10 @@
     </div>
 
     <%# @items リスト展開 %>
-    <%= render "shared/item-list" %>
+    <div id='item-pagenate'>
+      <%= render "shared/item-list" %>
+    </div>
+    <%= link_to_next_page @items, 'もっと見る', remote: true, class: 'more-link', id: 'more-link' %>
     <%# // @items リスト展開 %>   
     
   </div>

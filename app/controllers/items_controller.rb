@@ -5,7 +5,7 @@ class ItemsController < ApplicationController
   before_action :correct_user_edit, only: :edit
 
   def index
-    @items = Item.open.order('created_at DESC')
+    @items = Item.open.order('created_at DESC').page(params[:page])
   end
 
   def new
