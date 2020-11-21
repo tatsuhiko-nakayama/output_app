@@ -58,7 +58,7 @@ class ItemsController < ApplicationController
   end
 
   def search
-    @items = Item.open.search(params[:keyword]).order('created_at DESC')
+    @items = Item.open.search(params[:keyword]).order('created_at DESC').page(params[:page])
   end
 
   def like
