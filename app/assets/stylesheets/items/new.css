@@ -2,12 +2,12 @@ input[type="submit"] {
   -webkit-appearance: none;
 }
 
+
 select {
   -webkit-appearance: none;
 }
 
 .new-content {
-  height: calc(100vh - 80px);
   width: 100%;
   margin: 10px 15px;
   box-sizing: border-box;
@@ -17,7 +17,7 @@ select {
 }
 
 .caption-area {
-  height: 20%;
+  height: 160px;
   width: 100%;
 }
 
@@ -32,11 +32,11 @@ select {
 }
 
 .first-box {
-  height: 33%;
+  height: 25%;
 }
 
 .second-box {
-  height: 33%;
+  height: 25%;
   display: flex;
   justify-content: space-between;
 }
@@ -78,7 +78,7 @@ select {
 }
 
 .third-box {
-  height: 33%;
+  height: 25%;
   display: flex;
   justify-content: space-between;
 }
@@ -110,8 +110,24 @@ select {
   align-items: center;
 }
 
+.fourth-box {
+  height: 25%;
+  display: flex;
+  align-items: flex-end;
+  font-size: 12px;
+}
+
+.fourth-box span {
+  margin: 0 20px;
+  font-size: 15px;
+  
+  color: #fff;
+  padding: 1px 8px;
+  background-color: #4a4a4a;
+}
+
 .input-area {
-  height: 70%;
+  height: calc(100vh - 295px);
   width: 100%;
   margin-top: 5px;
   display: flex;
@@ -143,10 +159,11 @@ select {
 }
 
 .command-area {
-  height: 10%;
+  height: 50px;
   width: 100%;
   display: flex;
   justify-content: flex-end;
+  background-color: #f0f0f0;
 }
 
 .command-list {
@@ -198,7 +215,7 @@ select {
 }
 
 .edit-command-area {
-  height: 10%;
+  height: 50px;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -233,7 +250,7 @@ select {
   }
 
   .caption-area {
-    height: 30%;
+    height: 240px;
   }
 
   .second-box-left {
@@ -251,7 +268,7 @@ select {
   }
 
   .input-area {
-    height: 60%;
+    height: calc(100vh - 380px);
   }
 
   .input-area-right {
@@ -259,11 +276,11 @@ select {
   }
 
   .first-box {
-    height: 20%;
+    height: 40px;
   }
 
   .second-box {
-    height: 40%;
+    height: 80px;
     display: flex;
     flex-direction: column;
   }
@@ -273,7 +290,7 @@ select {
   }
 
   .third-box {
-    height: 40%;
+    height: 80px;
     display: flex;
     flex-direction: column-reverse;
   }
@@ -289,6 +306,10 @@ select {
 
   .timer {
     font-size: 12px;
+  }
+
+  .fourth-box {
+    height: 40px;
   }
 
 

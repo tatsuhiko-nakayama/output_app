@@ -37,6 +37,10 @@
   justify-content: space-around;
 }
 
+.profile-image {
+  font-size: 13px;
+}
+
 .profile-field-parent {
   height: 50px;
   width: 50vw;
@@ -113,7 +117,6 @@
 
 .profile-submit-btn {
   height: 45px;
-  width: 40vw;
   padding: 5px 20px;
   background-color: cornflowerblue;
   color: #fff;

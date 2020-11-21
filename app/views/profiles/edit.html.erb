@@ -32,9 +32,10 @@
       <div class="profile-image-parent">
         <div class="profile-image-child">
           <span>プロフィール画像</span>
-          <%= f.file_field :image, id:"profile-image" %>
+          <%= f.file_field :image, class: 'profile-image', id:"profile-image" %>
         </div>
-        <div id="image-list"></div>
+        <div id="image-list">
+        </div>
       </div>
       
       <div class="profile-submit">
