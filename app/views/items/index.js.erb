@@ -1,3 +1,4 @@
+$('#users-item-pagenate').append("<%= escape_javascript(render 'shared/item-list', object: @items) %>")
 $('#item-pagenate').append("<%= escape_javascript(render 'shared/item-list', object: @items) %>")
 $("#more-link").replaceWith("<%= escape_javascript(
   link_to_next_page(@items, 'もっと見る', remote: true, class: 'more-link', id: 'more-link')
