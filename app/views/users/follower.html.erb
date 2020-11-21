@@ -9,7 +9,10 @@
       <p><%= @follower_user.username%> 's follower</p>
     </div>
     <%# @users リスト展開 %>
-    <%= render 'userlist'%>
+    <div id='user-pagenate'>
+      <%= render 'userlist'%>
+    </div>
+    <%= link_to_next_page @users, 'もっと見る', remote: true, class: 'more-link', id: 'more-link' %>
     <%# // @users リスト展開 %>   
   </div>
   <%# // Left-side %>

@@ -8,13 +8,10 @@
       <p>☀︎ ハッシュタグ「 #<%= params[:keyword].tr('/０-９/', '/0-9/').tr('＃', '#').delete('#') %> 」の検索結果</p>
     </div>
     <%# @tags リスト展開 %>
-    <% @tags.each do |tag| %>
-      <li class='tag-list'>
-        <div class='tag-list-content'>
-          <%= link_to "##{tag.name} (#{tag.items.count}) 　open #{tag.items.open.count} ", "/items/hashtag/#{tag.name}" %>
-        </div>
-      </li>
-    <% end %>
+    <div id='tag-pagenate'>
+      <%= render 'search'%>
+    </div>
+    <%= link_to_next_page @tags, 'もっと見る', remote: true, class: 'more-link', id: 'more-link' %>
     <%# // @tags リスト展開 %>   
   </div>
   <%# // Left-side %>

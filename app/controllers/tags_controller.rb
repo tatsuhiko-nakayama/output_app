@@ -1,6 +1,6 @@
 class TagsController < ApplicationController
   def search
-    @tags = Tag.search(params[:keyword]).joins(:item_tags).group(:tag_id).order('count(item_id)desc')
+    @tags = Tag.search(params[:keyword]).joins(:item_tags).group(:tag_id).order('count(item_id)desc').page(params[:page])
 
     if user_signed_in?
       @user = current_user

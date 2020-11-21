@@ -3,7 +3,7 @@ class LikesController < ApplicationController
 
   def index
     @liked_user = User.find(params[:id])
-    @items = @liked_user.liked_items.open.order('likes.created_at DESC')
+    @items = @liked_user.liked_items.open.order('likes.created_at DESC').page(params[:page])
     if user_signed_in?
       @user = current_user
       @my_items = Item.where(user_id: current_user.id).order('created_at DESC')

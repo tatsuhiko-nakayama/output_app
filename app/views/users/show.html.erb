@@ -13,9 +13,15 @@
     </div>
     <%# @items リスト展開 %>
     <% if @user == current_user %>
-      <%= render "shared/users-item-list"%>
+      <div id='users-item-pagenate'>
+        <%= render "shared/users-item-list"%>
+      </div>
+      <%= link_to_next_page @user_items, 'もっと見る', remote: true, class: 'more-link', id: 'users-more-link' %>
     <% else %>
-      <%= render "shared/item-list" %>
+      <div id='item-pagenate'>
+        <%= render "shared/item-list" %>
+      </div>
+      <%= link_to_next_page @items, 'もっと見る', remote: true, class: 'more-link', id: 'more-link' %>
     <% end %>
     <%# // @items リスト展開 %> 
   </div>

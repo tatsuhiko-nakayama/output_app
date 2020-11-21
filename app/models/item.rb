@@ -10,6 +10,8 @@ class Item < ApplicationRecord
   belongs_to_active_hash :category
 
   enum status: { closed: 0, open: 1 }
+  paginates_per 10
+
 
   with_options presence: true do
     validates :title, length: { maximum: 40 }

@@ -5,7 +5,7 @@ class ItemsController < ApplicationController
   before_action :correct_user_edit, only: :edit
 
   def index
-    @items = Item.open.order('created_at DESC')
+    @items = Item.open.order('created_at DESC').page(params[:page])
   end
 
   def new
@@ -49,21 +49,21 @@ class ItemsController < ApplicationController
 
   def tag
     @tag = Tag.find_by(name: params[:name])
-    @items = @tag.items.open.order('created_at DESC')
+    @items = @tag.items.open.order('created_at DESC').page(params[:page])
   end
 
   def category
     @item = Item.find_by(category_id: params[:id])
-    @items = Item.open.where(category_id: params[:id]).order('created_at DESC')
+    @items = Item.open.where(category_id: params[:id]).order('created_at DESC').page(params[:page])
   end
 
   def search
-    @items = Item.open.search(params[:keyword]).order('created_at DESC')
+    @items = Item.open.search(params[:keyword]).order('created_at DESC').page(params[:page])
   end
 
   def like
     @liked_item = Item.find(params[:id])
-    @users = @liked_item.liked_users.order('likes.created_at DESC')
+    @users = @liked_item.liked_users.order('likes.created_at DESC').page(params[:page])
     if user_signed_in?
       @user = current_user
       @my_items = Item.where(user_id: current_user.id).order('created_at DESC')

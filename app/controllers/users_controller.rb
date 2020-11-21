@@ -3,12 +3,12 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
-    @items = @user.items.open.order('created_at DESC')
-    @user_items = @user.items.order('created_at DESC')
+    @items = @user.items.open.order('created_at DESC').page(params[:page])
+    @user_items = @user.items.order('created_at DESC').page(params[:page])
   end
 
   def search
-    @users = User.search(params[:keyword]).order('created_at DESC')
+    @users = User.search(params[:keyword]).order('created_at DESC').page(params[:page])
     if user_signed_in?
       @user = current_user
       @my_items = Item.where(user_id: current_user.id).order('created_at DESC')
@@ -17,7 +17,7 @@ class UsersController < ApplicationController
 
   def follow
     @follow_user = User.find(params[:id])
-    @users = @follow_user.followings.order('relationships.created_at DESC')
+    @users = @follow_user.followings.order('relationships.created_at DESC').page(params[:page])
     if user_signed_in?
       @user = current_user
       @my_items = Item.where(user_id: current_user.id).order('created_at DESC')
@@ -27,7 +27,7 @@ class UsersController < ApplicationController
     
   def follower
     @follower_user = User.find(params[:id])
-    @users = @follower_user.followers.order('relationships.created_at DESC')
+    @users = @follower_user.followers.order('relationships.created_at DESC').page(params[:page])
     if user_signed_in?
       @user = current_user
       @my_items = Item.where(user_id: current_user.id).order('created_at DESC')

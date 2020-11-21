@@ -1,0 +1,7 @@
+<% @tags.each do |tag| %>
+  <li class='tag-list'>
+    <div class='tag-list-content'>
+      <%= link_to "##{tag.name} (#{tag.items.count}) 　open #{tag.items.open.count} ", "/items/hashtag/#{tag.name}" %>
+    </div>
+  </li>
+<% end %>

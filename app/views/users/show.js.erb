@@ -1,0 +1,9 @@
+$('#users-item-pagenate').append("<%= escape_javascript(render 'shared/users-item-list', object: @user_items) %>")
+$("#users-more-link").replaceWith("<%= escape_javascript(
+  link_to_next_page(@user_items, 'もっと見る', remote: true, class: 'more-link', id: 'users-more-link')
+) %>");
+
+$('#item-pagenate').append("<%= escape_javascript(render 'shared/item-list', object: @items) %>")
+$("#more-link").replaceWith("<%= escape_javascript(
+  link_to_next_page(@items, 'もっと見る', remote: true, class: 'more-link', id: 'more-link')
+) %>");
