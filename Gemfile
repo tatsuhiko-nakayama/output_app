@@ -66,3 +66,4 @@ gem 'rails-i18n'
 gem 'redcarpet', '~> 2.3.0'
 gem 'coderay'
 gem "aws-sdk-s3", require: false
+gem 'kaminari'
