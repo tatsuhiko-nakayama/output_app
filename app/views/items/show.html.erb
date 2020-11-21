@@ -54,6 +54,9 @@
     </div>
 
     <div class='show-body'> 
+      <% if @item.image.attached? %>
+        <%= image_tag @item.image, class: 'show-image' %>
+      <% end %>
       <%= markdown(@item.body).html_safe %>
       <%#= safe_join(@item.body.split("\n"),tag(:br)) %>
     </div>
