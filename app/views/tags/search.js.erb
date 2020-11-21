@@ -1,0 +1,4 @@
+$('#tag-pagenate').append("<%= escape_javascript(render 'search', object: @tags) %>")
+$("#more-link").replaceWith("<%= escape_javascript(
+  link_to_next_page(@tags, 'もっと見る', remote: true, class: 'more-link', id: 'more-link')
+) %>");
