@@ -54,7 +54,7 @@ class ItemsController < ApplicationController
 
   def category
     @item = Item.find_by(category_id: params[:id])
-    @items = Item.open.where(category_id: params[:id]).order('created_at DESC')
+    @items = Item.open.where(category_id: params[:id]).order('created_at DESC').page(params[:page])
   end
 
   def search
