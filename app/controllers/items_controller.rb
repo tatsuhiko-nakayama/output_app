@@ -49,7 +49,7 @@ class ItemsController < ApplicationController
 
   def tag
     @tag = Tag.find_by(name: params[:name])
-    @items = @tag.items.open.order('created_at DESC')
+    @items = @tag.items.open.order('created_at DESC').page(params[:page])
   end
 
   def category
