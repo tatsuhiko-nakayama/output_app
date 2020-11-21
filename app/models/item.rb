@@ -8,6 +8,7 @@ class Item < ApplicationRecord
   has_many :item_tags, dependent: :destroy
   has_many :tags, through: :item_tags
   belongs_to_active_hash :category
+  has_one_attached :image
 
   enum status: { closed: 0, open: 1 }
   paginates_per 10

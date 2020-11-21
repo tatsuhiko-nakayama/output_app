@@ -18,7 +18,7 @@
 }
 
 .show-top-profile {
-  width: 70%;
+  width: 60%;
   display: flex;
   align-items: center;
 }
@@ -51,7 +51,7 @@
 }
 
 .show-top-command {
-  width: 30%;
+  width: 40%;
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -229,6 +229,14 @@
 .show-top-communication-after a {
   font-size: 14px;
   color: grey;
+}
+
+.show-image {
+  width: 100%;
+  max-width: 700px;
+  max-height: 70vh;
+  object-fit: contain;
+  margin-bottom: 30px;
 }
 
 .show-body {

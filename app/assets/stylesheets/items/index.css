@@ -415,7 +415,7 @@ a:hover {
   .main {
     background-color: #f0f0f0;
     display: flex;
-    padding: 10px 10vw;
+    padding: 0 10vw;
   }
 
   .top-right-content {
