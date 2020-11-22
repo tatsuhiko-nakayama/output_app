@@ -6,10 +6,11 @@
         <span class='list-username'><%= item.user.username %></span>
       </div>
     <% end %>
+
     <% if item.image.attached? %>
-      <div class='list-main-content-b'>
+    <div class='list-main-content-b'>
     <% else %>
-      <div class='list-main-content-a'>
+    <div class='list-main-content-a'>
     <% end %>
       <div class='list-title-content'>
         <p><%= link_to "#{item.title}", item_path(item.id) %></p>
@@ -26,7 +27,7 @@
         <div class='list-detail'>
           <div class='list-like-comment'>
             <div class='list-like-count'>
-             <span>✔︎ <%= Like.where(item_id: item.id).count %></span>
+              <span>✔︎ <%= Like.where(item_id: item.id).count %></span>
             </div>
             <span class='list-comment-icon'>💬 </span>
             <div class='list-comment-count'>

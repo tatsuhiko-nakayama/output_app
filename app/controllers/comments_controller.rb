@@ -1,5 +1,4 @@
 class CommentsController < ApplicationController
-
   def index
     @commented_user = User.find(params[:id])
     @items = @commented_user.commented_items.open.order('comments.created_at DESC').distinct.page(params[:page])
