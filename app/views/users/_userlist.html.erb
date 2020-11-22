@@ -5,7 +5,7 @@
         <%= image_tag user.profile.image, class:'list-avatar'%>
       </div>
     <% end %>
-    <div class='list-main-content'>
+    <div class='user-list-main-content'>
       <div class='list-title-content'>
         <%= link_to "#{user.username}", user_path(user.id) %>
       </div>
@@ -37,6 +37,9 @@
           </div>
           <div class='user-list-created-at'>
             <%= user.created_at.strftime('20%y年%m月から利用') %>
+          </div>
+          <div class='user-list-created-at-small'>
+            <%= user.created_at.strftime('20%y年%m月') %>
           </div>
         </div>
       </div>

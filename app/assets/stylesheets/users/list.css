@@ -43,3 +43,20 @@
   margin-right: 10px;
   color: grey;
 }
+
+.user-list-created-at-small {
+  font-size: 11px;
+  margin-right: 10px;
+  color: grey;
+  display: none;
+}
+
+@media screen and (max-width: 375px) {
+  .user-list-created-at {
+    display: none;
+  }
+
+  .user-list-created-at-small {
+    display: block;
+  }
+}

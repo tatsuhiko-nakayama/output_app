@@ -132,6 +132,14 @@ a:hover {
   box-sizing: border-box;
 }
 
+.user-list-main-content {
+  width: calc(100% - 80px);
+  display: flex;
+  flex-direction: column;
+  padding: 0 10px;
+  box-sizing: border-box;
+}
+
 .my-list-main-content {
   display: flex;
   flex-direction: column;
@@ -504,6 +512,10 @@ a:hover {
     padding: 0 2px 0 0;
   }
 
+  .user-list-main-content {
+    padding: 0 2px 0 0;
+  }
+
   .list-title-content a {
     font-size: 16px;
   }
@@ -524,5 +536,46 @@ a:hover {
 
   .users-list-closed {
     margin-right: 2.5vw;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .list-profile-content {
+    width: 60px;
+  }
+
+  .list-avatar {
+    width: 35px;
+    height: 35px;
+  }
+
+  .list-username {
+    font-size: 11px;
+  }
+
+  .list-main-content-a {
+    width: calc(100% - 60px);
+  }
+  
+  .list-main-content-b {
+    width: calc(100% - 117px);
+  }
+  
+  .user-list-main-content {
+    width: calc(100% - 60px);
+  }
+
+  .list-image-content {
+    display: flex;
+    align-items: center;
+    width: 57px;
+    height: 80px;
+    padding: 4px 2px 4px 1px;
+  }
+  
+  .list-image {
+    width: 54px;
+    height: 72px;
+    object-fit: cover;
   }
 }
