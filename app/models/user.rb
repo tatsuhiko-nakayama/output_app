@@ -52,5 +52,4 @@ class User < ApplicationRecord
   def self.guest
     find_by(username: 'guest')
   end
-  
 end
