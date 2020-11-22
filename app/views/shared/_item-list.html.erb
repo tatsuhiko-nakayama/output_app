@@ -6,7 +6,11 @@
         <span class='list-username'><%= item.user.username %></span>
       </div>
     <% end %>
-    <div class='list-main-content'>
+    <% if item.image.attached? %>
+      <div class='list-main-content-b'>
+    <% else %>
+      <div class='list-main-content-a'>
+    <% end %>
       <div class='list-title-content'>
         <p><%= link_to "#{item.title}", item_path(item.id) %></p>
       </div>
@@ -35,5 +39,10 @@
         </div>
       </div>
     </div>
+    <% if item.image.attached? %>
+      <div class='list-image-content'>      
+        <%= image_tag item.image, class: 'list-image'%>
+      </div>
+    <% end %>
   </li>
 <% end %>
