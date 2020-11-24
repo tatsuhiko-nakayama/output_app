@@ -11,11 +11,11 @@ Output App
 - URL : https://outputapp.herokuapp.com/
 
 ## 概要
-日々のアウトプットを記録するログ型SNS
+日々のアウトプットを記録する日記SNS
 
 ## 特徴
 - デフォルトが非公開でログアプリとして使いやすい
-- インプット情報を検索してネタ探し＆共有ができる
+- インプット情報を検索してネタ探し、共有ができる
 
 <img width="600" alt="スクリーンショット 2020-11-17 13 07 37" src="https://user-images.githubusercontent.com/70306357/99345591-fc3e0480-28d5-11eb-8620-ca6b6a7a2f1e.png">
 
@@ -26,11 +26,13 @@ Output App
 
 ## 使用技術
 - Ruby 2.6.5 / Rails 6.0.3.4
-- MySQL2
+- MySQL
 - JavaScript
 - jQuery
 - Git / GitHub
-- Amazon S3
+- AWS(EC2,S3,Route53)
+- Nginx
+- Capistrano
 
 ## 機能一覧（開発中の機能含む）
 
@@ -53,6 +55,7 @@ Output App
 
 ◆投稿機能
 - マークダウン記法
+- 画像投稿機能
 - ハッシュタグ機能
 - 投稿プレビュー機能 ※開発中
 - カウントアップタイマー機能 ※開発中
@@ -61,6 +64,10 @@ Output App
 
 <img width="600" alt="スクリーンショット 2020-11-17 13 20 49" src="https://user-images.githubusercontent.com/70306357/99346338-bd10b300-28d7-11eb-9848-4cece72981be.png">
 
+
+◆一覧表示機能
+- ページネーション機能
+- 画像サムネイル表示
 
 ◆検索機能
 - カテゴリ別検索
