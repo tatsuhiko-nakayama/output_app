@@ -63,7 +63,7 @@ a:hover {
 
 .search-bar {
   height: 45px;
-  padding: 10px 10px 5px;
+  padding: 15px 30px 5px;
   box-sizing: border-box;
   display: flex;
   align-items: center;
@@ -127,6 +127,7 @@ a:hover {
   padding: 5px 5px;
   font-size: 13px;
   font-family: sans-serif;
+  overflow-x: hidden;
 }
 
 .more-link {
@@ -570,6 +571,10 @@ a:hover {
 
   .top-right-content-unlogin {
     display: none;
+  }
+
+  .search-bar {
+    padding: 15px 12px 5px;
   }
 
   .search-category-btn {
