@@ -4,7 +4,7 @@ input[type="submit"] {
 
 
 select {
-  -webkit-appearance: none;
+
 }
 
 .new-content {
@@ -59,15 +59,16 @@ select {
 
 .category-list li {
   margin-right: 20px;
+  font-family: sans-serif;
 }
 
 .category-radio-btn {
- height: 17px;
- width: 17px;
- top: 3px;
- font-family: monospace;
- position: relative;
- cursor: pointer;
+  height: 17px;
+  width: 17px;
+  top: 4px;
+  font-family: sans-serif;
+  position: relative;
+  cursor: pointer;
 }
 
 .second-box-right {
@@ -253,7 +254,7 @@ select {
   }
 
   .category-list li {
-    margin-right: 10px;
+    margin: 0px 3px;
   }
 
   .input-area {
@@ -323,6 +324,7 @@ select {
   .category-radio-btn {
    height: 11px;
    width: 11px;
+   top: 2px;
    position: relative;
    cursor: pointer;
   }

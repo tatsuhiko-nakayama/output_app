@@ -59,32 +59,12 @@
   cursor: pointer;
 }
 
-.search-category-list a {
-  color: grey;
-}
+
 
 .search-list-child {
   padding: 0px 5px 8px 15px;
 }
 
-.search-input {
-  height: 22px;
-  width: 90px;
-  font-size: 13px;
-  margin-left: 15px;
-  margin-bottom: 15px;
-  padding: 1px 5px;
-  border: 1px solid #ccc;
-  border-radius: 3px;
-}
-
-.search-btn {
- 
-  font-size: 16px;
- 
-  cursor: pointer;
-
-}
 
 .right-header {
   width: 50vw;
