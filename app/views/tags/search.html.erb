@@ -3,10 +3,16 @@
 <div class='main'>
 
   <%# Left-side %>
-  <div class='top-left-content'>   
+  <div class='top-left-content'>
+
+    <%# Search-Contents %>
+    <%= render 'shared/search_contents' %>
+    <%# // Search-Contents %>
+
     <div class='item-list-navi'>
-      <p>☀︎ ハッシュタグ「 #<%= params[:keyword].tr('/０-９/', '/0-9/').tr('＃', '#').delete('#') %> 」の検索結果</p>
+      <p>「 #<%= params[:keyword].tr('/０-９/', '/0-9/').tr('＃', '#').delete('#') %> 」の検索結果</p>
     </div>
+
     <%# @tags リスト展開 %>
     <div id='tag-pagenate'>
       <%= render 'search'%>

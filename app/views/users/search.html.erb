@@ -3,16 +3,23 @@
 <div class='main'>
 
   <%# Left-side %>
-  <div class='top-left-content'>   
+  <div class='top-left-content'>
+
+    <%# Search-Contents %>
+    <%= render 'shared/search_contents' %>
+    <%# // Search-Contents %>
+
     <div class='item-list-navi'>
-      <p>☀︎ ユーザー「 <%= params[:keyword] %> 」の検索結果</p>
+      <p>👤「 <%= params[:keyword] %> 」の検索結果</p>
     </div>
+
     <%# @users リスト展開 %>
     <div id='user-pagenate'>
       <%= render 'userlist'%>
     </div>
     <%= link_to_next_page @users, 'もっと見る', remote: true, class: 'more-link', id: 'more-link' %>
-    <%# // @users リスト展開 %>   
+    <%# // @users リスト展開 %>
+
   </div>
   <%# // Left-side %>
   

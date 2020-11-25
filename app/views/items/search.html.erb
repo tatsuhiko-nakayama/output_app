@@ -3,10 +3,16 @@
 <div class='main'>
 
   <%# Left-side %>
-  <div class='top-left-content'>   
+  <div class='top-left-content'>
+
+    <%# Search-Contents %>
+    <%= render 'shared/search_contents' %>
+    <%# // Search-Contents %>
+
     <div class='item-list-navi'>
-      <p>☀︎ タイトル「 <%= params[:keyword] %> 」の検索結果</p>
+      <p>✏︎「 <%= params[:keyword] %> 」の検索結果</p>
     </div>
+
     <%# @items リスト展開 %>
     <div id='item-pagenate'>
       <%= render "shared/item-list" %>

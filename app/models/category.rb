@@ -4,6 +4,6 @@ class Category < ActiveHash::Base
     { id: 2, name: 'Youtube' },
     { id: 3, name: '記事/SNS' },
     { id: 4, name: 'イベント' },
-    { id: 5, name: '出来事' }
+    { id: 5, name: 'メモ' }
   ]
 end

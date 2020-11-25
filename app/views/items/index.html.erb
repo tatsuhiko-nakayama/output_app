@@ -7,7 +7,6 @@
 <% end %>
 <%# // ゲストログイン用コンテンツ%>
 
-
 <div class='main'>
 
   <%# if user_signed_in? %>
@@ -19,8 +18,12 @@
   <%# Left-side %>
   <div class='top-left-content'>
 
+    <%# Search-Contents %>
+    <%= render 'shared/search_contents' %>
+    <%# // Search-Contents %>
+
     <div class='item-list-navi'>
-      <p>☀︎ Pickup Output</p>
+      <p> Time Line</p>
     </div>
 
     <%# @items リスト展開 %>

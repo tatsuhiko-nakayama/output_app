@@ -3,10 +3,15 @@
 <div class='main'>
 
   <%# Left-side %>
-  <div class='top-left-content'>   
+  <div class='top-left-content'>
+
+    <%# Search-Contents %>
+    <%= render 'shared/search_contents' %>
+    <%# // Search-Contents %>
+
     <div class='item-list-navi'>
       <% if @item.present?%>
-        <p>☀︎ <%= @item.category.name%></p>
+        <p><%= @item.category.name%></p>
       <% else %>
         まだ投稿がありません
       <% end %>

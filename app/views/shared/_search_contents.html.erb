@@ -1,0 +1,35 @@
+<div class='search-bar'>
+  <div class='search-bar-left'>
+    <select class='search-menu' id='search-menu'>
+      <option value="0">＃</option>
+      <option value="1">✏︎</option>
+      <option value="2">👤</option>
+    </select>
+  </div>
+  <div class='search-bar-right'>
+    <%= form_with(url: hashtags_path, local: true, method: :get, class:'search-form', id:'search-form') do |form| %>
+      <%= form.text_field :keyword, class: "search-input", id: "search-input", placeholder: "ハッシュタグで検索" %>
+      <%= form.submit "🔎", class: "search-btn" %>
+    <% end %>
+  </div>  
+</div>
+
+<div class='search-category'>
+  <ul class='search-category-list'>
+    <%=link_to "/items/category/1" do %>
+      <li class='search-category-btn'>本</li>
+    <% end %>
+    <%=link_to "/items/category/2" do %>
+      <li class='search-category-btn'>Youtube</li>
+    <% end %>
+    <%=link_to "/items/category/3" do %>
+      <li class='search-category-btn'>記事/SNS</li>
+    <% end %>
+    <%=link_to "/items/category/4" do %>
+      <li class='search-category-btn'>イベント</li>
+    <% end %>
+    <%=link_to "/items/category/5" do %>
+      <li class='search-category-btn'>メモ</li>
+    <% end %>
+  </ul>
+</div>
