@@ -26,8 +26,8 @@
         </select>
       </div>
       <div class='search-bar-right'>
-        <%= form_with(url: hashtags_path, local: true, method: :get, class:'hashtag-search-form', id:'hashtag-search-form') do |form| %>
-          <%= form.text_field :keyword, class: "search-input" %>
+        <%= form_with(url: hashtags_path, local: true, method: :get, class:'search-form', id:'search-form') do |form| %>
+          <%= form.text_field :keyword, class: "search-input", id: "search-input", placeholder: "ハッシュタグで検索" %>
           <%= form.submit "🔎", class: "search-btn" %>
         <% end %>
       </div>  
