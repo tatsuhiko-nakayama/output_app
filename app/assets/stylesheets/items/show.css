@@ -530,6 +530,10 @@
     padding: 0 0.2vw;
   }
 
+  .show-left-content {
+    width: 100%;
+    margin: 0;
+  }
 
   .show-top-info {
     height: 60px;

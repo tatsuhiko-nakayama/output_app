@@ -1,38 +1,6 @@
 <header class='header'>
   <div class='left-header'>
-    <%= link_to image_tag("output_app_logo.png", class: "output_app_logo"), "/"%>  
-    <div class='search-box'>
-      <div class='search-title'>
-        <%= image_tag 'search.png', class:'search-title-icon'%>
-        <span>検索</span>
-      </div>
-      <ul class='search-list hidden', id='search-list'>
-        <li class='search-list-parent category-search'>カテゴリー検索</li>
-        <ul class='search-category-list hidden', id='search-category-list'>
-          <li class='search-list-child'><%= link_to '> 本', "/items/category/1"%></li>
-          <li class='search-list-child'><%= link_to '> Youtube', "/items/category/2"%></li>
-          <li class='search-list-child'><%= link_to '> 記事/SNS', "/items/category/3"%></li>
-          <li class='search-list-child'><%= link_to '> イベント', "/items/category/4"%></li>
-          <li class='search-list-child'><%= link_to '> 出来事', "/items/category/5"%></li>
-        </ul>
-        <ul>
-        <li class='search-list-parent hashtag-search'>ハッシュタグ検索</li>
-        <%= form_with(url: hashtags_path, local: true, method: :get, class:'hashtag-search-form hidden', id:'hashtag-search-form') do |form| %>
-          <%= form.text_field :keyword, class: "search-input" %>
-          <%= form.submit "🔎", class: "search-btn" %>
-        <% end %>
-        <li class='search-list-parent title-search'>タイトル検索</li>
-        <%= form_with(url: search_items_path, local: true, method: :get, class:'title-search-form hidden', id:'title-search-form') do |form| %>
-          <%= form.text_field :keyword, class: "search-input" %>
-          <%= form.submit "🔎", class: "search-btn" %>
-        <% end %>
-        <li class='search-list-parent user-search'>ユーザー検索</li>
-        <%= form_with(url: search_users_path, local: true, method: :get, class:'user-search-form hidden', id:'user-search-form') do |form| %>
-          <%= form.text_field :keyword, class: "search-input" %>
-          <%= form.submit "🔎", class: "search-btn" %>
-        <% end %>
-      </ul>
-    </div>
+    <%= link_to image_tag("output_app_logo.png", class: "output_app_logo"), "/"%> 
   </div>
 
   <%# ログイン有無の条件分岐 %>

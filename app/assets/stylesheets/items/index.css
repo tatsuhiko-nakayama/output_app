@@ -86,9 +86,9 @@ a:hover {
 
 .search-input {
   height: 25px;
-  width: calc(100% - 40px);
+  width: calc(100% - 60px);
   font-size: 13px;
-  padding: 1px 5px;
+  padding: 1px 15px;
   border: 1px solid #ccc;
   border-radius: 3px;
 }
