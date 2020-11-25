@@ -2,11 +2,6 @@ input[type="submit"] {
   -webkit-appearance: none;
 }
 
-
-select {
-
-}
-
 .new-content {
   width: 100%;
   margin: 10px 15px;
@@ -234,6 +229,10 @@ select {
 }
 
 @media screen and (max-width: 768px) {
+
+  select {
+    -webkit-appearance: none;
+  }
 
   .new-content {
     overflow-x: hidden;
