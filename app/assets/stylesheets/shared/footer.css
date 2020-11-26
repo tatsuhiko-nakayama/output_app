@@ -3,11 +3,9 @@
   height: 60px;
   background-color: grey;
   color: #fff;
-  text-align: center;
-}
-
-.footer p {
-  padding-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 @media screen and (max-width: 768px) {
