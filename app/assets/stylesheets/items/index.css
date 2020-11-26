@@ -410,6 +410,11 @@ a:hover {
   align-items: center;
 }
 
+.list-like-icon {
+  width: 13px;
+  margin-bottom: -2px;
+}
+
 .list-like-count {
   font-size: 13px;
   font-weight: bold;
@@ -422,8 +427,8 @@ a:hover {
 }
 
 .list-comment-icon {
-  font-size: 11px;
-  margin-right: 2px;
+  width: 16px;
+  margin-bottom: -3px;
 }
 
 .my-list-comment-icon {
