@@ -351,6 +351,11 @@
   font-weight: bold;
 }
 
+.info-icon-comment {
+  width: 28px;
+  margin-bottom: -5px;
+}
+
 .comment-input {
   margin-top: 20px;
   padding: 0 40px 20px;

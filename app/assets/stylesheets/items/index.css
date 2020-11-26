@@ -58,8 +58,9 @@ a:hover {
 }
 
 .search-btn {
-  font-size: 18px;
-  margin-left: 3px;
+  width: 17px;
+  margin-left: 5px;
+  margin-bottom: -2px;
   cursor: pointer;
 }
 
@@ -145,7 +146,7 @@ a:hover {
 }
 
 .my-item-list {
-  height: 80px;
+  height: 85px;
   list-style: none;
   padding: 5px 10px;
 }
@@ -246,8 +247,8 @@ a:hover {
 }
 
 .my-list-title-content p {
-  font-size: 13px;
-  margin-top: 5px;
+  font-size: 14px;
+  margin: 10px 0 5px;
   margin-left: 3px;
   font-weight: bold;
   overflow: hidden;
@@ -389,15 +390,6 @@ a:hover {
   margin-bottom: 2px;
 }
 
-.my-list-detail-content {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-bottom: 1px solid grey;
-  color: grey;
-  margin: 0 5px;
-}
-
 .list-detail {
   display: flex;
   justify-content: flex-start;
@@ -410,26 +402,22 @@ a:hover {
   align-items: center;
 }
 
+.list-like-icon {
+  width: 13px;
+  margin-bottom: -2px;
+}
+
 .list-like-count {
   font-size: 13px;
   font-weight: bold;
   margin-right: 10px;
 }
 
-.my-list-like-count {
-  font-size: 12px;
-  margin-right: 10px;
-}
-
 .list-comment-icon {
-  font-size: 11px;
-  margin-right: 2px;
+  width: 16px;
+  margin-bottom: -3px;
 }
 
-.my-list-comment-icon {
-  font-size: 10px;
-  margin-right: 2px;
-}
 
 .list-comment-count {
   font-size: 13px;
@@ -437,21 +425,9 @@ a:hover {
   margin-right: 12px;
 }
 
-.my-list-comment-count {
-  font-size: 12px;
-  margin-right: 12px;
-}
-
 .list-created-at {
   font-size: 12px;
   margin-right: 10px;
-}
-
-.my-list-created-at {
-  font-size: 11px;
-  display: flex;
-  justify-content: flex-end;
-  color: grey;
 }
 
 .list-image-content {
@@ -464,6 +440,44 @@ a:hover {
   width: 61.5px;
   height: 82px;
   object-fit: cover;
+}
+
+.my-list-detail-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid grey;
+  color: grey;
+  margin: 0 5px;
+}
+
+.my-list-like-icon {
+  width: 13px;
+  margin-bottom: -2px;
+}
+
+.my-list-like-count {
+  font-size: 12px;
+  margin-right: 10px;
+}
+
+.my-list-comment-icon {
+  width: 15px;
+  margin-bottom: -3px;
+  margin-right: 1px;
+}
+
+.my-list-comment-count {
+  font-size: 12px;
+  margin-right: 12px;
+  margin-bottom: 1px;
+}
+
+.my-list-created-at {
+  font-size: 11px;
+  display: flex;
+  justify-content: flex-end;
+  color: grey;
 }
 
 .top-right-content {
@@ -528,7 +542,7 @@ a:hover {
 }
 
 .command-new {
-  height: 30px;
+  height: 25px;
 }
 
 .command-avatar {

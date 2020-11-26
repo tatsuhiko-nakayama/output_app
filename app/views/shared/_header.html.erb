@@ -7,10 +7,22 @@
   <div class='right-header'>
     <% if user_signed_in? %>
       <ul class='signed-in-list'>
-        <li><%= link_to "✔︎ LIKE", "/likes/user/#{current_user.id}", class: "like-list-btn" %></li>
-        <li><%= link_to "✔︎","/likes/user/#{current_user.id}", class: 'like-list-btn-small' %>
-        <li><%= link_to "✏︎ NEW", new_item_path, class: "new-item-btn" %></li>
+        <%= link_to "/likes/user/#{current_user.id}" do %>
+          <li class="like-list-btn">
+            <%= image_tag "icon-like-white.png", class: "icon-like-white" %>
+            <p>LIKE</p>
+          </li>
+        <% end %>
+        <%= link_to new_item_path do %>
+          <li class="new-item-btn">
+            <%= image_tag "icon-new-white.png", class: "icon-new-white" %>
+            <p>NEW</p>
+          </li>
+        <% end %>
         <li><%= link_to image_tag(current_user.profile.image, class: "header-avatar"), user_path(current_user.id) %></li>
+        <%# ここから w768以下%>
+        <li><%= link_to image_tag("icon-like-brown.png", class: "like-list-btn-small"), "/likes/user/#{current_user.id}" %>
+        <%# ここまで w768以下%>
       </ul>
     <% else %>
       <ul class='not-signed-in-list'>

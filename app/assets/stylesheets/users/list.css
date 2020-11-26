@@ -21,6 +21,11 @@
   color:#4a4a4a;
 }
 
+.icon-new {
+  width: 13px;
+  margin-bottom: -1px;
+}
+
 .list-item-count {
   font-size: 12px;
   font-weight: bold;
