@@ -76,6 +76,7 @@
   object-fit: cover;
   border: 1px solid burlywood;
   border-radius: 70px;
+  margin-right: 10px;
 }
 
 .not-signed-in-list {
