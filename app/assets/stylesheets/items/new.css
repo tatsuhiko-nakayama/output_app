@@ -237,6 +237,10 @@ input[type="text"] {
 
 @media screen and (max-width: 768px) {
 
+  .main {
+    background-color: #fff;
+  }
+
   select {
     -webkit-appearance: none;
   }
@@ -307,6 +311,15 @@ input[type="text"] {
   .fourth-box {
     height: 40px;
   }
+
+  .command-area {
+    background-color: #fff;
+  }
+
+
+.edit-command-area {
+  background-color: #fff;
+}
 
 }
 
