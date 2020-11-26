@@ -31,10 +31,11 @@
         <div class='list-detail'>
           <div class='list-like-comment'>
             <div class='list-like-count'>
-             <span>✔︎ <%= Like.where(item_id: item.id).count %></span>
+              <%= image_tag "icon-like.png", class: 'list-like-icon'%>
+              <%= Like.where(item_id: item.id).count %>
             </div>
-            <span class='list-comment-icon'>💬 </span>
             <div class='list-comment-count'>
+              <%= image_tag "icon-comment.png", class: 'list-comment-icon'%>
               <%= Comment.where(item_id: item.id).count %>
             </div>
           </div>
