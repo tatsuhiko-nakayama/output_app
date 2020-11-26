@@ -58,8 +58,9 @@ a:hover {
 }
 
 .search-btn {
-  font-size: 18px;
-  margin-left: 3px;
+  width: 17px;
+  margin-left: 5px;
+  margin-bottom: -2px;
   cursor: pointer;
 }
 
