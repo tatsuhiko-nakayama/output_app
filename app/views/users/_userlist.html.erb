@@ -21,13 +21,15 @@
         <div class='user-list-detail'>
           <div class='list-like-comment'>
             <div class='list-like-count'>
-              ✏︎ <%= user.items.count%>
+              <%= image_tag "icon-new.png", class: "icon-new" %>
+              <%= user.items.count%>
             </div>
             <div class='list-like-count'>
-              ✔︎ <%= user.likes.count%>
+              <%= image_tag "icon-like.png", class: 'list-like-icon'%>
+              <%= user.likes.count%>
             </div>
-            <span class='list-comment-icon'>💬</span>
             <div class='user-list-comment-count'>
+              <%= image_tag "icon-comment.png", class: 'list-comment-icon'%>
               <%= user.comments.count %>
             </div>
             <%= image_tag 'human_icon.png', size: '15x15' %>
