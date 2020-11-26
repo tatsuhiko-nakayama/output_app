@@ -2,6 +2,14 @@ input[type="submit"] {
   -webkit-appearance: none;
 }
 
+input[type="text"] {
+  -webkit-appearance: none;
+}
+
+input[type="radio"] {
+  -webkit-appearance: none;
+}
+ 
 .new-content {
   width: 100%;
   margin: 10px 15px;
@@ -54,16 +62,18 @@ input[type="submit"] {
 
 .category-list li {
   margin-right: 20px;
-  font-family: sans-serif;
+  font-family: "Yu Gothic", sans-serif;
 }
 
 .category-radio-btn {
   height: 17px;
   width: 17px;
   top: 4px;
-  font-family: sans-serif;
+  font-family: "Yu Gothic", sans-serif;
   position: relative;
   cursor: pointer;
+  border: 1px solid grey;
+  border-radius: 15px;
 }
 
 .second-box-right {

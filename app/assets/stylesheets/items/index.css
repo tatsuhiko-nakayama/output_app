@@ -1,5 +1,5 @@
 html, body {
-  font-family: "arial", sans-serif;
+  font-family: "Arial", sans-serif;
 }
 
 a {
@@ -90,7 +90,7 @@ a:hover {
   margin: 0 5px;
   padding: 5px 5px;
   font-size: 13px;
-  font-family: sans-serif;
+  font-family: "Yu Gothic", sans-serif;
   overflow-x: hidden;
 }
 
