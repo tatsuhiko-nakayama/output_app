@@ -59,19 +59,6 @@
   font-size: 14px;
 }
 
-.new-item-btn-small {
-  color: burlywood;
-  background-color: #fff;
-  border: 1px solid #fff;
-  border-radius: 3px;
-  padding: 0.5px 7.2px;
-  margin-right: 20px;
-  font-size: 18px;
-  font-weight: bold;
-  display: none;
-}
-
-
 .header-avatar {
   width: 35px;
   height: 35px;
@@ -125,8 +112,8 @@
     display: none;
   }
 
-  .new-item-btn-small {
-    display: block;
+  .header-avatar {
+    display: none;
   }
   
 }
