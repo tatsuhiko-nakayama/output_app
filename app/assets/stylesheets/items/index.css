@@ -508,6 +508,36 @@ a:hover {
   margin-top: 5px;
 }
 
+.smartphone-command-bar {
+  width: 100vw;
+  height: 45px;
+  background-color: #fff;
+  position: fixed;
+  bottom: 0px;
+  right: 0px;
+  border-top: 1px solid #ccc;
+  padding: 5px;
+  box-sizing: border-box;
+  justify-content: space-around;
+  align-items: center;
+  display: none;
+}
+
+.command-home {
+  height: 20px;
+}
+
+.command-new {
+  height: 30px;
+}
+
+.command-avatar {
+  height: 30px;
+  object-fit: cover;
+  border: 1px solid #fff;
+  border-radius: 70px;
+}
+
 @media screen and (min-width: 968px) {
   .main {
     background-color: #f0f0f0;
@@ -555,6 +585,7 @@ a:hover {
     background-color: #f0f0f0;
     display: flex;
     justify-content: center;
+    min-height: calc(100vh - 105px);
   }
 
   .top-left-content {
@@ -630,6 +661,11 @@ a:hover {
   .users-list-closed {
     margin-right: 2.5vw;
   }
+
+  .smartphone-command-bar {
+    display: flex;
+  }
+
 }
 
 @media screen and (max-width: 375px) {

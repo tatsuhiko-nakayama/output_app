@@ -9,3 +9,9 @@
 .footer p {
   padding-top: 20px;
 }
+
+@media screen and (max-width: 768px) {
+  .footer {
+    height: 45px;
+  }
+}
