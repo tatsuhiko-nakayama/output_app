@@ -4,10 +4,7 @@ input[type="submit"] {
 
 input[type="text"] {
   -webkit-appearance: none;
-}
-
-input[type="radio"] {
-  -webkit-appearance: none;
+  -webkit-animation: none;
 }
  
 .new-content {
