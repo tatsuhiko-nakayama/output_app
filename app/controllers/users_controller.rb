@@ -36,6 +36,6 @@ class UsersController < ApplicationController
   private
 
   def correct_user_follower
-    redirect_to root_path unless params[:id] = current_user.id
+    redirect_to root_path unless user_signed_in? && params[:id] = current_user.id
   end
 end
