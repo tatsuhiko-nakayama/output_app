@@ -1,0 +1,50 @@
+<%= render "shared/header" %>
+
+
+<%# ゲストログイン用コンテンツ%>
+<% unless user_signed_in?%>
+  <%= render 'guest'%>
+<% end %>
+<%# // ゲストログイン用コンテンツ%>
+
+<div class='main'>
+
+  <%# if user_signed_in? %>
+    <%# if @user.username == 'guest' %>
+      <%# ゲストログイン中！機能が制限されています。 %>
+    <%# end %>
+  <%# end %>
+
+  <%# Left-side %>
+  <div class='top-left-content'>
+
+    <%# Search-Contents %>
+    <%= render 'shared/search_contents' %>
+    <%# // Search-Contents %>
+
+    <div class='item-list-navi'>
+      <p> Time Line</p>
+    </div>
+
+    <%# @items リスト展開 %>
+    <div id='item-pagenate'>
+      <%= render "shared/item-list" %>
+    </div>
+    <%= link_to_next_page @items, 'もっと見る', remote: true, class: 'more-link', id: 'more-link' %>
+    <%# // @items リスト展開 %>   
+    
+  </div>
+  <%# // Left-side%>
+
+  
+  <%# Right-side %>
+  <%= render 'shared/right_side' %>
+  <%# // Right-side %>
+
+</div>
+
+<%# スマホ用コマンド %>
+<%= render 'shared/command'%>
+<%# // スマホ用コマンド %>
+
+<%= render "shared/footer" %>

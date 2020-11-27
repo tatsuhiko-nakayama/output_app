@@ -1,6 +1,7 @@
 <% if user_signed_in? %>
   <div class='smartphone-command-bar'>
     <%= link_to image_tag("icon-home.png", class: "command-home"), "/"%>
+    <%= link_to "TL", "/timeline/#{current_user.id}" %>
     <%= link_to image_tag("icon-new.png", class: "command-new"), new_item_path %>
     <%= link_to image_tag(current_user.profile.image, class: "command-avatar"), user_path(current_user.id) %>
   </div>

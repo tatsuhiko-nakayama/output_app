@@ -1,6 +1,6 @@
 class ItemsController < ApplicationController
   before_action :set_item, only: [:edit, :update, :show]
-  before_action :set_user_items, only: [:index, :tag, :category, :search]
+  before_action :set_user_items, only: [:index, :tag, :category, :search, :timeline]
   before_action :correct_user_new, only: :new
   before_action :correct_user_edit, only: :edit
 
@@ -68,6 +68,11 @@ class ItemsController < ApplicationController
       @user = current_user
       @my_items = Item.where(user_id: current_user.id).order('created_at DESC')
     end
+  end
+
+  def timeline
+    @followings = current_user.followings
+    @items = Item.where(user_id: @followings).or(Item.where(user_id: current_user.id)).order('created_at DESC').open.page(params[:page])
   end
 
   private
