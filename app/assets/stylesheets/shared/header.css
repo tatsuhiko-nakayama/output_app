@@ -30,6 +30,20 @@
   align-items: center;
 }
 
+.tl-list-btn {
+  height: 31px;
+  width: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  border: 1px solid #fff;
+  border-radius: 3px;
+  margin-right: 20px;
+  font-size: 14px;
+  font-family: "Yu Gothic", "ヒラギノ角ゴ ProN", monospace;
+}
+
 .like-list-btn {
   color: #fff;
   border: 1px solid #fff;
@@ -110,6 +124,10 @@
 
   .left-header {
     padding: 10px 0;
+  }
+
+  .tl-list-btn {
+    display: none;
   }
 
   .like-list-btn {

@@ -31,5 +31,6 @@ Rails.application.routes.draw do
   get '/comments/user/:id', to: "comments#index"
   get '/follows/user/:id', to: "users#follow"
   get '/followers/user/:id', to: "users#follower"
+  get '/timeline/:id', to: "items#timeline"
   
 end
