@@ -23,7 +23,6 @@
 
 .activity {
   margin-bottom: 10px;
-  padding: 2px 10px;
   font-weight: bold;
   text-decoration: underline;
 }
@@ -58,7 +57,6 @@
 
 .status {
   margin: 10px 0;
-  padding: 2px 15px;
   font-weight: bold;
   text-decoration: underline;
 }
@@ -294,7 +292,7 @@
     align-items: center;
   }
   .user-left-content {
-    width: 90%;
+    width: 100%;
   }
 
   .user-right-content {
@@ -420,6 +418,60 @@
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+  }
+  
+}
+
+@media screen and (max-width:375px) {
+  
+  .user-name {
+    font-size: 14px;
+  }
+  
+  .status-title {
+    font-size: 10px;
+  }
+  
+  .status-number {
+   font-size: 15px;
+  }
+  .user-intro {
+    font-size: 11px;
+  }
+  
+  .userpage-regist-suggest-btn {
+    font-size: 12px;
+  }
+  
+  .user-website {
+    font-size: 11px;
+  }
+  
+  .weekly-count {
+    font-size: 13px;
+  }
+  
+  .weekly-count-day {
+    height: 40px;
+    width: 40px;
+    margin: 0 2px;
+  }
+  
+  .weekly-count-day-off {
+    height: 40px;
+    width: 40px;
+    margin: 0 2px;
+  }
+  
+  
+  .status-count {
+    font-size: 12px;
+  }
+  
+  .status-count-block {
+    height: 40px;
+    width: 40px;
+    margin: 0 2px;
   }
   
 }
