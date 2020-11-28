@@ -12,16 +12,72 @@
 }
 
 .user-analytics {
-  height: 100px;
-  background-color: lightsteelblue;
-  font-weight: bold;
+  height: 200px;
   color: #4a4a4a;
-  border: 2px dashed grey;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin: 10px 0;
+}
+
+.activity {
   margin-bottom: 10px;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.weekly-count {
+  display: flex;
+  font-size: 14px;
+}
+
+.weekly-count-day {
+  height: 45px;
+  width: 45px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 3px;
+  background-color: #b54a4a;
+  color: #fff;
+}
+
+.weekly-count-day-off {
+  height: 45px;
+  width: 45px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 3px;
+  background-color: #fff;
+}
+
+.status {
+  margin: 10px 0;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.status-count {
+  display: flex;
+  font-size: 13px;
+}
+
+.status-count-block {
+  height: 45px;
+  width: 45px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 3px;
+}
+
+.status-count-block span {
+  margin-bottom: 3px;
 }
 
 .user-right-content {
@@ -42,14 +98,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-
-.second-user-card {
-  width: 95%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-bottom: 5px;
 }
 
 .main-avatar {
@@ -110,6 +158,14 @@
   color: #000;
 }
 
+.second-user-card {
+  width: 95%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 5px;
+}
+
 .user-intro {
   max-height: 50%;
   width: 85%;
@@ -119,6 +175,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  word-break: break-all;
 }
 
 .profile-edit-btn {
@@ -195,7 +252,6 @@
   resize: none;
   border-radius: 3px;
   border: 2px solid lightcoral;
-  
 }
 
 .user-website-content {
@@ -236,9 +292,186 @@
     align-items: center;
   }
   .user-left-content {
-    width: 90%;
+    width: 100%;
   }
+
   .user-right-content {
+    width: 100%;
+    flex-direction: row;
+    max-width: 768px;
+    min-width: 0px;
+    margin: 0;
+    padding-top: 10px;
+  }
+
+  .user-card {
+    height: 210px;
+    width: 100%;
+    margin: 0;
+    border-right: 1px solid #ccc;
+  }
+
+  .main-avatar {
+    margin-top: 2px;
+  }
+  
+  .user-name {
+    height: 30px;
+  }
+  
+  .user-status {
+    height: 100px;
     width: 90%;
   }
+  
+  .user-status-top {
+    height: 50px;
+  }
+  
+  .user-status-bottom {
+    height: 50px;
+  }
+  
+  .user-status-nums {
+  
+  }
+  
+  .status-title {
+    font-size: 12px;
+  }
+  
+  .status-number {
+   font-size: 17px;
+  }
+
+  .second-user-card {
+    width: 100%;
+    margin-top: 5px;
+    padding: 0;
+  }
+
+  .user-intro {
+    max-height: 50%;
+    width: 85%;
+    margin: 5px 2px 2px;
+    padding: 0;
+    font-size: 12px;
+  }
+
+  .profile-edit-btn {
+    width: 80%;
+    margin-top: 10px;
+    padding: 3px 0;
+    font-size: 11px;
+    font-weight: bold;
+    border: 1px solid grey;
+  }
+  
+  .sign-out-btn {
+    width: 80%;
+    margin: 5px 0 5px;
+    padding:  3px 0;
+    font-size: 11px;
+    font-weight: bold;
+    border-radius: 3px;
+    border: 1px solid grey;
+  }
+  
+  .userpage-follow-btn {
+    min-width: 160px;
+    margin: 15px 0 5px;
+    padding: 5px 0;
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 3px;
+    border: 1px solid grey;
+  }
+  
+  .userpage-unfollow-btn {
+    min-width: 160px;
+    margin: 15px 0 5px;
+    padding: 5px 0;
+    font-size: 12px;
+    font-weight: bold;
+    resize: none;
+    border-radius: 3px;
+    border: 1px solid grey;
+  }
+  
+  .userpage-regist-suggest-btn {
+    margin: 8px 0 8px;
+  }
+  
+  .user-website-content {
+    justify-content: center;
+  }
+
+  .user-website-mark {
+    margin-right: 1px;
+    margin-top: 3px;
+    font-size: 12px;
+  }
+  
+  .user-website {
+    font-size: 12px;
+    margin: 5px 0 0 ;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  
+}
+
+@media screen and (max-width:375px) {
+  
+  .user-name {
+    font-size: 14px;
+  }
+  
+  .status-title {
+    font-size: 10px;
+  }
+  
+  .status-number {
+   font-size: 15px;
+  }
+  .user-intro {
+    font-size: 11px;
+  }
+  
+  .userpage-regist-suggest-btn {
+    font-size: 12px;
+  }
+  
+  .user-website {
+    font-size: 11px;
+  }
+  
+  .weekly-count {
+    font-size: 13px;
+  }
+  
+  .weekly-count-day {
+    height: 40px;
+    width: 40px;
+    margin: 0 2px;
+  }
+  
+  .weekly-count-day-off {
+    height: 40px;
+    width: 40px;
+    margin: 0 2px;
+  }
+  
+  
+  .status-count {
+    font-size: 12px;
+  }
+  
+  .status-count-block {
+    height: 40px;
+    width: 40px;
+    margin: 0 2px;
+  }
+  
 }
