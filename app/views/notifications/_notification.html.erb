@@ -1,1 +1,33 @@
-テスト
+<% @notifications.each do |notification| %>
+  <li class='notice-list'>
+    <%= link_to user_path(notification.visitor.id) do %>
+      <div class='notice-profile-content'>
+        <%= image_tag notification.visitor.profile.image, class:'notice-avatar'%>
+      </div>
+    <% end %>
+
+    <div class='list-main-content-notice'>
+      <div class='list-notice-message'>
+        <%= link_to notification.visitor.username, user_path(notification.visitor.id) %>
+        <% case notification.action %>
+          <% when "follow" then %>
+            があなたをフォローしました
+          <% when "like" then %>
+            があなたの投稿<%= link_to "「#{notification.item.title.truncate(20)}」", notification.item %>をLIKEしました
+          <% when "comment" then %>
+            <% if notification.item.user_id == notification.visited_id %>
+              があなたの投稿<%= link_to "「#{notification.item.title.truncate(20)}」", notification.item %>にコメントしました
+            <% else %>
+              があなたもコメントした
+              <%= link_to "#{notification.item.user.username}", user_path(notification.item.user.id) %>
+              の投稿
+              <%= link_to "「#{notification.item.title.truncate(20)}」", notification.item %>にコメントしました
+            <% end %>
+        <% end %>
+      </div>
+      <div class='list-notice-date'>
+        <%= l notification.created_at %>
+      </div>
+    </div>
+  </li>
+<% end %>

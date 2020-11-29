@@ -1,5 +1,34 @@
-<% if @notifications.where.not(visitor_id: current_user.id).exists? %>
-  <%= render 'notification'%>
-<% else %>
-  <p>通知はありません</p>
-<% end %>
+<%= render "shared/header" %>
+
+<div class='main'>
+
+  <%# Left-side %>
+  <div class='top-left-content'>
+
+    <div class='notice-list-navi'>
+      <p>通知一覧</p>
+    </div>
+
+    <% if @notifications.where.not(visitor_id: current_user.id).exists? %>
+      <div id='nortification-pagenate'>
+        <%= render "notification" %>
+      </div>
+      <%= link_to_next_page @notifications, 'もっと見る', remote: true, class: 'more-link', id: 'more-link' %>
+    <% else %>
+      <p>通知はありません</p>
+    <% end %>
+
+  </div>
+  <%# // Left-side%>
+
+  <%# Right-side %>
+  <%= render 'shared/right_side' %>
+  <%# // Right-side %>
+
+</div>
+
+<%# スマホ用コマンド %>
+<%= render 'shared/command'%>
+<%# // スマホ用コマンド %>
+
+<%= render "shared/footer" %>
