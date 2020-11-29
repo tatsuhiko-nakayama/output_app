@@ -7,7 +7,6 @@
   <div class='right-header'>
     <% if user_signed_in? %>
       <ul class='signed-in-list'>
-        <%= link_to 'Notice', notifications_path %>
         <%= link_to 'TL', "/timeline/#{current_user.id}", class:"tl-list-btn" %>
         <%= link_to "/likes/user/#{current_user.id}" do %>
           <li class="like-list-btn">
@@ -18,13 +17,16 @@
         <%= link_to new_item_path do %>
           <li class="new-item-btn">
             <%= image_tag "icon-new-white.png", class: "icon-new-white" %>
-            <p>NEW</p>
+            <p>NEW</p> 
           </li>
         <% end %>
+        <% if unchecked_notifications.any? %>
+        <li><%= link_to image_tag("icon-bell-red.png", class: "icon-bell"), notifications_path %></li>
+        <% else %>
+        <li><%= link_to image_tag("icon-bell-white.png", class: "icon-bell"), notifications_path %></li>
+        <% end %>
         <li><%= link_to image_tag(current_user.profile.image, class: "header-avatar"), user_path(current_user.id) %></li>
-        <%# ここから w768以下%>
         <li><%= link_to image_tag("icon-like-brown.png", class: "like-list-btn-small"), "/likes/user/#{current_user.id}" %>
-        <%# ここまで w768以下%>
       </ul>
     <% else %>
       <ul class='not-signed-in-list'>

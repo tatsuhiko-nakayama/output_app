@@ -9,7 +9,7 @@
       <p>通知一覧</p>
     </div>
 
-    <% if @notifications.where.not(visitor_id: current_user.id).exists? %>
+    <% if @notifications.exists? %>
       <div id='nortification-pagenate'>
         <%= render "notification" %>
       </div>
