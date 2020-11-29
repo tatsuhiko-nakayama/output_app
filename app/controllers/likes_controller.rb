@@ -14,6 +14,7 @@ class LikesController < ApplicationController
     @like = Like.new(user_id: current_user.id, item_id: params[:item_id])
     @like.save
     @like_count = Like.where(item_id: @item.id).count
+    @item.create_notification_like(current_user)
     redirect_to item_path(@item.id)
   end
 
