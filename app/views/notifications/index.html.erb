@@ -1,0 +1,5 @@
+<% if @notifications.where.not(visitor_id: current_user.id).exists? %>
+  <%= render 'notification'%>
+<% else %>
+  <p>通知はありません</p>
+<% end %>
