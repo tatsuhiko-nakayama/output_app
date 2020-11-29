@@ -14,6 +14,8 @@ class User < ApplicationRecord
   has_many :followings, through: :relationships, source: :follow
   has_many :reverse_of_relationships, class_name: 'Relationship', foreign_key: 'follow_id'
   has_many :followers, through: :reverse_of_relationships, source: :user
+  has_many :active_notifications, class_name: 'Notification', foreign_key: 'visitor_id', dependent: :destroy
+  has_many :passive_notifications, class_name: 'Notification', foreign_key: 'visited_id', dependent: :destroy
 
   paginates_per 10
 

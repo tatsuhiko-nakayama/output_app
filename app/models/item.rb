@@ -9,6 +9,7 @@ class Item < ApplicationRecord
   has_many :tags, through: :item_tags
   belongs_to_active_hash :category
   has_one_attached :image
+  has_many :notifications, dependent: :destroy
 
   enum status: { closed: 0, open: 1 }
   paginates_per 10
