@@ -14,8 +14,6 @@
         <%= render "notification" %>
       </div>
       <%= link_to_next_page @notifications, 'もっと見る', remote: true, class: 'more-link', id: 'more-link' %>
-    <% else %>
-      <p>通知はありません</p>
     <% end %>
 
   </div>

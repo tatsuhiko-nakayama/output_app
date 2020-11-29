@@ -1,0 +1,4 @@
+$('#notification-pagenate').append("<%= escape_javascript(render 'notification', object: @notifications) %>")
+$("#more-link").replaceWith("<%= escape_javascript(
+  link_to_next_page(@notifications, 'もっと見る', remote: true, class: 'more-link', id: 'more-link')
+) %>");
