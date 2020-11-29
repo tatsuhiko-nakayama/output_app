@@ -22,6 +22,7 @@ Rails.application.routes.draw do
   end
 
   resources :relationships, only: [:create, :destroy]
+  resources :notifications, only: :index
   
   get '/items/hashtag/:name', to: "items#tag"
   get '/items/category/:id', to: "items#category"

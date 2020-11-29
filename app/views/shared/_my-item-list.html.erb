@@ -30,7 +30,7 @@
             </div>
           </div>
         <div class='my-list-created-at'>
-          <%= l item.created_at %>
+          <%= "#{time_ago_in_words(item.created_at)}前" %>
         </div>  
       </div>   
     </div>

@@ -32,7 +32,7 @@
         <% if comment.user == current_user %>
           <%= link_to '削除', "/items/#{@item.id}/comments/#{comment.id}", method: :delete,  class: "comment-delete-btn" %>
         <% end %>
-        <%= l comment.created_at %>
+        <%= "#{time_ago_in_words(comment.created_at)}前" %>
       </div>
     </div>
     <div class="comment-message">

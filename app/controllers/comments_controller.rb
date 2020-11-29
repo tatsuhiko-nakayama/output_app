@@ -10,7 +10,9 @@ class CommentsController < ApplicationController
 
   def create
     @comment = Comment.new(comment_params)
+    @item = @comment.item
     @comment.save
+    @item.create_notification_comment(current_user, @comment.id)
     redirect_to item_path(@comment.item_id)
   end
 

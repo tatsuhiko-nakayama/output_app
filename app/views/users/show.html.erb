@@ -32,23 +32,23 @@
           </div>
            <div class='status-count-block'>
             <span>Book</span>
-            <%= "#{@status_items.where(category_id: 1).count * 100 / @all_count}%" %>
+            <%= "#{@status_items.where(category_id: 1).count * 100 / @all_count rescue 0 }%" %>
           </div>
           <div class='status-count-block'>
             <span>Youtube</span>
-            <%= "#{@status_items.where(category_id: 2).count * 100 / @all_count}%" %>
+            <%= "#{@status_items.where(category_id: 2).count * 100 / @all_count rescue 0}%" %>
           </div>
           <div class='status-count-block'>
             <span>SNS</span>
-            <%= "#{@status_items.where(category_id: 3).count * 100 / @all_count}%" %>
+            <%= "#{@status_items.where(category_id: 3).count * 100 / @all_count rescue 0}%" %>
           </div>
           <div class='status-count-block'>
             <span>Event</span>
-            <%= "#{@status_items.where(category_id: 4).count * 100 / @all_count}%" %>
+            <%= "#{@status_items.where(category_id: 4).count * 100 / @all_count rescue 0}%" %>
           </div>
           <div class='status-count-block'>
             <span>Memo</span>
-            <%= "#{@status_items.where(category_id: 5).count * 100 / @all_count}%" %>
+            <%= "#{@status_items.where(category_id: 5).count * 100 / @all_count rescue 0}%" %>
           </div>
         </div>
       </div>
