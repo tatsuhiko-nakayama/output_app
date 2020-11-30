@@ -14,14 +14,6 @@
   background-color: #fff;
 }
 
-.output {
-  margin: 15px;
-  font-weight: bold;
-  text-decoration: underline;
-  text-align: center;
-  color: #4a4a4a;
-}
-
 .user-card {
   height: 250px;
   width: 95%;
@@ -50,7 +42,7 @@
 }
 
 .user-menu-content {
-  height: 50px;
+  height: 70px;
   width: 120px;
   border: 1px solid #ccc;
   font-size: 12px;
@@ -61,7 +53,7 @@
 }
 
 .user-menu-1 {
-  height: 25px;
+  height: 35px;
   width: 90%;
   color: #4a4a4a;
   border-bottom: 1px solid #ccc;
@@ -71,7 +63,7 @@
 }
 
 .user-menu-2 {
-  height: 25px;
+  height: 35px;
   width: 95%;
   color: #4a4a4a;
   display: flex;
@@ -148,7 +140,6 @@
 }
 
 .user-intro {
-  max-height: 50%;
   width: 85%;
   margin: 0 2px 15px;
   padding-left: 3px;
@@ -207,6 +198,7 @@
 .user-website-content {
   width: 85%;
   display: flex;
+  justify-content: center;
   margin: 5px 0;
 }
 
@@ -227,7 +219,7 @@
 
 .user-left-content {
   width: calc(100% - 350px);
-  max-width: 700px;
+  max-width: 768px;
   margin: 10px 20px 10px 0;
   display: flex;
   flex-direction: column;
@@ -240,7 +232,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 10px 0;
+  padding-bottom: 15px;
+  margin-bottom: 15px;
 }
 
 .activity {
@@ -281,7 +274,6 @@
   margin: 20px 0;
   font-weight: bold;
   text-decoration: underline;
-
 }
 
 .status-count {
@@ -312,6 +304,11 @@
   }
   .user-left-content {
     width: 100%;
+    margin: 10px 0px;
+  }
+
+  .user-analytics {
+    background-color: #f0f0f0;
   }
 
   .user-right-content {
@@ -378,9 +375,9 @@
 
   .user-intro {
     width: 85%;
-    margin: 5px 2px 2px;
+    margin: 10px 2px 2px;
     padding: 0;
-    font-size: 12px;
+    font-size: 13px;
   }
 
   .userpage-follow-btn {
@@ -408,10 +405,6 @@
     margin: 8px 0 8px;
   }
   
-  .user-website-content {
-    justify-content: center;
-  }
-
   .user-website-mark {
     margin-right: 1px;
     margin-top: 3px;
@@ -419,7 +412,7 @@
   }
   
   .user-website {
-    font-size: 12px;
+    font-size: 13px;
     margin: 5px 0 0 ;
   }
   
@@ -438,7 +431,7 @@
    font-size: 15px;
   }
   .user-intro {
-    font-size: 11px;
+    font-size: 12px;
   }
   
   .userpage-follow-btn {
@@ -455,7 +448,7 @@
   }
   
   .user-website {
-    font-size: 11px;
+    font-size: 12px;
   }
   
   .weekly-count {
