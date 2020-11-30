@@ -7,7 +7,8 @@
   <div class='right-header'>
     <% if user_signed_in? %>
       <ul class='signed-in-list'>
-        <%= link_to 'TL', "/timeline/#{current_user.id}", class:"tl-list-btn" %>
+        <li><%= link_to image_tag("icon-home-brown.png", class: "icon-home-brown"), '/' %></li>
+        <li><%= link_to 'TL', "/timeline/#{current_user.id}", class:"tl-list-btn" %></li>
         <%= link_to "/likes/user/#{current_user.id}" do %>
           <li class="like-list-btn">
             <%= image_tag "icon-like-white.png", class: "icon-like-white" %>

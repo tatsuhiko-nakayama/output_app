@@ -1,74 +1,6 @@
 <%= render "shared/header" %>
 
 <div class='user-main'>
-  <div class='user-left-content'>
-    <%# if @user == current_user %>
-      <div class="user-analytics">
-        <span class='activity'>Activity</span>
-        <div class='weekly-count'>
-          <% 7.times do |x|%>
-            <% if @user.items.exists?(['created_at LIKE ?', "%#{(Date.today - 6 + x)}%"])%>
-              <div class='weekly-count-day'>
-                <span><%= (Date.today - 6 + x).strftime('%a') %></span>
-                <span><%= (Date.today - 6 + x).strftime('%e') %></span>
-              </div>
-            <% else %>
-              <div class='weekly-count-day-off'>
-                <span><%= (Date.today - 6 + x).strftime('%a') %></span>
-                <span><%= (Date.today - 6 + x).strftime('%e') %></span>
-              </div>
-            <% end%>
-          <% end %>
-        </div>
-        <span class='status'>Status</span>
-        <div class='status-count'>
-          <div class='status-count-block'>
-            <span>New</span>
-            <%= @all_count %>
-          </div>
-          <div class='status-count-block'>
-            <span>Open</span>
-            <%= @status_items.open.count %>
-          </div>
-           <div class='status-count-block'>
-            <span>Book</span>
-            <%= "#{@status_items.where(category_id: 1).count * 100 / @all_count rescue 0 }%" %>
-          </div>
-          <div class='status-count-block'>
-            <span>Youtube</span>
-            <%= "#{@status_items.where(category_id: 2).count * 100 / @all_count rescue 0}%" %>
-          </div>
-          <div class='status-count-block'>
-            <span>SNS</span>
-            <%= "#{@status_items.where(category_id: 3).count * 100 / @all_count rescue 0}%" %>
-          </div>
-          <div class='status-count-block'>
-            <span>Event</span>
-            <%= "#{@status_items.where(category_id: 4).count * 100 / @all_count rescue 0}%" %>
-          </div>
-          <div class='status-count-block'>
-            <span>Memo</span>
-            <%= "#{@status_items.where(category_id: 5).count * 100 / @all_count rescue 0}%" %>
-          </div>
-        </div>
-      </div>
-    <%# end %>
-
-    <%# @items リスト展開 %>
-    <% if @user == current_user %>
-      <div id='users-item-pagenate'>
-        <%= render "shared/users-item-list"%>
-      </div>
-      <%= link_to_next_page @user_items, 'もっと見る', remote: true, class: 'more-link', id: 'users-more-link' %>
-    <% else %>
-      <div id='item-pagenate'>
-        <%= render "shared/item-list" %>
-      </div>
-      <%= link_to_next_page @items, 'もっと見る', remote: true, class: 'more-link', id: 'more-link' %>
-    <% end %>
-    <%# // @items リスト展開 %>
-
-  </div>
 
   <div class='user-right-content'>
     <%# user-card部分%>
@@ -98,6 +30,107 @@
         </div>
       <% end%>
     </div>
+  </div>
+
+  <div class='user-left-content'>
+    <%# if @user == current_user %>
+      <div class="user-analytics">
+        <span class='activity'>Activity</span>
+        <div class='weekly-count'>
+          <% 7.times do |x|%>
+            <% if @user.items.exists?(['created_at LIKE ?', "%#{(Date.today - 6 + x)}%"])%>
+              <div class='weekly-count-day'>
+                <span><%= (Date.today - 6 + x).strftime('%a') %></span>
+                <span><%= (Date.today - 6 + x).strftime('%e') %></span>
+              </div>
+            <% else %>
+              <div class='weekly-count-day-off'>
+                <span><%= (Date.today - 6 + x).strftime('%a') %></span>
+                <span><%= (Date.today - 6 + x).strftime('%e') %></span>
+              </div>
+            <% end%>
+          <% end %>
+        </div>
+        <span class='status'>7days</span>
+        <div class='status-count'>
+          <div class='status-count-block'>
+            <span>Open</span>
+            <%= @status_items.open.count  %>
+          </div>
+          <div class='status-count-block'>
+            <span>Closed</span>
+            <%= @status_items.closed.count %>
+          </div>
+           <div class='status-count-block'>
+            <span>Book</span>
+            <%= "#{@status_items.where(category_id: 1).count * 100 / @status_items.count rescue 0 }%" %>
+          </div>
+          <div class='status-count-block'>
+            <span>Youtube</span>
+            <%= "#{@status_items.where(category_id: 2).count * 100 / @status_items.count rescue 0}%" %>
+          </div>
+          <div class='status-count-block'>
+            <span>SNS</span>
+            <%= "#{@status_items.where(category_id: 3).count * 100 / @status_items.count rescue 0}%" %>
+          </div>
+          <div class='status-count-block'>
+            <span>Event</span>
+            <%= "#{@status_items.where(category_id: 4).count * 100 / @status_items.count rescue 0}%" %>
+          </div>
+          <div class='status-count-block'>
+            <span>Memo</span>
+            <%= "#{@status_items.where(category_id: 5).count * 100 / @status_items.count rescue 0}%" %>
+          </div>
+        </div>
+        <span class='status'>Total</span>
+        <div class='status-count'>
+          <div class='status-count-block'>
+            <span>Open</span>
+            <%= @all_items.open.count  %>
+          </div>
+          <div class='status-count-block'>
+            <span>Closed</span>
+            <%= @all_items.closed.count %>
+          </div>
+           <div class='status-count-block'>
+            <span>Book</span>
+            <%= "#{@all_items.where(category_id: 1).count * 100 / @all_items.count rescue 0 }%" %>
+          </div>
+          <div class='status-count-block'>
+            <span>Youtube</span>
+            <%= "#{@all_items.where(category_id: 2).count * 100 / @all_items.count rescue 0}%" %>
+          </div>
+          <div class='status-count-block'>
+            <span>SNS</span>
+            <%= "#{@all_items.where(category_id: 3).count * 100 / @all_items.count rescue 0}%" %>
+          </div>
+          <div class='status-count-block'>
+            <span>Event</span>
+            <%= "#{@all_items.where(category_id: 4).count * 100 / @all_items.count rescue 0}%" %>
+          </div>
+          <div class='status-count-block'>
+            <span>Memo</span>
+            <%= "#{@all_items.where(category_id: 5).count * 100 / @all_items.count rescue 0}%" %>
+          </div>
+        </div>
+      </div>
+    <%# end %>
+
+    <%# @items リスト展開 %>
+    <span class='output'>Output</span>
+    <% if @user == current_user %>
+      <div id='users-item-pagenate'>
+        <%= render "shared/users-item-list"%>
+      </div>
+      <%= link_to_next_page @user_items, 'もっと見る', remote: true, class: 'more-link', id: 'users-more-link' %>
+    <% else %>
+      <div id='item-pagenate'>
+        <%= render "shared/item-list" %>
+      </div>
+      <%= link_to_next_page @items, 'もっと見る', remote: true, class: 'more-link', id: 'more-link' %>
+    <% end %>
+    <%# // @items リスト展開 %>
+
   </div>
 </div>
 

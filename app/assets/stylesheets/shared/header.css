@@ -30,9 +30,15 @@
   align-items: center;
 }
 
+.icon-home-brown {
+  width: 38px;
+  margin-right: 22px;
+  margin-bottom: -5px;
+}
+
 .tl-list-btn {
   height: 31px;
-  width: 80px;
+  width: 75px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -130,6 +136,10 @@
 
   .left-header {
     padding: 10px 0;
+  }
+
+  .icon-home-brown {
+    display: none;
   }
 
   .tl-list-btn {

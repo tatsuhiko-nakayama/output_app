@@ -291,12 +291,13 @@ a:hover {
 
 .list-category {
   display: flex;
-  font-size: 12px;
+  font-size: 11px;
   font-weight: bold;
+  font-family: "Yu Gothic", "ヒラギノ角ゴ ProN", monospace;
   color: #fff;
   border: 1px solid orange;
   border-radius: 3px;
-  padding: 2px 5px;
+  padding: 1px 5px;
   white-space: nowrap;
   background-color: orange;
 }
@@ -311,9 +312,10 @@ a:hover {
   color: #fff;
   font-size: 11px;
   font-weight: bold;
+  font-family: "Yu Gothic", "ヒラギノ角ゴ ProN", monospace;
   border: 1px solid orange;
   border-radius: 3px;
-  padding: 2px 5px 1px;
+  padding: 1px 5px;
   white-space: nowrap;
   background-color: orange;
 }
@@ -321,8 +323,9 @@ a:hover {
 .my-list-open {
   display: flex;
   color: #fff;
-  font-size: 12px;
+  font-size: 11px;
   font-weight: bold;
+  font-family: "Yu Gothic", "ヒラギノ角ゴ ProN", monospace;
   border: 1px solid yellowgreen;
   border-radius: 3px;
   padding: 1px 5px 2px;
@@ -345,11 +348,12 @@ a:hover {
 .my-list-closed {
   display: flex;
   color: #fff;
-  font-size: 12px;
+  font-size: 11px;
   font-weight: bold;
+  font-family: "Yu Gothic", "ヒラギノ角ゴ ProN", monospace;
   border: 1px solid  darkgreen;
   border-radius: 3px;
-  padding: 2px 5px;
+  padding: 1px 5px 2px;
   white-space: nowrap;
   background-color: darkgreen;
 }
@@ -427,7 +431,7 @@ a:hover {
 
 .list-created-at {
   font-size: 12px;
-  margin-right: 10px;
+  margin: 0 10px;
 }
 
 .list-image-content {
@@ -524,7 +528,7 @@ a:hover {
 
 .smartphone-command-bar {
   width: 100vw;
-  height: 45px;
+  height: 60px;
   background-color: #fff;
   position: fixed;
   bottom: 0px;
@@ -603,7 +607,7 @@ a:hover {
     background-color: #f0f0f0;
     display: flex;
     justify-content: center;
-    min-height: calc(100vh - 105px);
+    min-height: calc(100vh - 120px);
   }
 
   .top-left-content {
@@ -732,5 +736,14 @@ a:hover {
     width: 54px;
     height: 72px;
     object-fit: cover;
+  }
+
+  .list-category {
+    font-size: 10px;
+    padding: 0 3px;
+  }
+
+  .list-tag p {
+    font-size: 11px;
   }
 }

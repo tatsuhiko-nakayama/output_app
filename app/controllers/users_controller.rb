@@ -6,7 +6,7 @@ class UsersController < ApplicationController
     @items = @user.items.open.order('created_at DESC').page(params[:page])
     @user_items = @user.items.order('created_at DESC').page(params[:page])
     @status_items = @user.items.where(created_at: 6.days.ago.beginning_of_day..Time.zone.now.end_of_day)
-    @all_count = @status_items.count
+    @all_items = @user.items
   end
 
   def search

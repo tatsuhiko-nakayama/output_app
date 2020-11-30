@@ -10,6 +10,6 @@
 
 @media screen and (max-width: 768px) {
   .footer {
-    height: 45px;
+    background-color: #fff;
   }
 }

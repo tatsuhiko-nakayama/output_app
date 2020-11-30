@@ -129,7 +129,7 @@ input[type="text"] {
 }
 
 .input-area {
-  height: calc(100vh - 295px);
+  height: calc(100vh - 355px);
   width: 100%;
   margin-top: 5px;
   display: flex;
@@ -268,7 +268,7 @@ input[type="text"] {
   }
 
   .input-area {
-    height: calc(100vh - 375px);
+    height: calc(100vh - 435px);
   }
 
   .input-area-right {
