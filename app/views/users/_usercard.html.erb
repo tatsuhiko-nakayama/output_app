@@ -1,4 +1,15 @@
 <div class='user-card'>
+  <% if @user == current_user %>
+    <div class='user-menu-btn', id='user-menu-btn'>
+      …
+    </div>
+    <div class='user-menu hidden', id='user-menu'>
+      <div class='user-menu-content'>
+        <%= link_to "プロフィール編集", edit_user_profile_path(current_user.id), class: "user-menu-1" %>
+        <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "user-menu-2"  %>
+      </div>
+    </div>
+  <% end %>
   <%= image_tag @user.profile.image , class:"main-avatar"%>
   <div class='user-name'>
     <%= @user.username%>

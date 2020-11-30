@@ -3,25 +3,16 @@
 <div class='user-main'>
 
   <div class='user-right-content'>
+
     <%# user-card部分%>
     <%= render "usercard" %>
     <%# // user-card部分%>
+
     <div class="second-user-card">
+   
       <div class='user-intro'>
         <%= @user.profile.intro %>
       </div>
-      <%# プロフィール編集ボタン or フォローボタン 本人と本人以外で表示切り替え %>
-      <% if user_signed_in? && current_user.id.to_s == params[:id]  %>
-        <%= link_to 'プロフィール編集', edit_user_profile_path(current_user.id), class: 'profile-edit-btn' %>
-        <%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: 'sign-out-btn' %>
-      <% elsif user_signed_in? %>
-        <%# フォローボタン%>
-        <%= render 'follow', user: @user %>
-        <%# // フォローボタン%>
-      <% else %>
-        <%= link_to "✔︎ ユーザー登録をして#{@user.username}さんをフォローしませんか？", new_user_registration_path, class: 'userpage-regist-suggest-btn'%>
-      <% end %>
-      <%# // プロフィール編集ボタン or フォローボタン 本人と本人以外で表示切り替え %>
 
       <% if @user.profile.website && @user.profile.website != '' %>
         <div class='user-website-content'>
@@ -29,6 +20,17 @@
           <%= link_to @user.profile.website, "#{ @user.profile.website }",  class: 'user-website' %>
         </div>
       <% end%>
+      
+      <%# フォローボタン%>
+      <% if user_signed_in? && current_user.id.to_s != params[:id]  %>
+        <%= render 'follow', user: @user %>
+      <% end %>
+      <%# // フォローボタン%>
+
+      <% unless user_signed_in? %>
+        <%= link_to "✔︎ ユーザー登録をして#{@user.username}さんをフォローしませんか？", new_user_registration_path, class: 'userpage-regist-suggest-btn'%>
+      <% end %>
+
     </div>
   </div>
 
