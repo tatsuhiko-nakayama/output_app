@@ -5,6 +5,226 @@
   min-height: calc(100vh - 120px);
 }
 
+.user-right-content {
+  width: 300px;
+  margin: 10px 10px 10px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+}
+
+.output {
+  margin: 15px;
+  font-weight: bold;
+  text-decoration: underline;
+  text-align: center;
+  color: #4a4a4a;
+}
+
+.user-card {
+  height: 250px;
+  width: 95%;
+  margin-top: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.user-menu-btn {
+  font-weight: bold;
+  font-size: 20px;
+  color: #8a8a8a;
+  position: absolute;
+  z-index: 1;
+  right: 10px;
+  cursor: pointer;
+}
+
+.user-menu {
+  position: absolute;
+  z-index: 1;
+  right: 1px;
+  top: 30px;
+}
+
+.user-menu-content {
+  height: 50px;
+  width: 120px;
+  border: 1px solid #ccc;
+  font-size: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+}
+
+.user-menu-1 {
+  height: 25px;
+  width: 90%;
+  color: #4a4a4a;
+  border-bottom: 1px solid #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.user-menu-2 {
+  height: 25px;
+  width: 95%;
+  color: #4a4a4a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main-avatar {
+  height: 60px;
+  width: 60px;
+  object-fit: cover;
+  border: 1px solid #fff;
+  border-radius: 70px;
+  margin-top: 10px;
+}
+
+.user-name {
+  height: 37.5px;
+  width: 90%;
+  margin: 5px;
+  font-size: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.user-status {
+  height: 105px;
+  width: 90%;
+}
+
+.user-status-top {
+  height: 50px;
+  margin: 2px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.user-status-bottom {
+  height: 50px;
+  margin: 5px 20px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.user-status-nums {
+ font-size: 18px;
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+}
+
+.status-title {
+  color: grey;
+  font-size: 13px;
+}
+
+.status-number {
+  font-weight: bold;
+  margin-top: 3px;
+  color: #000;
+}
+
+.second-user-card {
+  width: 95%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 5px;
+  position: relative;
+  margin: 15px 0;
+}
+
+.user-intro {
+  max-height: 50%;
+  width: 85%;
+  margin: 0 2px 15px;
+  padding-left: 3px;
+  font-size: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  word-break: break-all;
+}
+
+.userpage-follow-btn {
+  min-width: 180px;
+  width: 19vw;
+  margin: 15px 0;
+  padding: 5px 0;
+  box-sizing: border-box;
+  color: grey;
+  font-size: 15px;
+  font-weight: bold;
+  resize: none;
+  border-radius: 3px;
+  border: 2px solid grey;
+  text-align: center;
+}
+
+.userpage-followed-btn {
+  min-width: 180px;
+  width: 19vw;
+  margin: 15px 0;
+  padding: 5px 0;
+  box-sizing: border-box;
+  color: #fff;
+  background-color: grey;
+  font-size: 15px;
+  font-weight: bold;
+  resize: none;
+  border-radius: 3px;
+  border: 2px solid grey;
+  text-align: center;
+}
+
+.userpage-regist-suggest-btn {
+  width: 90%;
+  margin: 5px 0 12px;
+  padding:  3px 8px;
+  box-sizing: border-box;
+  color: #fff;
+  background-color:lightcoral;
+  font-size: 13px;
+  font-weight: bold;
+  resize: none;
+  border-radius: 3px;
+  border: 2px solid lightcoral;
+}
+
+.user-website-content {
+  width: 85%;
+  display: flex;
+  margin: 5px 0;
+}
+
+.user-website-mark {
+  margin-right: 5px;
+  margin-top: -2px;
+}
+
+.user-website {
+  font-size: 15px;
+  text-decoration: underline;
+  text-align: center;
+  color: #000;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
 .user-left-content {
   width: calc(100% - 350px);
   max-width: 700px;
@@ -83,204 +303,6 @@
   margin-bottom: 3px;
 }
 
-.output {
-  margin: 15px;
-  font-weight: bold;
-  text-decoration: underline;
-  text-align: center;
-  color: #4a4a4a;
-}
-
-.user-right-content {
-  width: 300px;
-  margin: 10px 10px 10px 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: #fff;
-}
-
-.user-card {
-  height: 250px;
-  width: 95%;
-  margin-top: 5px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.main-avatar {
-  height: 60px;
-  width: 60px;
-  object-fit: cover;
-  border: 1px solid #fff;
-  border-radius: 70px;
-  margin-top: 10px;
-}
-
-.user-name {
-  height: 15%;
-  width: 90%;
-  margin: 5px;
-  font-size: 15px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.user-status {
-  height: 42%;
-  width: 90%;
-}
-
-.user-status-top {
-  height: 47%;
-  margin: 2px;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
-
-.user-status-bottom {
-  height: 47%;
-  margin: 5px 20px;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
-
-.user-status-nums {
- font-size: 18px;
- display: flex;
- flex-direction: column;
- align-items: center;
-}
-
-.status-title {
-  color: grey;
-  font-size: 13px;
-}
-
-.status-number {
-  font-weight: bold;
-  margin-top: 3px;
-  color: #000;
-}
-
-.second-user-card {
-  width: 95%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-bottom: 5px;
-}
-
-.user-intro {
-  max-height: 50%;
-  width: 85%;
-  margin: 0 2px 15px;
-  padding-left: 3px;
-  font-size: 15px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  word-break: break-all;
-}
-
-.profile-edit-btn {
-  width: 90%;
-  margin-top: 25px;
-  padding: 5px 0;
-  box-sizing: border-box;
-  color: grey;
-  font-size: 15px;
-  font-weight: bold;
-  resize: none;
-  border-radius: 3px;
-  border: 2px solid grey;
-  text-align: center;
-}
-
-.sign-out-btn {
-  width: 90%;
-  margin: 5px 0 12px;
-  padding:  5px 0;
-  box-sizing: border-box;
-  color: #fff;
-  background-color: grey;
-  font-size: 15px;
-  font-weight: bold;
-  resize: none;
-  border-radius: 3px;
-  border: 2px solid grey;
-  text-align: center;
-}
-
-.userpage-follow-btn {
-  min-width: 180px;
-  width: 19vw;
-  margin: 30px 0 10px;
-  padding: 5px 0;
-  box-sizing: border-box;
-  color: grey;
-  font-size: 15px;
-  font-weight: bold;
-  resize: none;
-  border-radius: 3px;
-  border: 2px solid grey;
-  text-align: center;
-}
-
-.userpage-unfollow-btn {
-  min-width: 180px;
-  width: 19vw;
-  margin: 30px 0 10px;
-  padding: 5px 0;
-  box-sizing: border-box;
-  color: #fff;
-  background-color: grey;
-  font-size: 15px;
-  font-weight: bold;
-  resize: none;
-  border-radius: 3px;
-  border: 2px solid grey;
-  text-align: center;
-}
-
-.userpage-regist-suggest-btn {
-  width: 90%;
-  margin: 5px 0 12px;
-  padding:  3px 8px;
-  box-sizing: border-box;
-  color: #fff;
-  background-color:lightcoral;
-  font-size: 13px;
-  font-weight: bold;
-  resize: none;
-  border-radius: 3px;
-  border: 2px solid lightcoral;
-}
-
-.user-website-content {
-  width: 85%;
-  display: flex;
-}
-
-.user-website-mark {
-  margin-right: 5px;
-  margin-top: 7px;
-}
-
-.user-website {
-  font-size: 15px;
-  text-decoration: underline;
-  margin-top: 10px;
-  margin-bottom: 25px;
-  text-align: center;
-  color: #000;
-  word-break: break-all;
-}
-
 @media screen and (max-width:768px) {
   .user-main {
     background-color: #fff;
@@ -303,9 +325,20 @@
 
   .user-card {
     height: 210px;
-    width: 100%;
+    width: 50vw;
     margin: 0;
     border-right: 1px solid #ccc;
+    position: static;
+  }
+
+  .user-menu-btn {
+    top: 65px;
+    right: 20px;
+  }
+  
+  .user-menu {
+    top: 95px;
+    right: 20px;
   }
 
   .main-avatar {
@@ -329,10 +362,6 @@
     height: 50px;
   }
   
-  .user-status-nums {
-  
-  }
-  
   .status-title {
     font-size: 12px;
   }
@@ -342,40 +371,20 @@
   }
 
   .second-user-card {
-    width: 100%;
-    margin-top: 5px;
+    width: 50vw;
+    margin: 0;
     padding: 0;
   }
 
   .user-intro {
-    max-height: 50%;
     width: 85%;
     margin: 5px 2px 2px;
     padding: 0;
     font-size: 12px;
   }
 
-  .profile-edit-btn {
-    width: 80%;
-    margin-top: 10px;
-    padding: 3px 0;
-    font-size: 11px;
-    font-weight: bold;
-    border: 1px solid grey;
-  }
-  
-  .sign-out-btn {
-    width: 80%;
-    margin: 5px 0 5px;
-    padding:  3px 0;
-    font-size: 11px;
-    font-weight: bold;
-    border-radius: 3px;
-    border: 1px solid grey;
-  }
-  
   .userpage-follow-btn {
-    min-width: 160px;
+    min-width: 150px;
     margin: 15px 0 5px;
     padding: 5px 0;
     font-size: 12px;
@@ -384,8 +393,8 @@
     border: 1px solid grey;
   }
   
-  .userpage-unfollow-btn {
-    min-width: 160px;
+  .userpage-followed-btn {
+    min-width: 150px;
     margin: 15px 0 5px;
     padding: 5px 0;
     font-size: 12px;
@@ -412,15 +421,11 @@
   .user-website {
     font-size: 12px;
     margin: 5px 0 0 ;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
   }
   
 }
 
 @media screen and (max-width:375px) {
-  
   .user-name {
     font-size: 14px;
   }
@@ -436,6 +441,15 @@
     font-size: 11px;
   }
   
+  .userpage-follow-btn {
+    min-width: 120px;
+
+  }
+  
+  .userpage-followed-btn {
+    min-width: 120px;
+  }
+
   .userpage-regist-suggest-btn {
     font-size: 12px;
   }
@@ -459,7 +473,6 @@
     width: 40px;
     margin: 0 2px;
   }
-  
   
   .status-count {
     font-size: 12px;
