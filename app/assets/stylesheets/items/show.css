@@ -65,6 +65,7 @@
   padding: 3px 10px;
   margin-right: 5px;
   box-sizing: border-box;
+  font-size: 14px;
 }
 
 .show-follow-btn {
@@ -327,8 +328,17 @@
 }
 
 .show-bottom-first {
-  height: 20px;
-  width: 100%;
+  margin: 20px 20px 0;
+}
+
+.icon-twitter-white-circle {
+  width: 35px;
+  margin-right: 10px;
+}
+
+.icon-line-white-circle {
+  width: 35px;
+  margin-right: 10px;
 }
 
 .show-bottom-second {
@@ -396,7 +406,7 @@
   border: 1px solid yellowgreen;
   border-radius: 10px;
   color: #fff;
-  font-size: 15px;
+  font-size: 14px;
   background-color: yellowgreen;
   padding: 3px 10px;
   margin-right: 5px;
