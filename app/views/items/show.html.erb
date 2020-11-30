@@ -63,8 +63,9 @@
 
     <div class='show-bottom'>
       <div class='show-bottom-first'>
-        <%= link_to image_tag('icon-twitter-white-circle.png', class: 'icon-twitter-white-circle'), "https://twitter.com/intent/tweet?url=http://output-app.com/items/#{@item.id}&text=#{@item.title}&hashtags=OutputApp" %>
-        <%= link_to image_tag('icon-line-white-circle.png', class: 'icon-line-white-circle'), "https://timeline.line.me/social-plugin/share?url=http://output-app.com/items/#{@item.id}" %>
+        <%= link_to image_tag('icon-twitter-white-circle.png', class: 'show-bottom-icon'), "https://twitter.com/intent/tweet?url=http://output-app.com/items/#{@item.id}&text=#{@item.title}&hashtags=OutputApp" %>
+        <%= link_to image_tag('icon-line-white-circle.png', class: 'show-bottom-icon'), "https://timeline.line.me/social-plugin/share?url=http://output-app.com/items/#{@item.id}" %>
+        <%= link_to image_tag('icon-fb-white-circle.png', class: 'show-bottom-icon'), "https://www.facebook.com/sharer/sharer.php?u=http://output-app.com/items/#{@item.id}" %>
       </div>
       <div class='show-bottom-second'>
       </div>
