@@ -5,7 +5,7 @@
   <%# Left-side %>
   <div class='top-left-content'>   
     <div class='whose-item-list-navi'>
-      <%= image_tag @commented_user.profile.image.variant(combine_options:{gravity: :center, resize:"128x128^", crop:"128x128+0+0"}).processed, class: 'whose-user-avatar'%>
+      <%= image_tag @commented_user.profile.image.variant(resize_to_fill: [128, 128]), class: 'whose-user-avatar'%>
       <p><%= @commented_user.username%> 's Comment</p>
     </div>
     <%# @items リスト展開 %>
