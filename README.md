@@ -1,28 +1,39 @@
-## アプリケーション名
+## アプリケーション概要
 Output App
 
-<img width="600" alt="スクリーンショット 2020-11-17 12 58 15" src="https://user-images.githubusercontent.com/70306357/99345033-b2085380-28d4-11eb-8c3d-f14170bfb752.png">
+width: 400px
+
+<img width="398" alt="スクリーンショット 2020-12-01 16 20 10" src="https://user-images.githubusercontent.com/70306357/100709516-9da67980-33f1-11eb-9e2d-62bed4e86c40.png">
+
+width: 1024px
+
+<img width="1021" alt="スクリーンショット 2020-12-01 16 25 21" src="https://user-images.githubusercontent.com/70306357/100709665-dd6d6100-33f1-11eb-88ac-36a8b4130e74.png">
 
 
-非ログイン状態でも記事の閲覧は可能です。
-ゲストログインをしていただくことで記事の投稿やいいね等各アクションが可能になります。
+非ログインでも記事の閲覧は可能です。
+ログインしていただくことで記事の投稿やいいね等各アクションが可能になります。
+
+最小画面サイズ => 320pxまで対応しています。
 
 ## リンク
-- URL : https://outputapp.herokuapp.com/
+- URL : http://output-app.com
 
-## 概要
+## ジャンル
 日々のアウトプットを記録する日記SNS
 
 ## 特徴
-- デフォルトが非公開でログアプリとして使いやすい
-- インプット情報を検索してネタ探し、共有ができる
+- デフォルトが非公開
+- インプット情報を検索できる
+- 週間のログ状況を表示
 
-<img width="600" alt="スクリーンショット 2020-11-17 13 07 37" src="https://user-images.githubusercontent.com/70306357/99345591-fc3e0480-28d5-11eb-8620-ca6b6a7a2f1e.png">
+フォロワーやいいねを集めるためではなく、気軽にアウトプットをするための機能を揃えています。
 
 ## 開発背景
-- 自己成長に集中できるログ＆コミュニケーションツールが欲しかったから
-- インプットの情報源を共有したかったから
+- 既存のSNSでは吐き出せないことを吐き出せるアプリを作りたい
+- アウトプットをしやすい環境を作って人の成長や喜びに貢献したい
 
+## 影響を受けた本
+- ゼロ秒思考
 
 ## 使用技術
 - Ruby 2.6.5 / Rails 6.0.3.4
@@ -34,62 +45,47 @@ Output App
 - Nginx
 - Capistrano
 
-## 機能一覧（開発中の機能含む）
+## 機能一覧
 
-◆ユーザー機能
-- deviseを使用
+◆ユーザー系
 - ユーザーページ
-  - 投稿一覧表示
-  - 投稿アナリティクス表示 ※開発中
-  - ステータス表示(投稿/フォロー/いいね/コメント 各総数)
-  - プロフィール編集（本人のみ）
-  - フォロワー数表示（本人のみ）
+  - ユーザーインフォメーション
+  - アクション数
+  - 週間アナリティクス
+  - 投稿一覧
 
-ログインユーザー自身のユーザーページ
-
-<img width="600" alt="スクリーンショット 2020-11-17 13 13 13" src="https://user-images.githubusercontent.com/70306357/99345939-d2391200-28d6-11eb-8474-6314156cdc2f.png">
-
-本人以外のユーザーページ
-
-<img width="600" alt="スクリーンショット 2020-11-17 13 15 30" src="https://user-images.githubusercontent.com/70306357/99346023-fd236600-28d6-11eb-818b-36e2d775a637.png">
-
-◆投稿機能
-- マークダウン記法
-- 画像投稿機能
-- ハッシュタグ機能
-- 投稿プレビュー機能 ※開発中
-- カウントアップタイマー機能 ※開発中
-
-<img width="600" alt="スクリーンショット 2020-11-17 13 05 07" src="https://user-images.githubusercontent.com/70306357/99345413-96517d00-28d5-11eb-924c-c466bfd9d048.png">
-
-<img width="600" alt="スクリーンショット 2020-11-17 13 20 49" src="https://user-images.githubusercontent.com/70306357/99346338-bd10b300-28d7-11eb-9848-4cece72981be.png">
+<img width="597" alt="スクリーンショット 2020-12-01 16 36 35" src="https://user-images.githubusercontent.com/70306357/100710715-79e43300-33f3-11eb-8935-c54538f323b7.png">
 
 
-◆一覧表示機能
-- ページネーション機能
+◆投稿
+- 公開選択
+- 画像投稿
+- ハッシュタグ登録
+- マークダウン
+
+<img width="488" alt="スクリーンショット 2020-12-01 16 42 52" src="https://user-images.githubusercontent.com/70306357/100711202-4ce45000-33f4-11eb-9a97-989dc62e620c.png">
+
+◆一覧表示
+- ページネーション
 - 画像サムネイル表示
 
-◆検索機能
-- カテゴリ別検索
-- ハッシュタグ検索
-- ユーザー名検索
-- 投稿タイトル検索
+◆検索
+- カテゴリ
+- ハッシュタグ
+- ユーザー
+- タイトル
 
-◆トレンド表示機能 ※開発中
-- 最新×人気の投稿をピックアップ
-
-◆サジェスト機能 ※開発中
-- 類似投稿のサジェスト
-
-◆フォロー機能
-
-◆いいね機能
-
-◆コメント機能
+◆その他機能
+- いいね
+- コメント
+- タイムライン
+- SNSシェア
+- 通知
+- スマホ用コマンド
 
 
 ## ER図
-![Output App ER図](https://user-images.githubusercontent.com/70306357/97796045-d9162280-1c50-11eb-8c5a-117fa3e51e60.png) 
+![Output App ER図 (1)](https://user-images.githubusercontent.com/70306357/100713974-7901d000-33f8-11eb-9d74-971ba1cfa135.png)
 
 ## テーブル設計
 
@@ -106,11 +102,15 @@ Output App
 - has_one  :profile
 - has_many :items
 - has_many :comments
+- has_many :commented_items, through: :comments, source: :item
 - has_many :likes
+- has_many :liked_items, through: :likes, source: :item
 - has_many :relationships
 - has_many :followings, through: :relationships, source: :follow
 - has_many :reverse_of_relationships, class_name: 'Relationship', foreign_key: 'follow_id'
 - has_many :followers, through: :reverse_of_relationships, source: :user
+- has_many :active_notifications, class_name: 'Notification', foreign_key: 'visitor_id'
+- has_many :passive_notifications, class_name: 'Notification', foreign_key: 'visited_id'
 
 ### profiles テーブル
 
@@ -154,11 +154,15 @@ Output App
 ### Association
 
 - belongs_to :user
-- has_many   :likes
-- has_many   :comments
-- has_many   :item_tags
-- has_many   :tags, through: :item_tags
+- has_many :likes
+- has_many :liked_users, through: :likes, source: :user
+- has_many :comments
+- has_many :commented_users, through: :comments, source: :user
+- has_many :item_tags
+- has_many :tags, through: :item_tags
 - belongs_to_active_hash :category
+- has_one_attached :image
+- has_many :notifications, dependent: :destroy
 
 ### tags テーブル
 
@@ -207,3 +211,22 @@ Output App
 
 - belongs_to :user
 - belongs_to :item
+- has_many :notifications
+
+### notification テーブル
+
+| Column     | Type       | Options                        |
+| ---------- | ---------- | ------------------------------ |
+| visitor_id | integer    | null: false                    |
+| visited_id | integer    | null: false                    |
+| item_id    | integer    |                                |
+| comment_id | integer    |                                |
+| action     | string     | null: false, default: ''       |
+| checked    | boolean    | null: false, default: false    |
+
+### Association
+
+- belongs_to :item, optional: true
+- belongs_to :comment, optional: true
+- belongs_to :visitor, class_name: 'User', foreign_key: 'visitor_id', optional: true
+- belongs_to :visited, class_name: 'User', foreign_key: 'visited_id', optional: true
