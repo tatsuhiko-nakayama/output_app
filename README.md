@@ -3,11 +3,11 @@ Output App
 
 width: 400px
 
-<img width="398" alt="スクリーンショット 2020-12-01 16 20 10" src="https://user-images.githubusercontent.com/70306357/100709516-9da67980-33f1-11eb-9e2d-62bed4e86c40.png" style="border:1px solid #ccc">
+<img width="398" alt="スクリーンショット 2020-12-01 16 20 10" src="https://user-images.githubusercontent.com/70306357/100709516-9da67980-33f1-11eb-9e2d-62bed4e86c40.png" style="border:1px solid grey">
 
 width: 1024px
 
-<img width="1021" alt="スクリーンショット 2020-12-01 16 25 21" src="https://user-images.githubusercontent.com/70306357/100709665-dd6d6100-33f1-11eb-88ac-36a8b4130e74.png" style="border:1px solid #ccc">
+<img width="1021" alt="スクリーンショット 2020-12-01 16 25 21" src="https://user-images.githubusercontent.com/70306357/100709665-dd6d6100-33f1-11eb-88ac-36a8b4130e74.png" style="border:1px solid grey">
 
 
 非ログインでも記事の閲覧は可能です。
@@ -54,7 +54,7 @@ width: 1024px
   - 週間アナリティクス
   - 投稿一覧
 
-<img width="597" alt="スクリーンショット 2020-12-01 16 36 35" src="https://user-images.githubusercontent.com/70306357/100710715-79e43300-33f3-11eb-8935-c54538f323b7.png" style="border:1px solid #ccc">
+<img width="597" alt="スクリーンショット 2020-12-01 16 36 35" src="https://user-images.githubusercontent.com/70306357/100710715-79e43300-33f3-11eb-8935-c54538f323b7.png" style="border:1px solid grey">
 
 
 ◆投稿
@@ -63,7 +63,7 @@ width: 1024px
 - ハッシュタグ登録
 - マークダウン
 
-<img width="488" alt="スクリーンショット 2020-12-01 16 42 52" src="https://user-images.githubusercontent.com/70306357/100711202-4ce45000-33f4-11eb-9a97-989dc62e620c.png" style="border:1px solid #ccc">
+<img width="488" alt="スクリーンショット 2020-12-01 16 42 52" src="https://user-images.githubusercontent.com/70306357/100711202-4ce45000-33f4-11eb-9a97-989dc62e620c.png" style="border:1px solid grey">
 
 ◆一覧表示
 - ページネーション
