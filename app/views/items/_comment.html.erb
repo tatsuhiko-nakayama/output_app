@@ -7,7 +7,7 @@
     <%= form_with model: @comment, url: item_comments_path(@item.id), local: true do |f| %>
       <div class='comment-btn-box'>
         <div class='comment-btn-box-left'>
-          <%= image_tag current_user.profile.image, class:'show-top-avatar'%>
+          <%= image_tag current_user.profile.image.variant(combine_options:{gravity: :center, resize:"128x128^", crop:"128x128+0+0"}).processed, class:'show-top-avatar'%>
           <span class='show-top-username'><%= current_user.username %></span>
         </div>
         <%= f.submit 'コメントする', class:'comment-btn'%>
@@ -25,7 +25,7 @@
   <div class="comment-content">
     <div class="comment-btn-box">
       <div class="comment-btn-box-left">
-        <%= link_to image_tag(comment.user.profile.image, class: 'show-top-avatar'), user_path(comment.user.id) %>
+        <%= link_to image_tag(comment.user.profile.image.variant(combine_options:{gravity: :center, resize:"128x128^", crop:"128x128+0+0"}).processed, class: 'show-top-avatar'), user_path(comment.user.id) %>
         <%= link_to comment.user.username, user_path(comment.user.id), class: 'show-top-username' %>
       </div>
       <div class="comment-btn-box-right">

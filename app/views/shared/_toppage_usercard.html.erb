@@ -1,5 +1,5 @@
 <div class='toppage-user-card'>
-  <%= image_tag @user.profile.image , class:"main-avatar"%>
+  <%= image_tag @user.profile.image.variant(combine_options:{gravity: :center, resize:"128x128^", crop:"128x128+0+0"}).processed , class:"main-avatar"%>
   <div class='user-name'>
     <%= @user.username%>
   </div>

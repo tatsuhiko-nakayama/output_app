@@ -3,6 +3,6 @@
     <%= link_to image_tag("icon-home.png", class: "command-home"), "/"%>
     <%= link_to image_tag("icon-tl.png", class: "command-tl"), "/timeline/#{current_user.id}" %>
     <%= link_to image_tag("icon-new.png", class: "command-new"), new_item_path %>
-    <%= link_to image_tag(current_user.profile.image, class: "command-avatar"), user_path(current_user.id) %>
+    <%= link_to image_tag(current_user.profile.image.variant(combine_options:{gravity: :center, resize:"128x128^", crop:"128x128+0+0"}).processed, class: "command-avatar"), user_path(current_user.id) %>
   </div>
 <% end %>

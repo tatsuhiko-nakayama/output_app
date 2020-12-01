@@ -2,7 +2,7 @@
   <li class='item-list'>
     <%= link_to user_path(item.user.id) do %>
       <div class='list-profile-content'>
-        <%= image_tag item.user.profile.image, class:'list-avatar'%>
+        <%= image_tag item.user.profile.image.variant(combine_options:{gravity: :center, resize:"128x128^", crop:"128x128+0+0"}).processed, class:'list-avatar'%>
         <span class='list-username'><%= item.user.username %></span>
       </div>
     <% end %>
