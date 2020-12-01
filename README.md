@@ -1,25 +1,36 @@
 ## アプリケーション概要
 Output App
 
-width: 400px
+<br>
+
+(width: 400px)
 
 <kbd><img width="398" alt="スクリーンショット 2020-12-01 16 20 10" src="https://user-images.githubusercontent.com/70306357/100709516-9da67980-33f1-11eb-9e2d-62bed4e86c40.png"></kbd>
 
-width: 1024px
+<br>
+
+(width: 1024px)
 
 <kbd><img width="1021" alt="スクリーンショット 2020-12-01 16 25 21" src="https://user-images.githubusercontent.com/70306357/100709665-dd6d6100-33f1-11eb-88ac-36a8b4130e74.png"></kbd>
 
+<br>
 
 非ログインでも記事の閲覧は可能です。
 ログインしていただくことで記事の投稿やいいね等各アクションが可能になります。
 
 最小画面サイズ => 320pxまで対応しています。
 
+<br>
+
 ## リンク
 - URL : http://output-app.com
 
+<br>
+
 ## ジャンル
 日々のアウトプットを記録する日記SNS
+
+<br>
 
 ## 特徴
 - デフォルトが非公開
@@ -28,12 +39,18 @@ width: 1024px
 
 フォロワーやいいねを集めるためではなく、気軽にアウトプットをするための機能を揃えています。
 
+<br>
+
 ## 開発背景
 - 既存のSNSでは吐き出せないことを吐き出せるアプリを作りたい
 - アウトプットをしやすい環境を作って人の成長や喜びに貢献したい
 
-## 影響を受けた本
+<br>
+
+## 影響を受けたもの
 - ゼロ秒思考
+
+<br>
 
 ## 使用技術
 - Ruby 2.6.5 / Rails 6.0.3.4
@@ -44,6 +61,8 @@ width: 1024px
 - AWS(EC2,S3,Route53)
 - Nginx
 - Capistrano
+
+<br>
 
 ## 機能一覧
 
