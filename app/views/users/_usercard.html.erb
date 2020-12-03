@@ -10,7 +10,7 @@
       </div>
     </div>
   <% end %>
-  <%= image_tag @user.profile.image..variant(resize_to_fill: [128, 128]), class:"main-avatar"%>
+  <%= image_tag @user.profile.image.variant(resize_to_fill: [128, 128]), class:"main-avatar"%>
   <div class='user-name'>
     <%= @user.username%>
   </div>

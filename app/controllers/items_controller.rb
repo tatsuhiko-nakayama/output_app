@@ -3,6 +3,7 @@ class ItemsController < ApplicationController
   before_action :set_user_items, only: [:index, :tag, :category, :search, :timeline]
   before_action :correct_user_new, only: :new
   before_action :correct_user_edit, only: :edit
+  before_action :correct_user_show, only: :show
   before_action :correct_user_timeline, only: :timeline
 
   def index
@@ -101,7 +102,14 @@ class ItemsController < ApplicationController
     redirect_to root_path unless user_signed_in? && @item.user.id == current_user.id
   end
 
+  def correct_user_show
+    if @item.closed?
+      redirect_to root_path unless @item.user == current_user
+    end
+  end
+
   def correct_user_timeline
     redirect_to root_path unless user_signed_in? && params[:id] = current_user.id
   end
+
 end
