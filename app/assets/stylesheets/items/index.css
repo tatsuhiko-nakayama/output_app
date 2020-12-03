@@ -95,6 +95,17 @@ a:hover {
   overflow-x: hidden;
 }
 
+.top-infomation {
+  height: 25px;
+  margin-top: 20px;
+  margin-bottom: -5px;
+  text-align: center;
+}
+
+.top-infomation a {
+  color: #B54A4A;
+}
+
 .item-list-navi {
   height: 25px;
   margin: 20px 0 10px;
