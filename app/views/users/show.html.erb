@@ -23,7 +23,9 @@
       
       <%# フォローボタン%>
       <% if user_signed_in? && current_user.id.to_s != params[:id]  %>
-        <%= render 'follow', user: @user %>
+        <div id="follow-btn-userpage">
+          <%= render 'follow', user: @user %>
+        </div>
       <% end %>
       <%# // フォローボタン%>
 
